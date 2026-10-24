@@ -12,15 +12,18 @@ export const SITE = {
   },
   // Ficha de inscripción: poner el PDF en public/docs/inscription.pdf
   signupPdf: '/docs/inscription.pdf',
+  // Música de fondo (se baja con `npm run images`)
+  music: '/audio/music.mp3',
   // Formulario: crear un form en https://formspree.io y poner el ID en .env
   formspreeId: import.meta.env.VITE_FORMSPREE_ID || '',
 }
 
-// Imágenes: se bajan del sitio original con `node scripts/download-images.mjs`
+// Imágenes: se bajan del sitio original con `npm run images`
 export const IMAGES = {
-  hero: '/images/hero.jpg',
-  logo: '/images/logo.jpg',
+  logo: '/images/logo.png',
+  sky: '/images/sky.jpg',
   about: '/images/about.jpg',
+  philosophyBg: '/images/philosophy-bg.jpg',
   sully: '/images/sully.jpg',
   courses: [
     '/images/course-intuitive.jpg',

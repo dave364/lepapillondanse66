@@ -6,50 +6,15 @@
   "nav": {
     "home": "Accueil",
     "sully": "Sully",
-    "courses": "Cours et ateliers",
+    "courses": "Cours, ateliers, événements",
     "online": "Expérience en ligne",
     "contact": "Contact",
     "signup": "S'inscrire",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
-    "language": "Langue"
-  },
-  "disciplines": ["Danse intuitive", "Danse orientale", "Tribal fusion", "Pilates mat", "Ballet"],
-  "hero": {
-    "title": "Renaître, rayonner, s'envoler",
-    "lead": "Et si votre nouvelle vie commençait maintenant ? Le Papillon Danse est une association artistique de danse et de bien-être féminin à Perpignan.",
-    "ctaPrimary": "S'inscrire",
-    "ctaSecondary": "Voir les cours",
-    "imageAlt": "Sully en mouvement de danse orientale"
-  },
-  "about": {
-    "title": "L'association Le Papillon Danse 66",
-    "paragraphs": [
-      "Après la maternité, les épreuves, les blessures ou les changements de vie, il est possible de se reconnecter à soi-même, à son corps et à sa lumière intérieure.",
-      "Sully accompagne les femmes à travers la danse intuitive, la danse orientale et l'expression corporelle pour retrouver confiance, féminité, liberté et puissance intérieure.",
-      "Grâce à une approche artistique, pédagogique et profondément humaine, chaque femme est guidée pour révéler son potentiel et devenir l'artiste de sa propre vie. La danse devient un véritable outil de transformation durable et d'épanouissement personnel."
-    ]
-  },
-  "journey": {
-    "title": "Un parcours en trois étapes",
-    "intro": "Plus qu'un simple cours de danse, Sully propose un accompagnement progressif inspiré du cycle de transformation du papillon, symbole de renaissance, d'évolution et d'émancipation féminine.",
-    "stages": [
-      {
-        "name": "La chenille",
-        "subtitle": "La découverte de soi",
-        "text": "Chaque parcours commence par une phase de reconnexion. À travers le mouvement, la respiration et l'expression corporelle, les participantes apprennent à écouter leur corps et à prendre confiance dans un environnement bienveillant."
-      },
-      {
-        "name": "La chrysalide",
-        "subtitle": "L'évolution intérieure",
-        "text": "Le temps de l'introspection et de la transformation. Les femmes explorent leur posture, leur énergie, leur créativité et leur présence. La danse devient un outil d'expression émotionnelle et d'affirmation de soi."
-      },
-      {
-        "name": "Le papillon",
-        "subtitle": "La transformation",
-        "text": "Peu à peu, chaque femme révèle son identité, sa féminité et sa liberté d'expression, pleinement alignée avec elle-même et capable de créer une vie plus harmonieuse et épanouissante."
-      }
-    ]
+    "language": "Langue",
+    "signupOpen": "Inscriptions ouvertes",
+    "location": "Localisation"
   },
   "courses": {
     "title": "Les cours et expériences",
@@ -73,10 +38,6 @@
       }
     ],
     "more": "Voir tous les cours et ateliers"
-  },
-  "closing": {
-    "title": "Vous n'êtes pas ici par hasard",
-    "text": "Brillez. Transformez-vous. Osez voler. Votre transformation commence ici."
   },
   "signup": {
     "title": "Inscription",
@@ -125,5 +86,67 @@
   "notFound": {
     "title": "Page introuvable",
     "back": "Retour à l'accueil"
+  },
+  "hero": {
+    "lines": [
+      "Danse intuitive – Danse orientale",
+      "Tribal fusion – Pilates mat – Ballet"
+    ],
+    "music": "Musique",
+    "musicPlay": "Écouter la musique",
+    "musicPause": "Mettre la musique en pause"
+  },
+  "about": {
+    "title": "L'Association « Le Papillon Danse 66 »",
+    "lead": "Le Papillon Danse est une association artistique de danse et de bien-être féminin dans les Pyrénées-Orientales, à Perpignan.",
+    "question": "Et si votre nouvelle vie commençait maintenant ?",
+    "paragraphs": [
+      "Après la maternité, les épreuves, les blessures ou les changements de vie, il est possible de se reconnecter à soi-même, à son corps et à sa lumière intérieure.",
+      "Au sein de Le Papillon Danse, Sully accompagne les femmes à travers la danse intuitive, la danse orientale et l'expression corporelle pour retrouver confiance, féminité, liberté et puissance intérieure.",
+      "Grâce à une approche artistique, pédagogique et profondément humaine, chaque femme est guidée pour révéler son potentiel, développer son expression personnelle et devenir l'artiste de sa propre vie.",
+      "À travers les cours, ateliers et accompagnements, la danse devient un véritable outil de transformation durable, de reconnexion à soi et d'épanouissement personnel."
+    ],
+    "motto": "Renaître • Rayonner • S'envoler"
+  },
+  "philosophy": {
+    "title": "Philosophie et expérience",
+    "paragraphs": [
+      "Chez Le Papillon Danse, la danse est considérée comme un véritable parcours d'évolution personnelle, de reconnexion au corps et de transformation intérieure.",
+      "L'association artistique accompagne à Perpignan les femmes à travers la danse intuitive, la danse orientale et l'expression corporelle, dans une expérience immersive alliant mouvement, créativité, confiance en soi et bien-être féminin.",
+      "Plus qu'un simple cours de danse, Sully propose un accompagnement progressif inspiré du cycle de transformation du papillon, symbole de renaissance, d'évolution et d'émancipation féminine."
+    ],
+    "stagesTitle": "Un parcours en plusieurs étapes",
+    "accompTitle": "Un accompagnement artistique et humain",
+    "motto": "Danse • Transformation • Féminité • Expression de soi",
+    "stages": [
+      {
+        "name": "La chenille",
+        "subtitle": "La découverte de soi",
+        "text": "Chaque parcours commence par une phase de reconnexion. À travers le mouvement, la respiration et l'expression corporelle, les participantes apprennent à écouter leur corps et à prendre confiance dans un environnement bienveillant."
+      },
+      {
+        "name": "La chrysalide",
+        "subtitle": "L'évolution intérieure",
+        "text": "Le temps de l'introspection et de la transformation. Les femmes explorent leur posture, leur énergie, leur créativité et leur présence. La danse devient un outil d'expression émotionnelle et d'affirmation de soi."
+      },
+      {
+        "name": "Le papillon",
+        "subtitle": "La transformation",
+        "text": "Peu à peu, chaque femme révèle son identité, sa féminité et sa liberté d'expression, pleinement alignée avec elle-même et capable de créer une vie plus harmonieuse et épanouissante."
+      }
+    ]
+  },
+  "info": {
+    "title": "Information et tarifs",
+    "text": "Rejoignez l'association pour découvrir la danse et le bien-être. Pour toute question ou demande d'inscription, contactez-nous."
+  },
+  "closing": {
+    "lines": [
+      "Vous n'êtes pas ici par hasard",
+      "Brillez. Transformez-vous.",
+      "Osez voler.",
+      "Votre transformation commence ici"
+    ],
+    "cta": "Inscription"
   }
 }

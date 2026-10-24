@@ -6,50 +6,15 @@
   "nav": {
     "home": "Home",
     "sully": "Sully",
-    "courses": "Classes and workshops",
+    "courses": "Classes, workshops, events",
     "online": "Online experience",
     "contact": "Contact",
     "signup": "Sign up",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "language": "Language"
-  },
-  "disciplines": ["Intuitive dance", "Oriental dance", "Tribal fusion", "Pilates mat", "Ballet"],
-  "hero": {
-    "title": "Be reborn, shine, take flight",
-    "lead": "What if your new life started now? Le Papillon Danse is an artistic association for dance and women's well-being in Perpignan, France.",
-    "ctaPrimary": "Sign up",
-    "ctaSecondary": "See the classes",
-    "imageAlt": "Sully performing an oriental dance movement"
-  },
-  "about": {
-    "title": "The Le Papillon Danse 66 association",
-    "paragraphs": [
-      "After motherhood, hardship, injuries or life changes, it is possible to reconnect with yourself, your body and your inner light.",
-      "Sully guides women through intuitive dance, oriental dance and body expression to regain confidence, femininity, freedom and inner strength.",
-      "With an artistic, educational and deeply human approach, each woman is guided to reveal her potential and become the artist of her own life. Dance becomes a real tool for lasting transformation and personal growth."
-    ]
-  },
-  "journey": {
-    "title": "A journey in three stages",
-    "intro": "More than a dance class, Sully offers a gradual path inspired by the butterfly's transformation cycle, a symbol of rebirth, growth and women's emancipation.",
-    "stages": [
-      {
-        "name": "The caterpillar",
-        "subtitle": "Discovering yourself",
-        "text": "Every journey begins with reconnection. Through movement, breathing and body expression, participants learn to listen to their bodies and build confidence in a kind, safe space."
-      },
-      {
-        "name": "The chrysalis",
-        "subtitle": "Inner growth",
-        "text": "A time for reflection and transformation. Women explore their posture, energy, creativity and presence. Dance becomes a tool for emotional expression and self-affirmation."
-      },
-      {
-        "name": "The butterfly",
-        "subtitle": "Transformation",
-        "text": "Little by little, each woman reveals her identity, femininity and freedom of expression, fully aligned with herself and able to create a more harmonious, fulfilling life."
-      }
-    ]
+    "language": "Language",
+    "signupOpen": "Registration open",
+    "location": "Location"
   },
   "courses": {
     "title": "Classes and experiences",
@@ -73,10 +38,6 @@
       }
     ],
     "more": "See all classes and workshops"
-  },
-  "closing": {
-    "title": "You are not here by chance",
-    "text": "Shine. Transform. Dare to fly. Your transformation starts here."
   },
   "signup": {
     "title": "Sign up",
@@ -125,5 +86,67 @@
   "notFound": {
     "title": "Page not found",
     "back": "Back to home"
+  },
+  "hero": {
+    "lines": [
+      "Intuitive dance – Oriental dance",
+      "Tribal fusion – Pilates mat – Ballet"
+    ],
+    "music": "Music",
+    "musicPlay": "Play the music",
+    "musicPause": "Pause the music"
+  },
+  "about": {
+    "title": "The « Le Papillon Danse 66 » Association",
+    "lead": "Le Papillon Danse is an artistic association for dance and women's well-being in the Pyrénées-Orientales, in Perpignan, France.",
+    "question": "What if your new life started now?",
+    "paragraphs": [
+      "After motherhood, hardship, injuries or life changes, it is possible to reconnect with yourself, your body and your inner light.",
+      "At Le Papillon Danse, Sully guides women through intuitive dance, oriental dance and body expression to regain confidence, femininity, freedom and inner strength.",
+      "With an artistic, educational and deeply human approach, each woman is guided to reveal her potential, develop her personal expression and become the artist of her own life.",
+      "Through classes, workshops and coaching, dance becomes a real tool for lasting transformation, reconnection with yourself and personal growth."
+    ],
+    "motto": "Be reborn • Shine • Take flight"
+  },
+  "philosophy": {
+    "title": "Philosophy and experience",
+    "paragraphs": [
+      "At Le Papillon Danse, dance is a true journey of personal growth, reconnection with the body and inner transformation.",
+      "In Perpignan, the association guides women through intuitive dance, oriental dance and body expression, in an immersive experience combining movement, creativity, self-confidence and women's well-being.",
+      "More than a dance class, Sully offers a gradual path inspired by the butterfly's transformation cycle, a symbol of rebirth, growth and women's emancipation."
+    ],
+    "stagesTitle": "A journey in several stages",
+    "accompTitle": "Artistic and human guidance",
+    "motto": "Dance • Transformation • Femininity • Self-expression",
+    "stages": [
+      {
+        "name": "The caterpillar",
+        "subtitle": "Discovering yourself",
+        "text": "Every journey begins with reconnection. Through movement, breathing and body expression, participants learn to listen to their bodies and build confidence in a kind, safe space."
+      },
+      {
+        "name": "The chrysalis",
+        "subtitle": "Inner growth",
+        "text": "A time for reflection and transformation. Women explore their posture, energy, creativity and presence. Dance becomes a tool for emotional expression and self-affirmation."
+      },
+      {
+        "name": "The butterfly",
+        "subtitle": "Transformation",
+        "text": "Little by little, each woman reveals her identity, femininity and freedom of expression, fully aligned with herself and able to create a more harmonious, fulfilling life."
+      }
+    ]
+  },
+  "info": {
+    "title": "Information and prices",
+    "text": "Join the association to discover dance and well-being. For any question or to sign up, get in touch."
+  },
+  "closing": {
+    "lines": [
+      "You are not here by chance",
+      "Shine. Transform.",
+      "Dare to fly.",
+      "Your transformation starts here"
+    ],
+    "cta": "Sign up"
   }
 }

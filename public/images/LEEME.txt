@@ -1,16 +1,15 @@
-Las imágenes se bajan del sitio original con:
+Las imágenes y la música se bajan del sitio original con:
 
   npm run images
 
-Nombres que usa el sitio:
-
-hero.jpg               Portada
-about.jpg              Sección de la asociación
-sully.jpg              Página de Sully
-logo.jpg               Logo (sección de cierre)
+logo.png               Logo (ya incluido en el repo, fondo transparente)
+sky.jpg                Fondo de cielo y mar de todas las secciones
+about.jpg              Sección "L'Association" (Sully bailando)
+philosophy-bg.jpg      Fondo del círculo de "Philosophie"
+sully.jpg              Foto de Sully (Philosophie y página Sully)
 course-intuitive.jpg   Danza intuitiva
 course-orientale.jpg   Danza oriental
-course-prepa.jpg       Preparación corporal (hoy es una foto de stock de Wix: reemplazar por una propia)
+course-prepa.jpg       Preparación corporal (foto de stock de Wix: reemplazar)
 course-ateliers.jpg    Talleres creativos
 
 Si Sully pasa fotos mejores, reemplazar el archivo con el mismo nombre.

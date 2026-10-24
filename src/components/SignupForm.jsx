@@ -58,7 +58,7 @@ export default function SignupForm() {
         <textarea name="message" rows="5" />
       </label>
 
-      <button className="btn btn--plum" disabled={status === 'sending'}>
+      <button className="btn-gold" disabled={status === 'sending'}>
         {status === 'sending' ? t('form.sending') : t('form.submit')}
       </button>
 

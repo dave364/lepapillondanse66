@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { IMAGES } from '../config/site'
-import ArchImage from './ArchImage'
+import SafeImg from './SafeImg'
 
 export default function CourseList() {
   const { t } = useTranslation()
@@ -10,10 +10,11 @@ export default function CourseList() {
     <ul className="courses">
       {items.map((c, i) => (
         <li key={c.title} className="course">
-          <ArchImage src={IMAGES.courses[i]} alt={c.title} className="course__img" />
-          <div className="course__body">
-            <h3>{c.title}</h3>
-            <p>{c.text}</p>
+          <h3 className="course__title">{c.title}</h3>
+          <p className="course__text">{c.text}</p>
+          {/* Foto redonda con borde dorado, como en el sitio original */}
+          <div className="round">
+            <SafeImg src={IMAGES.courses[i]} alt={c.title} />
           </div>
         </li>
       ))}

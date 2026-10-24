@@ -5,19 +5,15 @@ import SignupForm from '../components/SignupForm'
 export default function Signup() {
   const { t } = useTranslation()
   return (
-    <section className="section page">
-      <div className="container signup">
-        <div className="prose">
-          <h1>{t('signup.title')}</h1>
-          <p className="page__lead">{t('signup.intro')}</p>
-          <a href={SITE.signupPdf} className="btn btn--ghost-dark" download>
-            {t('signup.pdf')}
-          </a>
-        </div>
-        <div className="signup__form">
-          <h2>{t('signup.formTitle')}</h2>
-          <SignupForm />
-        </div>
+    <section className="block sky">
+      <h1 className="block__title">{t('signup.title')}</h1>
+      <p className="info">{t('signup.intro')}</p>
+      <p className="center">
+        <a href={SITE.signupPdf} className="btn-gold" download>{t('signup.pdf')}</a>
+      </p>
+      <div className="panel">
+        <h2 className="panel__title">{t('signup.formTitle')}</h2>
+        <SignupForm />
       </div>
     </section>
   )

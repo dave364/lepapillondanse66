@@ -35,7 +35,7 @@ public/
 
 ## Pendiente
 
-- [ ] Bajar las imágenes del sitio original: `npm run images` (ver `public/images/LEEME.txt`)
+- [ ] Bajar las imágenes y la música del sitio original: `npm run images` (el logo ya está en el repo)
 - [ ] Reemplazar la foto de stock de Wix de "Préparation corporelle" por una propia
 - [ ] PDF de inscripción en `public/docs/inscription.pdf`
 - [ ] Crear el formulario en [Formspree](https://formspree.io) y poner su ID en `.env` (ver `.env.example`)

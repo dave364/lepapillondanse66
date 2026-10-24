@@ -6,50 +6,15 @@
   "nav": {
     "home": "Inicio",
     "sully": "Sully",
-    "courses": "Clases y talleres",
+    "courses": "Clases, talleres, eventos",
     "online": "Experiencia online",
     "contact": "Contacto",
     "signup": "Inscribirme",
     "openMenu": "Abrir el menú",
     "closeMenu": "Cerrar el menú",
-    "language": "Idioma"
-  },
-  "disciplines": ["Danza intuitiva", "Danza oriental", "Tribal fusion", "Pilates mat", "Ballet"],
-  "hero": {
-    "title": "Renacer, brillar, volar",
-    "lead": "¿Y si tu nueva vida empezara ahora? Le Papillon Danse es una asociación artística de danza y bienestar femenino en Perpignan.",
-    "ctaPrimary": "Inscribirme",
-    "ctaSecondary": "Ver las clases",
-    "imageAlt": "Sully en un movimiento de danza oriental"
-  },
-  "about": {
-    "title": "La asociación Le Papillon Danse 66",
-    "paragraphs": [
-      "Después de la maternidad, las pruebas, las heridas o los cambios de vida, es posible volver a conectar con una misma, con el cuerpo y con la luz interior.",
-      "Sully acompaña a las mujeres a través de la danza intuitiva, la danza oriental y la expresión corporal para recuperar la confianza, la feminidad, la libertad y la fuerza interior.",
-      "Con un enfoque artístico, pedagógico y profundamente humano, cada mujer es guiada para revelar su potencial y convertirse en la artista de su propia vida. La danza se vuelve una verdadera herramienta de transformación duradera y de crecimiento personal."
-    ]
-  },
-  "journey": {
-    "title": "Un recorrido en tres etapas",
-    "intro": "Más que una simple clase de danza, Sully propone un acompañamiento progresivo inspirado en el ciclo de transformación de la mariposa, símbolo de renacimiento, evolución y emancipación femenina.",
-    "stages": [
-      {
-        "name": "La oruga",
-        "subtitle": "El descubrimiento de una misma",
-        "text": "Cada recorrido empieza con una fase de reconexión. A través del movimiento, la respiración y la expresión corporal, las participantes aprenden a escuchar su cuerpo y a ganar confianza en un ambiente cálido y seguro."
-      },
-      {
-        "name": "La crisálida",
-        "subtitle": "La evolución interior",
-        "text": "El tiempo de la introspección y la transformación. Las mujeres exploran su postura, su energía, su creatividad y su presencia. La danza se vuelve una herramienta de expresión emocional y de afirmación personal."
-      },
-      {
-        "name": "La mariposa",
-        "subtitle": "La transformación",
-        "text": "Poco a poco, cada mujer revela su identidad, su feminidad y su libertad de expresión, en plena armonía consigo misma y capaz de crear una vida más plena y creativa."
-      }
-    ]
+    "language": "Idioma",
+    "signupOpen": "Inscripciones abiertas",
+    "location": "Ubicación"
   },
   "courses": {
     "title": "Clases y experiencias",
@@ -73,10 +38,6 @@
       }
     ],
     "more": "Ver todas las clases y talleres"
-  },
-  "closing": {
-    "title": "No estás aquí por casualidad",
-    "text": "Brillá. Transformate. Animate a volar. Tu transformación empieza aquí."
   },
   "signup": {
     "title": "Inscripción",
@@ -125,5 +86,67 @@
   "notFound": {
     "title": "Página no encontrada",
     "back": "Volver al inicio"
+  },
+  "hero": {
+    "lines": [
+      "Danza intuitiva – Danza oriental",
+      "Tribal fusion – Pilates mat – Ballet"
+    ],
+    "music": "Música",
+    "musicPlay": "Escuchar la música",
+    "musicPause": "Pausar la música"
+  },
+  "about": {
+    "title": "La Asociación « Le Papillon Danse 66 »",
+    "lead": "Le Papillon Danse es una asociación artística de danza y bienestar femenino en los Pirineos Orientales, en Perpignan.",
+    "question": "¿Y si tu nueva vida empezara ahora?",
+    "paragraphs": [
+      "Después de la maternidad, las pruebas, las heridas o los cambios de vida, es posible volver a conectar con una misma, con el cuerpo y con la luz interior.",
+      "En Le Papillon Danse, Sully acompaña a las mujeres a través de la danza intuitiva, la danza oriental y la expresión corporal para recuperar la confianza, la feminidad, la libertad y la fuerza interior.",
+      "Con un enfoque artístico, pedagógico y profundamente humano, cada mujer es guiada para revelar su potencial, desarrollar su expresión personal y convertirse en la artista de su propia vida.",
+      "A través de las clases, los talleres y el acompañamiento, la danza se vuelve una verdadera herramienta de transformación duradera, de reconexión con una misma y de crecimiento personal."
+    ],
+    "motto": "Renacer • Brillar • Volar"
+  },
+  "philosophy": {
+    "title": "Filosofía y experiencia",
+    "paragraphs": [
+      "En Le Papillon Danse, la danza es un verdadero recorrido de evolución personal, de reconexión con el cuerpo y de transformación interior.",
+      "La asociación acompaña a las mujeres en Perpignan a través de la danza intuitiva, la danza oriental y la expresión corporal, en una experiencia inmersiva que une movimiento, creatividad, confianza y bienestar femenino.",
+      "Más que una simple clase de danza, Sully propone un acompañamiento progresivo inspirado en el ciclo de transformación de la mariposa, símbolo de renacimiento, evolución y emancipación femenina."
+    ],
+    "stagesTitle": "Un recorrido en varias etapas",
+    "accompTitle": "Un acompañamiento artístico y humano",
+    "motto": "Danza • Transformación • Feminidad • Expresión personal",
+    "stages": [
+      {
+        "name": "La oruga",
+        "subtitle": "El descubrimiento de una misma",
+        "text": "Cada recorrido empieza con una fase de reconexión. A través del movimiento, la respiración y la expresión corporal, las participantes aprenden a escuchar su cuerpo y a ganar confianza en un ambiente cálido y seguro."
+      },
+      {
+        "name": "La crisálida",
+        "subtitle": "La evolución interior",
+        "text": "El tiempo de la introspección y la transformación. Las mujeres exploran su postura, su energía, su creatividad y su presencia. La danza se vuelve una herramienta de expresión emocional y de afirmación personal."
+      },
+      {
+        "name": "La mariposa",
+        "subtitle": "La transformación",
+        "text": "Poco a poco, cada mujer revela su identidad, su feminidad y su libertad de expresión, en plena armonía consigo misma y capaz de crear una vida más plena y creativa."
+      }
+    ]
+  },
+  "info": {
+    "title": "Información y tarifas",
+    "text": "Sumate a la asociación para descubrir la danza y el bienestar. Para cualquier consulta o inscripción, escribinos."
+  },
+  "closing": {
+    "lines": [
+      "No estás aquí por casualidad",
+      "Brillá. Transformate.",
+      "Animate a volar.",
+      "Tu transformación empieza aquí"
+    ],
+    "cta": "Inscripción"
   }
 }

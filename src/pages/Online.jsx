@@ -5,16 +5,12 @@ import { SITE } from '../config/site'
 export default function Online() {
   const { t } = useTranslation()
   return (
-    <section className="section page">
-      <div className="container prose">
-        <h1>{t('online.title')}</h1>
-        <p className="page__lead">{t('online.text')}</p>
-        <p>
-          <a href={SITE.social.youtube} className="btn btn--plum" target="_blank" rel="noreferrer">
-            {t('online.youtube')}
-          </a>
-        </p>
-      </div>
+    <section className="block sky block--short">
+      <h1 className="block__title">{t('online.title')}</h1>
+      <p className="info">{t('online.text')}</p>
+      <p className="center">
+        <a href={SITE.social.youtube} className="btn-gold" target="_blank" rel="noreferrer">{t('online.youtube')}</a>
+      </p>
     </section>
   )
 }

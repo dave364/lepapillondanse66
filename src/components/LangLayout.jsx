@@ -47,8 +47,7 @@ export default function LangLayout() {
         ))}
         <link rel="alternate" hrefLang="x-default" href={urlFor(DEFAULT_LANG)} />
       </Helmet>
-      <a href="#main" className="skip-link">↓</a>
-      <Header />
+      <Header full={!rest} />
       <main id="main">
         <Outlet />
       </main>
