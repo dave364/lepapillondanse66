@@ -22,7 +22,9 @@ export default function LangLayout() {
   }, [lang, valid, i18n])
 
   // Vuelve arriba al cambiar de página
-  useEffect(() => window.scrollTo(0, 0), [pathname])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
 
   if (!valid) return <Navigate to={`/${DEFAULT_LANG}`} replace />
   if (i18n.language !== lang) i18n.changeLanguage(lang)

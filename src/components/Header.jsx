@@ -11,7 +11,9 @@ export default function Header() {
   const { pathname } = useLocation()
 
   // Cierra el menú móvil al cambiar de página
-  useEffect(() => setOpen(false), [pathname])
+  useEffect(() => {
+    setOpen(false)
+  }, [pathname])
 
   const links = [
     { to: `/${lang}`, label: t('nav.home'), end: true },
