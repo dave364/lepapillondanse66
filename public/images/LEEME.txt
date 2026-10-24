@@ -1,11 +1,16 @@
-Imágenes del sitio (usar los originales de Sully, en .jpg):
+Las imágenes se bajan del sitio original con:
 
-hero.jpg               Portada (vertical, ideal 900x1200)
+  npm run images
+
+Nombres que usa el sitio:
+
+hero.jpg               Portada
 about.jpg              Sección de la asociación
 sully.jpg              Página de Sully
+logo.jpg               Logo (sección de cierre)
 course-intuitive.jpg   Danza intuitiva
 course-orientale.jpg   Danza oriental
-course-prepa.jpg       Preparación corporal
+course-prepa.jpg       Preparación corporal (hoy es una foto de stock de Wix: reemplazar por una propia)
 course-ateliers.jpg    Talleres creativos
 
-Mientras falten, el sitio muestra un degradado en su lugar.
+Si Sully pasa fotos mejores, reemplazar el archivo con el mismo nombre.

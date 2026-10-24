@@ -35,7 +35,8 @@ public/
 
 ## Pendiente
 
-- [ ] Imágenes originales de Sully en `public/images/` (nombres en `LEEME.txt`)
+- [ ] Bajar las imágenes del sitio original: `npm run images` (ver `public/images/LEEME.txt`)
+- [ ] Reemplazar la foto de stock de Wix de "Préparation corporelle" por una propia
 - [ ] PDF de inscripción en `public/docs/inscription.pdf`
 - [ ] Crear el formulario en [Formspree](https://formspree.io) y poner su ID en `.env` (ver `.env.example`)
 - [ ] Texto completo de la historia de Sully

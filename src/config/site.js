@@ -16,9 +16,10 @@ export const SITE = {
   formspreeId: import.meta.env.VITE_FORMSPREE_ID || '',
 }
 
-// Imágenes: reemplazar los archivos en public/images/ por los originales de Sully
+// Imágenes: se bajan del sitio original con `node scripts/download-images.mjs`
 export const IMAGES = {
   hero: '/images/hero.jpg',
+  logo: '/images/logo.jpg',
   about: '/images/about.jpg',
   sully: '/images/sully.jpg',
   courses: [

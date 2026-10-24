@@ -85,6 +85,8 @@ export default function Home() {
 
       <section className="closing">
         <div className="container closing__inner">
+          <img src={IMAGES.logo} alt="Le Papillon Danse" className="closing__logo" loading="lazy"
+            onError={(e) => { e.currentTarget.hidden = true }} />
           <h2>{t('closing.title')}</h2>
           <p>{t('closing.text')}</p>
           <Link to={`/${lang}/inscription`} className="btn btn--gold">{t('hero.ctaPrimary')}</Link>
