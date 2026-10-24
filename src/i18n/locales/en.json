@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Oriental dance and intuitive dance in Perpignan | Le Papillon Danse 66",
+    "description": "Oriental dance, intuitive dance, tribal fusion, Pilates and ballet with Le Papillon Danse 66 in Perpignan. An artistic, transformative experience for women."
+  },
+  "nav": {
+    "home": "Home",
+    "sully": "Sully",
+    "courses": "Classes and workshops",
+    "online": "Online experience",
+    "contact": "Contact",
+    "signup": "Sign up",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  },
+  "disciplines": ["Intuitive dance", "Oriental dance", "Tribal fusion", "Pilates mat", "Ballet"],
+  "hero": {
+    "title": "Be reborn, shine, take flight",
+    "lead": "What if your new life started now? Le Papillon Danse is an artistic association for dance and women's well-being in Perpignan, France.",
+    "ctaPrimary": "Sign up",
+    "ctaSecondary": "See the classes",
+    "imageAlt": "Sully performing an oriental dance movement"
+  },
+  "about": {
+    "title": "The Le Papillon Danse 66 association",
+    "paragraphs": [
+      "After motherhood, hardship, injuries or life changes, it is possible to reconnect with yourself, your body and your inner light.",
+      "Sully guides women through intuitive dance, oriental dance and body expression to regain confidence, femininity, freedom and inner strength.",
+      "With an artistic, educational and deeply human approach, each woman is guided to reveal her potential and become the artist of her own life. Dance becomes a real tool for lasting transformation and personal growth."
+    ]
+  },
+  "journey": {
+    "title": "A journey in three stages",
+    "intro": "More than a dance class, Sully offers a gradual path inspired by the butterfly's transformation cycle, a symbol of rebirth, growth and women's emancipation.",
+    "stages": [
+      {
+        "name": "The caterpillar",
+        "subtitle": "Discovering yourself",
+        "text": "Every journey begins with reconnection. Through movement, breathing and body expression, participants learn to listen to their bodies and build confidence in a kind, safe space."
+      },
+      {
+        "name": "The chrysalis",
+        "subtitle": "Inner growth",
+        "text": "A time for reflection and transformation. Women explore their posture, energy, creativity and presence. Dance becomes a tool for emotional expression and self-affirmation."
+      },
+      {
+        "name": "The butterfly",
+        "subtitle": "Transformation",
+        "text": "Little by little, each woman reveals her identity, femininity and freedom of expression, fully aligned with herself and able to create a more harmonious, fulfilling life."
+      }
+    ]
+  },
+  "courses": {
+    "title": "Classes and experiences",
+    "intro": "In-person classes in Perpignan, open to all women, whatever their age or level.",
+    "items": [
+      {
+        "title": "Intuitive dance and intuitive oriental dance",
+        "text": "Two experiences in one: a guided sensory approach to reconnect your body with its own rhythms and release your inner energy."
+      },
+      {
+        "title": "Oriental dance",
+        "text": "Explore the ancestral movements of oriental dance for elegant artistic expression and genuine self-affirmation."
+      },
+      {
+        "title": "Body conditioning",
+        "text": "A gentle, mindful practice for dancers and non-dancers: reconnect with your body, strengthen it gently and reveal your femininity in movement."
+      },
+      {
+        "title": "Creative workshops",
+        "text": "Develop your technique, creativity and body expression in an artistic workshop open to all levels and collaborations."
+      }
+    ],
+    "more": "See all classes and workshops"
+  },
+  "closing": {
+    "title": "You are not here by chance",
+    "text": "Shine. Transform. Dare to fly. Your transformation starts here."
+  },
+  "signup": {
+    "title": "Sign up",
+    "intro": "For any question or to sign up, fill in the form or download the registration sheet.",
+    "pdf": "Download the registration sheet (PDF)",
+    "formTitle": "Online registration request"
+  },
+  "form": {
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "course": "Class you're interested in",
+    "coursePlaceholder": "Choose a class",
+    "message": "Message",
+    "submit": "Send request",
+    "sending": "Sending…",
+    "success": "Request sent. Sully will get back to you very soon.",
+    "error": "The request couldn't be sent. Check your connection or write directly to the email address below.",
+    "notConfigured": "The form isn't active yet. Write directly to the email address below."
+  },
+  "sully": {
+    "title": "Sully",
+    "lead": "Founder of Le Papillon Danse 66",
+    "paragraphs": [
+      "Founded and led by Sully, the association combines movement teaching, intuitive dance, oriental dance, body expression and creative coaching.",
+      "Through workshops, classes and artistic experiences, each woman receives practical tools to build her confidence, her creativity and her ability to become the artist of her own life, whether personally, professionally or artistically."
+    ]
+  },
+  "online": {
+    "title": "Online experience",
+    "text": "Coming soon: meditations, programs and guides so you can practice from anywhere in the world. In the meantime, find Sully on YouTube.",
+    "youtube": "Visit the YouTube channel"
+  },
+  "contact": {
+    "title": "Contact and location",
+    "addressTitle": "Address",
+    "address": "66000 Perpignan, France",
+    "phoneTitle": "Phone",
+    "emailTitle": "Email",
+    "socialTitle": "Social media"
+  },
+  "footer": {
+    "tagline": "Dance, transformation, femininity, self-expression.",
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "back": "Back to home"
+  }
+}

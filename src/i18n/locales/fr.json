@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Danse orientale et danse intuitive à Perpignan | Le Papillon Danse 66",
+    "description": "Danse orientale, danse intuitive, tribal fusion, Pilates et ballet avec Le Papillon Danse 66 à Perpignan. Une expérience artistique et transformatrice pour les femmes."
+  },
+  "nav": {
+    "home": "Accueil",
+    "sully": "Sully",
+    "courses": "Cours et ateliers",
+    "online": "Expérience en ligne",
+    "contact": "Contact",
+    "signup": "S'inscrire",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue"
+  },
+  "disciplines": ["Danse intuitive", "Danse orientale", "Tribal fusion", "Pilates mat", "Ballet"],
+  "hero": {
+    "title": "Renaître, rayonner, s'envoler",
+    "lead": "Et si votre nouvelle vie commençait maintenant ? Le Papillon Danse est une association artistique de danse et de bien-être féminin à Perpignan.",
+    "ctaPrimary": "S'inscrire",
+    "ctaSecondary": "Voir les cours",
+    "imageAlt": "Sully en mouvement de danse orientale"
+  },
+  "about": {
+    "title": "L'association Le Papillon Danse 66",
+    "paragraphs": [
+      "Après la maternité, les épreuves, les blessures ou les changements de vie, il est possible de se reconnecter à soi-même, à son corps et à sa lumière intérieure.",
+      "Sully accompagne les femmes à travers la danse intuitive, la danse orientale et l'expression corporelle pour retrouver confiance, féminité, liberté et puissance intérieure.",
+      "Grâce à une approche artistique, pédagogique et profondément humaine, chaque femme est guidée pour révéler son potentiel et devenir l'artiste de sa propre vie. La danse devient un véritable outil de transformation durable et d'épanouissement personnel."
+    ]
+  },
+  "journey": {
+    "title": "Un parcours en trois étapes",
+    "intro": "Plus qu'un simple cours de danse, Sully propose un accompagnement progressif inspiré du cycle de transformation du papillon, symbole de renaissance, d'évolution et d'émancipation féminine.",
+    "stages": [
+      {
+        "name": "La chenille",
+        "subtitle": "La découverte de soi",
+        "text": "Chaque parcours commence par une phase de reconnexion. À travers le mouvement, la respiration et l'expression corporelle, les participantes apprennent à écouter leur corps et à prendre confiance dans un environnement bienveillant."
+      },
+      {
+        "name": "La chrysalide",
+        "subtitle": "L'évolution intérieure",
+        "text": "Le temps de l'introspection et de la transformation. Les femmes explorent leur posture, leur énergie, leur créativité et leur présence. La danse devient un outil d'expression émotionnelle et d'affirmation de soi."
+      },
+      {
+        "name": "Le papillon",
+        "subtitle": "La transformation",
+        "text": "Peu à peu, chaque femme révèle son identité, sa féminité et sa liberté d'expression, pleinement alignée avec elle-même et capable de créer une vie plus harmonieuse et épanouissante."
+      }
+    ]
+  },
+  "courses": {
+    "title": "Les cours et expériences",
+    "intro": "Des cours en présentiel à Perpignan, ouverts à toutes les femmes, quel que soit leur âge ou leur niveau.",
+    "items": [
+      {
+        "title": "Danse intuitive et orientale intuitive",
+        "text": "Deux expériences en une : une approche sensorielle guidée pour reconnecter votre corps à ses propres rythmes et libérer votre énergie intérieure."
+      },
+      {
+        "title": "Danse orientale",
+        "text": "Explorez les mouvements ancestraux de la danse orientale pour une expression artistique élégante et une véritable affirmation de soi."
+      },
+      {
+        "title": "Préparation corporelle",
+        "text": "Une pratique douce et consciente, pour danseuses et non-danseuses : se reconnecter à son corps, le renforcer en douceur et révéler sa féminité en mouvement."
+      },
+      {
+        "title": "Ateliers créatifs",
+        "text": "Développez votre technique, votre créativité et votre expression corporelle dans un atelier artistique ouvert à tous les niveaux et aux collaborations."
+      }
+    ],
+    "more": "Voir tous les cours et ateliers"
+  },
+  "closing": {
+    "title": "Vous n'êtes pas ici par hasard",
+    "text": "Brillez. Transformez-vous. Osez voler. Votre transformation commence ici."
+  },
+  "signup": {
+    "title": "Inscription",
+    "intro": "Pour toute question ou demande d'inscription, remplissez le formulaire ou téléchargez la fiche d'inscription.",
+    "pdf": "Télécharger la fiche d'inscription (PDF)",
+    "formTitle": "Demande d'inscription en ligne"
+  },
+  "form": {
+    "name": "Nom et prénom",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "course": "Cours qui vous intéresse",
+    "coursePlaceholder": "Choisir un cours",
+    "message": "Message",
+    "submit": "Envoyer la demande",
+    "sending": "Envoi en cours…",
+    "success": "Demande envoyée. Sully vous répondra très bientôt.",
+    "error": "La demande n'a pas pu être envoyée. Vérifiez votre connexion ou écrivez directement à l'adresse e-mail ci-dessous.",
+    "notConfigured": "Le formulaire n'est pas encore activé. Écrivez directement à l'adresse e-mail ci-dessous."
+  },
+  "sully": {
+    "title": "Sully",
+    "lead": "Fondatrice de Le Papillon Danse 66",
+    "paragraphs": [
+      "Fondée et accompagnée par Sully, l'association propose une approche mêlant pédagogie du mouvement, danse intuitive, danse orientale, expression corporelle et accompagnement créatif.",
+      "À travers les ateliers, cours et expériences artistiques, chaque femme reçoit des outils concrets pour développer sa confiance, sa créativité et sa capacité à devenir l'artiste de sa propre vie, dans son univers personnel, professionnel ou artistique."
+    ]
+  },
+  "online": {
+    "title": "Expérience en ligne",
+    "text": "Bientôt : méditations, programmes et guides pour pratiquer où que vous soyez dans le monde. En attendant, retrouvez Sully sur YouTube.",
+    "youtube": "Voir la chaîne YouTube"
+  },
+  "contact": {
+    "title": "Contact et localisation",
+    "addressTitle": "Adresse",
+    "address": "66000 Perpignan, France",
+    "phoneTitle": "Téléphone",
+    "emailTitle": "E-mail",
+    "socialTitle": "Réseaux sociaux"
+  },
+  "footer": {
+    "tagline": "Danse, transformation, féminité, expression de soi.",
+    "rights": "Tous droits réservés."
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "back": "Retour à l'accueil"
+  }
+}
