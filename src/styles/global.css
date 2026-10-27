@@ -344,6 +344,22 @@ p { margin: 0 0 1em; }
   font-size: 1.15rem;
   font-weight: 700;
 }
+/* En pantallas grandes, como en el original: la foto ocupa toda la mitad
+   izquierda del círculo, translúcida, y deja ver las alas detrás */
+@media (min-width: 821px) {
+  .philo { align-items: stretch; }
+  .philo__img {
+    align-self: stretch;
+    justify-self: stretch;
+    max-width: none;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+    opacity: 0.42;
+  }
+  .philo__text { align-self: center; }
+}
 @media (max-width: 820px) {
   .philo { grid-template-columns: 1fr; }
   .philo::before { border-radius: 48% / 22%; inset-inline: 0; }
