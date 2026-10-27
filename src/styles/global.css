@@ -6,7 +6,7 @@
    (inline/block) para que el árabe (RTL) se espeje solo.
 
    Tipografías del original → equivalentes gratuitas:
-   eschaton  → Gloock         (título principal y títulos de cursos)
+   eschaton  → Gilda Display  (título principal y títulos de cursos)
    aboreto   → Aboreto        (títulos de sección, igual que el original)
    cormorant → Cormorant Garamond (igual que el original)
    gilroy    → Outfit         (textos chicos, footer)
@@ -19,7 +19,7 @@
   --lilac-deep: #b48fd4;
   --pill: #e6dcf7;      /* botones del menú */
 
-  --f-display: 'Gloock', 'Didot', Georgia, serif;
+  --f-display: 'Gilda Display', 'Didot', Georgia, serif;
   --f-title: 'Aboreto', 'Trajan Pro', Georgia, serif;
   --f-text: 'Cormorant Garamond', Garamond, Georgia, serif;
   --f-sans: 'Outfit', 'Helvetica Neue', Arial, sans-serif;
