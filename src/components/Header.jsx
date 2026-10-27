@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { IMAGES } from '../config/site'
 import LanguageSwitcher from './LanguageSwitcher'
 import MusicButton from './MusicButton'
+import OrnateButton from './OrnateButton'
 
 // Cabecera igual a la del sitio original: logo centrado, título con las
 // disciplinas y menú de botones. En la home se muestra completa; en las
@@ -46,7 +47,8 @@ export default function Header({ full = false }) {
         </h1>
       )}
 
-      <button
+      <OrnateButton
+        size="sm"
         className="header__toggle"
         aria-expanded={open}
         aria-controls="main-nav"
@@ -54,13 +56,13 @@ export default function Header({ full = false }) {
       >
         <span className="burger" data-open={open} aria-hidden="true" />
         {open ? t('nav.closeMenu') : t('nav.openMenu')}
-      </button>
+      </OrnateButton>
 
       <nav id="main-nav" className="nav" data-open={open}>
         <ul>
           {links.map((l) => (
             <li key={l.to}>
-              <NavLink to={l.to} end={l.end}>{l.label}</NavLink>
+              <OrnateButton as={NavLink} size="sm" to={l.to} end={l.end}>{l.label}</OrnateButton>
             </li>
           ))}
         </ul>

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import CourseList from '../components/CourseList'
+import OrnateButton from '../components/OrnateButton'
 
 export default function Courses() {
   const { t, i18n } = useTranslation()
@@ -10,7 +11,7 @@ export default function Courses() {
       <p className="info">{t('courses.intro')}</p>
       <CourseList />
       <p className="center">
-        <Link to={`/${i18n.language}/inscription`} className="btn-gold">{t('closing.cta')}</Link>
+        <OrnateButton as={Link} to={`/${i18n.language}/inscription`}>{t('closing.cta')}</OrnateButton>
       </p>
     </section>
   )

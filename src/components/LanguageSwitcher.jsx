@@ -20,7 +20,7 @@ export default function LanguageSwitcher() {
   }
 
   return (
-    <label className="lang">
+    <label className="lang ornate ornate--sm">
       <span className="visually-hidden">{t('nav.language')}</span>
       <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16">
         <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.6" />

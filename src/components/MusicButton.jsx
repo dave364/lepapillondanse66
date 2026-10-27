@@ -1,5 +1,6 @@
 import { useSyncExternalStore } from 'react'
 import { useTranslation } from 'react-i18next'
+import OrnateButton from './OrnateButton'
 import { isAvailable, isPlaying, pauseMusic, playMusic, subscribe } from '../lib/music'
 
 // Botón para pausar o volver a poner la música
@@ -11,7 +12,8 @@ export default function MusicButton() {
   if (!available) return null
 
   return (
-    <button
+    <OrnateButton
+      size="sm"
       className="music"
       onClick={() => (playing ? pauseMusic() : playMusic())}
       aria-pressed={playing}
@@ -25,6 +27,6 @@ export default function MusicButton() {
         )}
       </svg>
       <span>{t('hero.music')}</span>
-    </button>
+    </OrnateButton>
   )
 }

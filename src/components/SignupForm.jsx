@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { SITE } from '../config/site'
+import OrnateButton from './OrnateButton'
 
 // Envía los datos por email usando Formspree (sin backend propio)
 export default function SignupForm() {
@@ -58,9 +59,9 @@ export default function SignupForm() {
         <textarea name="message" rows="5" />
       </label>
 
-      <button className="btn-gold" disabled={status === 'sending'}>
+      <OrnateButton className="form__submit" disabled={status === 'sending'}>
         {status === 'sending' ? t('form.sending') : t('form.submit')}
-      </button>
+      </OrnateButton>
 
       {['success', 'error', 'notConfigured'].includes(status) && (
         <p className={`form__status form__status--${status}`} role="status">

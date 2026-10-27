@@ -1,63 +1,67 @@
 import { forwardRef, useId } from 'react'
 
-// Marco dorado con volutas, inspirado en el logo de Le Papillon:
-// óvalo doble, curvas a los costados y una gema verde arriba.
-function Frame({ id }) {
-  const gold = `url(#${id}-gold)`
-  const curl = (
-    <g fill="none" stroke={gold} strokeWidth="1.6" strokeLinecap="round">
-      <path d="M22 40c-8 0-13-5-13-10 0-4 3-7 7-7 3 0 5 2 5 4.5S19 31 17 31" />
-      <path d="M22 40c-8 0-13 5-13 10 0 4 3 7 7 7 3 0 5-2 5-4.5S19 49 17 49" />
-      <path d="M9 40H2" />
-      <circle cx="3" cy="40" r="1.6" fill={gold} stroke="none" />
-    </g>
-  )
+// Botón con el estilo del logo de Le Papillon: óvalo con borde dorado doble.
+// - size="lg": botones principales (Entrer, Inscription), con volutas a los
+//   costados y una gema verde arriba.
+// - size="sm": menú, idioma, música. Solo el óvalo dorado.
+// Se adapta al ancho del texto. Acepta `as` para usarlo como link
+// (por ej. as={Link} o as="a").
 
+function Curl({ id, side }) {
   return (
-    <svg className="ornate__frame" viewBox="0 0 300 80" preserveAspectRatio="none" aria-hidden="true">
+    <svg className={`ornate__curl ornate__curl--${side}`} viewBox="0 0 26 44" aria-hidden="true">
+      <g fill="none" stroke={`url(#${id})`} strokeWidth="1.6" strokeLinecap="round">
+        <path d="M26 22c-8 0-13-5-13-10 0-4 3-7 7-7 3 0 5 2 5 4.5S23 13 21 13" />
+        <path d="M26 22c-8 0-13 5-13 10 0 4 3 7 7 7 3 0 5-2 5-4.5S23 31 21 31" />
+        <path d="M13 22H6" />
+      </g>
+      <circle cx="5" cy="22" r="1.7" fill={`url(#${id})`} />
+    </svg>
+  )
+}
+
+function Gem({ id }) {
+  return (
+    <svg className="ornate__gem" viewBox="0 0 40 18" aria-hidden="true">
       <defs>
-        <linearGradient id={`${id}-gold`} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#f6e3a1" />
-          <stop offset=".35" stopColor="#c99a3b" />
-          <stop offset=".6" stopColor="#f3d98c" />
-          <stop offset="1" stopColor="#a87a26" />
-        </linearGradient>
-        <linearGradient id={`${id}-fill`} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#fffaf0" stopOpacity=".95" />
-          <stop offset="1" stopColor="#f6e8d6" stopOpacity=".95" />
-        </linearGradient>
         <linearGradient id={`${id}-gem`} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#5fd3b5" />
           <stop offset="1" stopColor="#0c6b5a" />
         </linearGradient>
       </defs>
-
-      {/* óvalo exterior e interior */}
-      <rect x="24" y="10" width="252" height="60" rx="30" fill={`url(#${id}-fill)`} stroke={gold} strokeWidth="2" />
-      <rect x="30" y="16" width="240" height="48" rx="24" fill="none" stroke={gold} strokeWidth="0.9" />
-
-      {/* volutas a los costados */}
-      {curl}
-      <g transform="translate(300 0) scale(-1 1)">{curl}</g>
-
-      {/* gema y destellos arriba, como en el logo */}
-      <path d="M150 3l5 7-5 7-5-7z" fill={`url(#${id}-gem)`} stroke={gold} strokeWidth="1" />
-      <path d="M136 10h6M158 10h6" stroke={gold} strokeWidth="1.2" strokeLinecap="round" />
-      {/* punto abajo */}
-      <circle cx="150" cy="70" r="2.2" fill={gold} />
+      <path d="M20 1l6 8-6 8-6-8z" fill={`url(#${id}-gem)`} stroke={`url(#${id})`} strokeWidth="1.2" />
+      <path d="M4 9h7M29 9h7" stroke={`url(#${id})`} strokeWidth="1.3" strokeLinecap="round" />
     </svg>
   )
 }
 
-// Botón o link con el marco dorado. Acepta `as="a"` para links.
 const OrnateButton = forwardRef(function OrnateButton(
-  { as: Tag = 'button', className = '', children, ...props },
+  { as: Tag = 'button', size = 'lg', className = '', children, ...props },
   ref,
 ) {
-  const id = useId().replace(/:/g, '')
+  const id = `gold${useId().replace(/[^a-zA-Z0-9]/g, '')}`
+  const big = size === 'lg'
+
   return (
-    <Tag ref={ref} className={`ornate ${className}`} {...props}>
-      <Frame id={id} />
+    <Tag ref={ref} className={`ornate ornate--${size} ${className}`} {...props}>
+      {big && (
+        <>
+          {/* degradado dorado compartido por las volutas y la gema */}
+          <svg width="0" height="0" className="ornate__defs" aria-hidden="true">
+            <defs>
+              <linearGradient id={id} x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stopColor="#f6e3a1" />
+                <stop offset=".4" stopColor="#c99a3b" />
+                <stop offset=".65" stopColor="#f3d98c" />
+                <stop offset="1" stopColor="#a87a26" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <Curl id={id} side="start" />
+          <Curl id={id} side="end" />
+          <Gem id={id} />
+        </>
+      )}
       <span className="ornate__label">{children}</span>
     </Tag>
   )

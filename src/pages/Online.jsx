@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { SITE } from '../config/site'
+import OrnateButton from '../components/OrnateButton'
 
 // Aquí irán más adelante las meditaciones, ebooks y la tienda
 export default function Online() {
@@ -9,7 +10,7 @@ export default function Online() {
       <h1 className="block__title">{t('online.title')}</h1>
       <p className="info">{t('online.text')}</p>
       <p className="center">
-        <a href={SITE.social.youtube} className="btn-gold" target="_blank" rel="noreferrer">{t('online.youtube')}</a>
+        <OrnateButton as="a" href={SITE.social.youtube} target="_blank" rel="noreferrer">{t('online.youtube')}</OrnateButton>
       </p>
     </section>
   )

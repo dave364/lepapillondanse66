@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { IMAGES } from '../config/site'
 import CourseList from '../components/CourseList'
 import SafeImg from '../components/SafeImg'
+import OrnateButton from '../components/OrnateButton'
 
 export default function Home() {
   const { t, i18n } = useTranslation()
@@ -69,7 +70,7 @@ export default function Home() {
         <h2 className="closing__title">
           {closing.map((l) => <span key={l}>{l}</span>)}
         </h2>
-        <Link to={`/${lang}/inscription`} className="btn-gold">{t('closing.cta')}</Link>
+        <OrnateButton as={Link} to={`/${lang}/inscription`}>{t('closing.cta')}</OrnateButton>
       </section>
     </>
   )
