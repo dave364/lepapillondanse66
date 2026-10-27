@@ -184,6 +184,13 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 760px) {
   .header__toggle.ornate { display: inline-flex; }
+  /* Menú abierto: el logo y el título se achican para dar lugar a los botones */
+  .header__logo img,
+  .header__title { transition: width 0.35s ease, font-size 0.35s ease, margin 0.35s ease; }
+  .header--full.header--menu-open { justify-content: flex-start; padding-block-start: 4.25rem; }
+  .header--full.header--menu-open .header__logo img { width: 110px; }
+  .header--menu-open .header__title { font-size: 1.2rem; margin: 0.6rem 0 0.4rem; }
+  .header--menu-open .nav ul { margin-block-start: 1rem; }
   .nav { display: none; width: 100%; max-width: 360px; }
   .nav[data-open='true'] { display: block; }
   .nav ul { flex-direction: column; align-items: stretch; margin-block-start: 0.9rem; }

@@ -31,7 +31,7 @@ export default function Header({ full = false }) {
   const lines = t('hero.lines', { returnObjects: true })
 
   return (
-    <header className={`header sky ${full ? 'header--full' : ''}`}>
+    <header className={`header sky ${full ? 'header--full' : ''} ${open ? 'header--menu-open' : ''}`}>
       <div className="header__tools">
         <MusicButton />
         <LanguageSwitcher />
