@@ -26,7 +26,7 @@ export default function Home() {
             {about.map((p) => <p key={p}>{p}</p>)}
             <p className="motto">{t('about.motto')}</p>
           </div>
-          <SafeImg src={IMAGES.about} alt={t('nav.sully')} className="about__img fade-edges" />
+          <SafeImg src={IMAGES.about} alt={t('nav.sully')} className="about__img dreamy" />
         </div>
       </section>
 

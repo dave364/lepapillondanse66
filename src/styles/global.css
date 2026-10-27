@@ -259,6 +259,21 @@ p { margin: 0 0 1em; }
     linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
   mask-composite: intersect;
 }
+/* Efecto soñado: tonos pastel, contraste suave, velo rosado-lila,
+   un poco translúcida y con bordes que se disuelven del todo */
+.dreamy {
+  filter: contrast(0.8) brightness(1.1) saturate(0.92);
+  opacity: 0.85;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, #000 18%, #000 82%, transparent),
+    linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent, #000 18%, #000 82%, transparent),
+    linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+  mask-composite: intersect;
+}
+
 /* Fotos con fondo blanco: el blanco toma el color del fondo */
 .img-blend { mix-blend-mode: multiply; }
 
