@@ -72,10 +72,18 @@ p { margin: 0 0 1em; }
 .sky {
   background-color: #f2cfe2;
   background-image:
-    url('/images/sky.jpg'),
+    url('/images/sky-mobile.jpg'),
     linear-gradient(180deg, #c9b8ee 0%, #f3c4dc 40%, #f6d3c4 75%, #b9a7d6 100%);
   background-size: cover;
   background-position: center;
+}
+/* En pantallas grandes, la versión HD del cielo */
+@media (min-width: 900px), (min-resolution: 2dppx) and (min-width: 600px) {
+  .sky {
+    background-image:
+      url('/images/sky.jpg'),
+      linear-gradient(180deg, #c9b8ee 0%, #f3c4dc 40%, #f6d3c4 75%, #b9a7d6 100%);
+  }
 }
 @media (hover: hover) and (min-width: 900px) {
   .sky { background-attachment: fixed; }

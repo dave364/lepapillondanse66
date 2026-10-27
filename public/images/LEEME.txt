@@ -3,9 +3,10 @@ Las imágenes y la música se bajan del sitio original con:
   npm run images
 
 logo.png               Logo (ya incluido en el repo, fondo transparente)
-sky.jpg                Fondo de cielo y mar de todas las secciones
+sky.jpg                Fondo de cielo y mar, versión HD para compu (mejorada con IA, ya en el repo)
+sky-mobile.jpg         Fondo de cielo y mar, versión liviana para celular (ya en el repo)
 about.jpg              Sección "L'Association" (Sully bailando)
-philosophy-bg.jpg      Fondo del círculo de "Philosophie"
+philosophy-bg.jpg      Fondo del círculo de "Philosophie" (mejorado con IA, ya en el repo)
 sully.jpg              Foto de Sully (Philosophie y página Sully)
 course-intuitive.jpg   Danza intuitiva
 course-orientale.jpg   Danza oriental

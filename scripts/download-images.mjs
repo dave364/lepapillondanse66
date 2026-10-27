@@ -12,13 +12,12 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', 'public')
 const WIX = 'https://static.wixstatic.com/media'
 const fit = (id, file, size = 1600) => `${WIX}/${id}/v1/fit/w_${size},h_${size},q_85/${file}`
 
+// El fondo de cielo (sky.jpg / sky-mobile.jpg) y el de "Philosophie"
+// (philosophy-bg.jpg) ya están en el repo, mejorados en HD con IA:
+// no se descargan para no reemplazarlos por las versiones de baja calidad.
 const FILES = {
-  // Fondo de cielo y mar de todas las secciones
-  'images/sky.jpg': fit('032056_52632aaef97045e6a95a881804cf117f~mv2.jpg', 'sky.jpg', 2400),
   // Sección "L'Association": Sully bailando, cielo violeta
   'images/about.jpg': fit('032056_ed5c43e7988c4b44878237ff4f90eb3c~mv2.png', 'about.jpg'),
-  // Sección "Philosophie": fondo del círculo (silueta con alas)
-  'images/philosophy-bg.jpg': fit('032056_c5cd026cbc58489d85c87a31fd412a34~mv2.jpg', 'philosophy-bg.jpg'),
   // Sección "Philosophie": foto de Sully / página Sully
   'images/sully.jpg': fit('032056_4c483b3c3ed548af8192a1902309bbad~mv2.png', 'sully.jpg'),
   // Cursos (fotos redondas)
