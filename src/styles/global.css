@@ -99,7 +99,8 @@ p { margin: 0 0 1em; }
   text-align: center;
 }
 .header--full {
-  min-height: min(100vh, 780px);
+  min-height: 100vh;
+  min-height: 100svh;
   justify-content: center;
   padding-block: 4.5rem 3rem;
 }
@@ -118,18 +119,27 @@ p { margin: 0 0 1em; }
   height: auto;
   filter: drop-shadow(0 6px 18px rgb(112 28 69 / 0.25));
 }
-.header--full .header__logo img { width: clamp(190px, 24vw, 270px); }
+/* Portada: como en el original, todo escala con el tamaño de la pantalla
+   (el ancho y también el alto, para que entre completa sin scroll) */
+.header--full .header__logo img { width: clamp(min(62vw, 250px), min(23vw, 42vh), 560px); }
 
 .header__title {
   margin: 1.5rem 0 1.75rem;
   font-family: var(--f-display);
   font-weight: 400;
-  font-size: clamp(1.7rem, 1rem + 3.4vw, 3.4rem);
+  font-size: clamp(1.7rem, min(0.6rem + 3.6vw, 8.5vh), 5.6rem);
   line-height: 1.12;
   color: var(--wine);
   text-shadow: 0 1px 12px rgb(255 255 255 / 0.5);
 }
 .header__title span { display: block; }
+
+/* Botones de la portada (menú, música, idioma) más grandes en pantallas grandes */
+.header .ornate--sm {
+  font-size: clamp(0.92rem, 0.45rem + 0.62vw, 1.2rem);
+  padding: 0.55em 1.3em;
+}
+.header--full .nav ul { gap: 0.7em 0.65em; font-size: clamp(0.92rem, 0.45rem + 0.62vw, 1.2rem); }
 
 /* Idioma: el select va sin estilo propio dentro del óvalo dorado */
 .lang select {
