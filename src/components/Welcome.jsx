@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { IMAGES } from '../config/site'
 import { playMusic } from '../lib/music'
+import OrnateButton from './OrnateButton'
 
 // Pantalla de bienvenida con el logo. Al tocar "Entrer" se abre la página
 // y arranca la música (ese toque es el permiso que piden los navegadores).
@@ -14,7 +15,8 @@ export default function Welcome() {
   useEffect(() => {
     if (state !== 'open') return
     document.body.style.overflow = 'hidden'
-    button.current?.focus()
+    // Foco en "Entrer" (para el teclado) sin mostrar el resplandor de foco
+    button.current?.focus({ focusVisible: false })
     return () => {
       document.body.style.overflow = ''
     }
@@ -37,9 +39,9 @@ export default function Welcome() {
       onKeyDown={(e) => e.key === 'Escape' && enter(false)}
     >
       <img src={IMAGES.logo} alt="Le Papillon Danse" className="welcome__logo" width="591" height="751" />
-      <button ref={button} className="btn-gold welcome__enter" onClick={() => enter(true)}>
+      <OrnateButton ref={button} className="welcome__enter" onClick={() => enter(true)}>
         {t('welcome.enter')}
-      </button>
+      </OrnateButton>
       <button className="welcome__silent" onClick={() => enter(false)}>
         {t('welcome.enterSilent')}
       </button>
