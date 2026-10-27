@@ -13,7 +13,7 @@ export default function Sully() {
           <p className="strong">{t('sully.lead')}</p>
           {paragraphs.map((p) => <p key={p}>{p}</p>)}
         </div>
-        <SafeImg src={IMAGES.sully} alt={t('sully.title')} className="about__img" loading="eager" />
+        <SafeImg src={IMAGES.sully} alt={t('sully.title')} className="about__img img-blend fade-edges" loading="eager" />
       </div>
     </section>
   )

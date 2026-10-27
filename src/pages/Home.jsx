@@ -26,7 +26,7 @@ export default function Home() {
             {about.map((p) => <p key={p}>{p}</p>)}
             <p className="motto">{t('about.motto')}</p>
           </div>
-          <SafeImg src={IMAGES.about} alt={t('nav.sully')} className="about__img" />
+          <SafeImg src={IMAGES.about} alt={t('nav.sully')} className="about__img fade-edges" />
         </div>
       </section>
 
@@ -34,7 +34,7 @@ export default function Home() {
       <section className="block lilac">
         <h2 className="block__title">{t('philosophy.title')}</h2>
         <div className="philo" style={{ '--philo-bg': `url(${IMAGES.philosophyBg})` }}>
-          <SafeImg src={IMAGES.sully} alt="" className="philo__img" />
+          <SafeImg src={IMAGES.sully} alt="" className="philo__img img-blend fade-edges" />
           <div className="philo__text">
             {philo.map((p) => <p key={p}>{p}</p>)}
 
