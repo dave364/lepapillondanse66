@@ -661,6 +661,61 @@ p { margin: 0 0 1em; }
   height: 18px;
 }
 
+/* ---------- Escala de escritorio ----------
+   Como en el original de Wix, en compu todas las secciones crecen con el
+   ancho de la pantalla. Medidas tomadas del original a 1920px de ancho:
+   títulos 78px, texto de la asociación 36px, filosofía y cursos 27px,
+   foto de la asociación ~54% del ancho, fotos de cursos ~390px. */
+@media (min-width: 821px) {
+  .block { padding-block: clamp(4rem, 6vw, 9rem); padding-inline: 2vw; }
+  .block--short { padding-block: clamp(3rem, 4.5vw, 7rem); }
+  .block__title {
+    max-width: 92vw;
+    font-size: clamp(2.3rem, 4.1vw, 6.5rem);
+    margin-block-end: clamp(2rem, 3.5vw, 5rem);
+  }
+
+  /* L'Association: texto ~40% y foto ~54% del ancho */
+  .about {
+    max-width: 96vw;
+    grid-template-columns: 40fr 54fr;
+    gap: 2vw;
+  }
+  .about__text { font-size: clamp(1.2rem, 1.9vw, 2.6rem); }
+  .about__img { max-height: none; }
+
+  /* Philosophie: foto ~45% y texto ~47% */
+  .philo {
+    max-width: 96vw;
+    grid-template-columns: 45fr 47fr;
+    gap: 2vw;
+  }
+  .philo__text { font-size: clamp(1.05rem, 1.42vw, 2rem); }
+  .philo__text h3 { font-size: 1.25em; }
+  .philo__stage h4 { font-size: 1.07em; }
+
+  /* Cursos */
+  .courses { max-width: 88vw; }
+  .course { padding-block: 2vw; gap: 3vw; }
+  .course__title { font-size: clamp(1.4rem, 2.5vw, 3.4rem); }
+  .course__text { font-size: clamp(1rem, 1.4vw, 1.9rem); }
+  .round { width: clamp(150px, 20vw, 440px); }
+
+  /* Información y cierre */
+  .info { font-size: clamp(1.05rem, 1.7vw, 2.3rem); }
+  .closing__title { font-size: clamp(2.3rem, 4.1vw, 6.5rem); max-width: 72vw; }
+  /* Botones grandes (Inscription, PDF…) acompañan la escala */
+  .ornate--lg { font-size: clamp(1.05rem, 1.25vw, 1.8rem); min-width: 13em; min-height: 3.4em; }
+
+  /* Footer */
+  .footer { font-size: clamp(0.95rem, 1.1vw, 1.5rem); }
+  .footer__inner { max-width: 94vw; }
+  .footer__logo { width: clamp(90px, 11vw, 230px); }
+  .footer__name { font-size: clamp(1.2rem, 2vw, 2.6rem); }
+  .footer__social svg { width: clamp(26px, 2vw, 42px); height: auto; }
+  .footer__legal { max-width: 94vw; }
+}
+
 /* ---------- Movimiento reducido ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
