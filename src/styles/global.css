@@ -216,8 +216,7 @@ p { margin: 0 0 1em; }
   gap: clamp(1.5rem, 4vw, 3.5rem);
 }
 /* Panel de vidrio esmerilado: se ve el cielo detrás, desenfocado */
-.glass,
-.about__text {
+.glass {
   background: linear-gradient(160deg, rgb(255 255 255 / 0.32), rgb(255 240 248 / 0.16));
   -webkit-backdrop-filter: blur(14px) saturate(1.15);
   backdrop-filter: blur(14px) saturate(1.15);
@@ -227,10 +226,26 @@ p { margin: 0 0 1em; }
   /* halo claro detrás de la letra para que se lea sobre el cielo */
   text-shadow: 0 0 12px rgb(255 245 250 / 0.9), 0 0 2px rgb(255 245 250 / 0.8);
 }
+/* Texto sin recuadro: un resplandor suave detrás que se desvanece en el cielo */
 .about__text {
+  position: relative;
+  isolation: isolate;
   text-align: center;
   font-size: 1.22rem;
   padding: clamp(1.5rem, 3vw, 2.25rem);
+  text-shadow: 0 0 14px rgb(255 245 250 / 0.95), 0 0 3px rgb(255 245 250 / 0.85);
+}
+.about__text::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -6% -10%;
+  background: radial-gradient(ellipse at center, rgb(255 244 250 / 0.6), rgb(255 244 250 / 0.38) 50%, transparent 75%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 40%, transparent 72%);
+  mask-image: radial-gradient(ellipse at center, #000 40%, transparent 72%);
+  pointer-events: none;
 }
 
 /* Fotos que se funden con el cielo: bordes que se desvanecen */
