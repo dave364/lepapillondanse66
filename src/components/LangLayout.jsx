@@ -6,6 +6,7 @@ import { LANGUAGES, DEFAULT_LANG, getDir, isSupported } from '../i18n'
 import { SITE } from '../config/site'
 import Header from './Header'
 import Footer from './Footer'
+import Welcome from './Welcome'
 
 export default function LangLayout() {
   const { lang } = useParams()
@@ -47,6 +48,7 @@ export default function LangLayout() {
         ))}
         <link rel="alternate" hrefLang="x-default" href={urlFor(DEFAULT_LANG)} />
       </Helmet>
+      <Welcome />
       <Header full={!rest} />
       <main id="main">
         <Outlet />

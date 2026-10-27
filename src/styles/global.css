@@ -499,6 +499,55 @@ p { margin: 0 0 1em; }
   .footer__logo { margin-inline: auto; }
 }
 
+/* ---------- Pantalla de bienvenida ---------- */
+.welcome {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: var(--gutter);
+  background-attachment: scroll;
+  transition: opacity 0.7s ease;
+}
+.welcome--closing { opacity: 0; pointer-events: none; }
+.welcome__logo {
+  width: min(62vw, 340px);
+  height: auto;
+  margin-block-end: 1rem;
+  filter: drop-shadow(0 10px 30px rgb(112 28 69 / 0.3));
+  animation: welcome-in 1.2s ease both, float 6s ease-in-out 1.2s infinite;
+}
+.welcome__enter {
+  min-width: 11rem;
+  font-size: 1.05rem;
+  animation: welcome-in 1.2s ease 0.4s both;
+}
+.welcome__silent {
+  background: none;
+  border: 0;
+  color: var(--wine);
+  font: 400 0.9rem var(--f-sans);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  opacity: 0.8;
+  animation: welcome-in 1.2s ease 0.6s both;
+}
+.welcome__silent:hover { opacity: 1; }
+
+@keyframes welcome-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
 /* ---------- Movimiento reducido ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }

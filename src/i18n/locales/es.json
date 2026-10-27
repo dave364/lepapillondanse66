@@ -148,5 +148,9 @@
       "Tu transformación empieza aquí"
     ],
     "cta": "Inscripción"
+  },
+  "welcome": {
+    "enter": "Entrar",
+    "enterSilent": "Entrar sin música"
   }
 }

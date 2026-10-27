@@ -148,5 +148,9 @@
       "Your transformation starts here"
     ],
     "cta": "Sign up"
+  },
+  "welcome": {
+    "enter": "Enter",
+    "enterSilent": "Enter without music"
   }
 }
