@@ -2,7 +2,43 @@ import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { SITE } from '../config/site'
 
-// Música del sitio original. No arranca sola: el visitante decide.
+// Volumen final de la música (0 a 1). Bajo para no molestar.
+const VOLUME = 0.15
+// Duración de la entrada suave, en milisegundos
+const FADE_MS = 2500
+// Si el visitante pausó la música, no la volvemos a arrancar en esta visita
+const PAUSED_KEY = 'music-paused'
+
+const wasPausedByUser = () => {
+  try {
+    return sessionStorage.getItem(PAUSED_KEY) === '1'
+  } catch {
+    return false
+  }
+}
+const rememberPaused = (paused) => {
+  try {
+    if (paused) sessionStorage.setItem(PAUSED_KEY, '1')
+    else sessionStorage.removeItem(PAUSED_KEY)
+  } catch {
+    /* sin almacenamiento */
+  }
+}
+
+// Sube el volumen de 0 a VOLUME de forma gradual
+function fadeIn(audio) {
+  audio.volume = 0
+  const start = performance.now()
+  const step = (now) => {
+    const progress = Math.min((now - start) / FADE_MS, 1)
+    audio.volume = VOLUME * progress
+    if (progress < 1 && !audio.paused) requestAnimationFrame(step)
+  }
+  requestAnimationFrame(step)
+}
+
+// Música del sitio. Intenta sonar al cargar la página; si el navegador
+// lo bloquea (pasa casi siempre), arranca con el primer toque o clic.
 export default function MusicButton() {
   const { t } = useTranslation()
   const audio = useRef(null)
@@ -12,10 +48,57 @@ export default function MusicButton() {
   useEffect(() => {
     const a = new Audio(SITE.music)
     a.loop = true
-    a.volume = 0.5
-    a.addEventListener('error', () => setAvailable(false))
+    a.volume = 0
+    a.preload = 'auto'
     audio.current = a
-    return () => a.pause()
+
+    const onError = () => setAvailable(false)
+    a.addEventListener('error', onError)
+
+    const events = ['pointerdown', 'keydown', 'touchend']
+    const removeListeners = () =>
+      events.forEach((e) => window.removeEventListener(e, startOnInteraction))
+
+    let cancelled = false
+
+    const start = async () => {
+      if (cancelled) return false
+      try {
+        await a.play()
+        if (cancelled) {
+          a.pause()
+          return false
+        }
+        fadeIn(a)
+        setPlaying(true)
+        removeListeners()
+        return true
+      } catch {
+        return false
+      }
+    }
+
+    // Primer toque o clic en cualquier parte de la página
+    function startOnInteraction(e) {
+      // Si tocaron el botón de música, que lo maneje el botón
+      if (e.target.closest?.('.music')) return removeListeners()
+      start()
+    }
+
+    if (!wasPausedByUser()) {
+      start().then((ok) => {
+        if (!ok && !cancelled) {
+          events.forEach((e) => window.addEventListener(e, startOnInteraction))
+        }
+      })
+    }
+
+    return () => {
+      cancelled = true
+      removeListeners()
+      a.removeEventListener('error', onError)
+      a.pause()
+    }
   }, [])
 
   if (!available) return null
@@ -26,10 +109,13 @@ export default function MusicButton() {
     if (playing) {
       a.pause()
       setPlaying(false)
+      rememberPaused(true)
     } else {
       try {
         await a.play()
+        fadeIn(a)
         setPlaying(true)
+        rememberPaused(false)
       } catch {
         setAvailable(false)
       }
