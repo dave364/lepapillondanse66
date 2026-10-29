@@ -18,3 +18,10 @@ export const BOOKING = {
     empowerment: `${BASE}/services/c656fc65-d817-4b81-a758-a08360ef7306${ref}`, // Coaching empowerment féminin
   },
 }
+
+// Pagos con PayPal (cuenta personal de Sully, no la de la asociación)
+export const PAYPAL = 'https://paypal.me/zulgeycastro'
+
+// Link de PayPal con el monto ya cargado, por ej. paypalLink(45) → .../45EUR
+export const paypalLink = (amount) =>
+  amount ? `${PAYPAL}/${amount}EUR` : PAYPAL
