@@ -7,6 +7,7 @@ import { SITE } from '../config/site'
 import Header from './Header'
 import Footer from './Footer'
 import Welcome from './Welcome'
+import useReveal from '../hooks/useReveal'
 
 export default function LangLayout() {
   const { lang } = useParams()
@@ -34,6 +35,8 @@ export default function LangLayout() {
     window.scrollTo(0, 0)
   }, [pathname, hash])
 
+  useReveal(pathname)
+
   if (!valid) return <Navigate to={`/${DEFAULT_LANG}`} replace />
   if (i18n.language !== lang) i18n.changeLanguage(lang)
 
@@ -58,7 +61,11 @@ export default function LangLayout() {
       <Welcome />
       <Header full={!rest} />
       <main id="main">
-        <Outlet />
+        {/* key = página sin el idioma: al cambiar de página hay fundido,
+            al cambiar de idioma no */}
+        <div key={rest} className="page-fade">
+          <Outlet />
+        </div>
       </main>
       <Footer />
     </>
