@@ -52,16 +52,13 @@ export const IMAGES = {
   ],
 }
 
-// Eventos: video profesional y galería de fotos.
-// El video está alojado por ahora en el sitio de Wix. Cuando se tenga el
-// archivo, ponerlo en public/video/ y cambiar `sources` por esa ruta.
+// Eventos: video profesional (hafla en la playa) y galería de fotos.
 // Para la galería: poner las fotos en public/images/eventos/ y agregarlas a
 // `gallery` ({ src, alt }). Si la lista está vacía, la galería no se muestra.
-const WIX_VIDEO = 'https://video.wixstatic.com/video/032056_b6271730568b467192146c5314911b02'
 export const EVENTS = {
   video: {
-    poster: 'https://static.wixstatic.com/media/032056_b6271730568b467192146c5314911b02f000.jpg',
-    sources: ['720p', '1080p', '480p', '360p'].map((q) => `${WIX_VIDEO}/${q}/mp4/file.mp4`),
+    poster: '/video/hafla-poster.jpg',
+    sources: ['/video/hafla.mp4'],
   },
   gallery: [],
 }

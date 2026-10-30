@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import { EVENTS, SITE } from '../config/site'
 import OrnateButton from '../components/OrnateButton'
 import SafeImg from '../components/SafeImg'
+import { pauseMusic } from '../lib/music'
 
 // Video: si ninguna fuente carga, se oculta en vez de mostrar un reproductor roto
 function EventVideo({ title }) {
@@ -21,7 +22,8 @@ function EventVideo({ title }) {
   if (failed) return null
   return (
     <div className="events__video">
-      <video ref={ref} controls playsInline preload="metadata" poster={EVENTS.video.poster} title={title}>
+      {/* Al darle play al video se pausa la música de fondo */}
+      <video ref={ref} onPlay={pauseMusic} controls playsInline preload="metadata" poster={EVENTS.video.poster} title={title}>
         {EVENTS.video.sources.map((src) => <source key={src} src={src} type="video/mp4" />)}
       </video>
     </div>
