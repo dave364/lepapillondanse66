@@ -41,7 +41,11 @@ public/
 - [ ] Crear el formulario en [Formspree](https://formspree.io) y poner su ID en `.env` (ver `.env.example`)
 - [ ] Texto completo de la historia de Sully
 - [ ] Prerenderizado para SEO (`vite-react-ssg`) antes de publicar
-- [ ] Fase 2: pagos · Fase 3: ebooks, programas, meditaciones y link a la tienda
+- [x] Reservas con Setmore y pagos con PayPal (`src/config/booking.js`: precios, duraciones y links)
+- [ ] Si cambia un precio o servicio en Setmore, actualizar `src/config/booking.js`
+- [ ] Video profesional del videasta para la portada
+- [ ] Feed de Instagram en el sitio (Behold.so, que conecte Sully)
+- [ ] Fase 3: ebooks, programas, meditaciones y link a la tienda
 
 ## Deploy
 
