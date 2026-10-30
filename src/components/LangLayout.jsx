@@ -11,7 +11,7 @@ import Welcome from './Welcome'
 export default function LangLayout() {
   const { lang } = useParams()
   const { t, i18n } = useTranslation()
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
 
   const valid = isSupported(lang)
 
@@ -22,10 +22,17 @@ export default function LangLayout() {
     document.documentElement.dir = getDir(lang)
   }, [lang, valid, i18n])
 
-  // Vuelve arriba al cambiar de página
+  // Al cambiar de página vuelve arriba; si el link trae #ancla, baja a esa sección
   useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(hash.slice(1))
+      if (el) {
+        el.scrollIntoView()
+        return
+      }
+    }
     window.scrollTo(0, 0)
-  }, [pathname])
+  }, [pathname, hash])
 
   if (!valid) return <Navigate to={`/${DEFAULT_LANG}`} replace />
   if (i18n.language !== lang) i18n.changeLanguage(lang)

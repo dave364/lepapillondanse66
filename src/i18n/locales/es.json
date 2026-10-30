@@ -14,11 +14,13 @@
     "closeMenu": "Cerrar el menú",
     "language": "Idioma",
     "signupOpen": "Inscripciones abiertas",
-    "location": "Ubicación"
+    "location": "Ubicación",
+    "services": "Terapias y coaching",
+    "book": "Reservar"
   },
   "courses": {
     "title": "Clases y experiencias",
-    "intro": "Clases presenciales en Perpignan, abiertas a todas las mujeres, sin importar la edad ni el nivel.",
+    "intro": "En Perpignan y online, clases abiertas a todas las mujeres, sin importar la edad ni el nivel.",
     "items": [
       {
         "title": "Danza intuitiva y oriental intuitiva",
@@ -26,7 +28,7 @@
       },
       {
         "title": "Danza oriental",
-        "text": "Explorá los movimientos ancestrales de la danza oriental para una expresión artística elegante y una verdadera afirmación personal."
+        "text": "Explora los movimientos ancestrales de la danza oriental para una expresión artística elegante y una verdadera afirmación personal."
       },
       {
         "title": "Preparación corporal",
@@ -34,14 +36,14 @@
       },
       {
         "title": "Talleres creativos",
-        "text": "Desarrollá tu técnica, tu creatividad y tu expresión corporal en un taller artístico abierto a todos los niveles y a colaboraciones."
+        "text": "Desarrolla tu técnica, tu creatividad y tu expresión corporal en un taller artístico abierto a todos los niveles y a colaboraciones."
       }
     ],
     "more": "Ver todas las clases y talleres"
   },
   "signup": {
     "title": "Inscripción",
-    "intro": "Para cualquier consulta o para inscribirte, completá el formulario o descargá la ficha de inscripción.",
+    "intro": "Para cualquier consulta o para inscribirte, completa el formulario o descarga la ficha de inscripción.",
     "pdf": "Descargar la ficha de inscripción (PDF)",
     "formTitle": "Solicitud de inscripción online"
   },
@@ -55,8 +57,8 @@
     "submit": "Enviar solicitud",
     "sending": "Enviando…",
     "success": "Solicitud enviada. Sully te va a responder muy pronto.",
-    "error": "No se pudo enviar la solicitud. Revisá tu conexión o escribí directamente al email que figura abajo.",
-    "notConfigured": "El formulario todavía no está activado. Escribí directamente al email que figura abajo."
+    "error": "No se pudo enviar la solicitud. Revisa tu conexión o escribe directamente al email que figura abajo.",
+    "notConfigured": "El formulario todavía no está activado. Escribe directamente al email que figura abajo."
   },
   "sully": {
     "title": "Sully",
@@ -68,8 +70,9 @@
   },
   "online": {
     "title": "Experiencia online",
-    "text": "Muy pronto: meditaciones, programas y guías para practicar desde cualquier parte del mundo. Mientras tanto, encontrá a Sully en YouTube.",
-    "youtube": "Ver el canal de YouTube"
+    "text": "Muy pronto: meditaciones, programas y guías para practicar desde cualquier parte del mundo. Mientras tanto, encuentra a Sully en YouTube.",
+    "youtube": "Ver el canal de YouTube",
+    "classes": "Ver las clases online"
   },
   "contact": {
     "title": "Contacto y ubicación",
@@ -138,13 +141,13 @@
   },
   "info": {
     "title": "Información y tarifas",
-    "text": "Sumate a la asociación para descubrir la danza y el bienestar. Para cualquier consulta o inscripción, escribinos."
+    "text": "Súmate a la asociación para descubrir la danza y el bienestar. Para cualquier consulta o inscripción, escríbenos."
   },
   "closing": {
     "lines": [
       "No estás aquí por casualidad",
-      "Brillá. Transformate.",
-      "Animate a volar.",
+      "Brilla. Transfórmate.",
+      "Anímate a volar.",
       "Tu transformación empieza aquí"
     ],
     "cta": "Inscripción"
@@ -152,5 +155,84 @@
   "welcome": {
     "enter": "Entrar",
     "enterSilent": "Entrar sin música"
-  }
+  },
+  "book": {
+    "cta": "Reservar",
+    "pay": "Pagar con PayPal",
+    "free": "Gratis",
+    "online": "Online",
+    "freeTrial": "1.ª clase gratis",
+    "min": "min",
+    "hour": "h",
+    "payNote": "Pago seguro por PayPal, a nombre de Zulgey Castro.",
+    "call": {
+      "title": "Conozcámonos",
+      "text": "Una primera llamada personalizada de 30 minutos, en vivo y sin costo, para responder tus dudas y elegir el acompañamiento que mejor te va.",
+      "cta": "Reservar mi llamada gratis"
+    }
+  },
+  "services": {
+    "metaTitle": "Terapias holísticas, coaching y clases online | Le Papillon Danse 66",
+    "title": "Terapias holísticas y acompañamiento",
+    "method": "Método Mariposa",
+    "motto": "Renacer • Brillar • Volar",
+    "intro": "Sesiones para reconectar con tu intuición, soltar lo que te pesa y avanzar con confianza, online o en Perpignan.",
+    "danceTitle": "Danza y movimiento",
+    "danceIntro": "Clases online para bailar desde casa, a tu ritmo. La primera clase es gratis.",
+    "careTitle": "Terapias y acompañamiento",
+    "careIntro": "Sesiones individuales guiadas por Sully, entre intuición, energía y transformación personal.",
+    "howTitle": "Cómo reservar",
+    "how": [
+      "Elige tu sesión y reserva tu horario online.",
+      "Paga tu sesión por PayPal.",
+      "Recibes la confirmación por email."
+    ],
+    "disclaimer": "Estos acompañamientos holísticos no reemplazan una consulta ni un tratamiento médico.",
+    "items": {
+      "intuitiveDance": {
+        "title": "Danza intuitiva y estudios complementarios",
+        "text": "Navega en tu interior con el estudio de tus emociones y herramientas para liberar tensiones y recuperar el bienestar que necesitas."
+      },
+      "orientalIntuitive": {
+        "title": "Danza oriental intuitiva",
+        "text": "Bases simples, lectura de tu energía a través del movimiento y coreografías inspiradoras. Sin límite de edad ni condición física. Plan mensual disponible."
+      },
+      "pilatesOnline": {
+        "title": "Preparación corporal",
+        "subtitle": "Trabajo de suelo inspirado en el método Pilates",
+        "text": "Tonificar tu cuerpo con suavidad y trabajar las zonas que prefieras. Plan mensual disponible."
+      },
+      "tarot": {
+        "title": "Consulta de tarot",
+        "text": "Tarot intuitivo, predictivo y terapéutico para responder tus dudas y recibir consejo."
+      },
+      "pendulum": {
+        "title": "Péndulo, radiestesia y limpieza energética",
+        "text": "Una sesión para liberar bloqueos, alinear y armonizar tu energía."
+      },
+      "akashic": {
+        "title": "Vidas pasadas y registros akáshicos",
+        "text": "Exploración de tus vidas pasadas y anclaje de las virtudes y cualidades que necesitas para tu vida presente."
+      },
+      "spiritualCoaching": {
+        "title": "Coaching espiritual y holístico de transformación",
+        "text": "Individual o grupal, online o presencial. Incluye diagnóstico gratuito, materiales y herramientas."
+      },
+      "empowerment": {
+        "title": "Coaching Empowerment Femenino",
+        "text": "Acompañamiento individual completo: finanzas, belleza, nutrición, programa de entrenamiento adaptado, mentalidad y plan de negocio."
+      }
+    },
+    "discover": "Descubrir las terapias"
+  },
+  "insta": {
+    "title": "Sigue a la mariposa",
+    "text": "Clases, detrás de escena, inspiración y novedades: encuentra a Sully día a día en Instagram.",
+    "cta": "Seguir a @lepapillondanse66"
+  },
+  "closingCta": {
+    "book": "Reservar mi sesión",
+    "call": "o reservar la llamada gratuita para conocernos"
+  },
+  "atelierCta": "Contactarme"
 }

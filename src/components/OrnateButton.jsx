@@ -25,8 +25,8 @@ function Gem({ id }) {
     <svg className="ornate__gem" viewBox="0 0 40 18" aria-hidden="true">
       <defs>
         <linearGradient id={`${id}-gem`} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#5fd3b5" />
-          <stop offset="1" stopColor="#0c6b5a" />
+          <stop offset="0" stopColor="#7ee6dd" />
+          <stop offset="1" stopColor="#12807a" />
         </linearGradient>
       </defs>
       <path d="M20 1l6 8-6 8-6-8z" fill={`url(#${id}-gem)`} stroke={`url(#${id})`} strokeWidth="1.2" />
@@ -50,10 +50,10 @@ const OrnateButton = forwardRef(function OrnateButton(
           <svg width="0" height="0" className="ornate__defs" aria-hidden="true">
             <defs>
               <linearGradient id={id} x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stopColor="#f6e3a1" />
-                <stop offset=".4" stopColor="#c99a3b" />
-                <stop offset=".65" stopColor="#f3d98c" />
-                <stop offset="1" stopColor="#a87a26" />
+                <stop offset="0" stopColor="#f5e3b3" />
+                <stop offset=".4" stopColor="#d6a84f" />
+                <stop offset=".65" stopColor="#f2d896" />
+                <stop offset="1" stopColor="#b08533" />
               </linearGradient>
             </defs>
           </svg>

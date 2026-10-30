@@ -14,11 +14,13 @@
     "closeMenu": "Close menu",
     "language": "Language",
     "signupOpen": "Registration open",
-    "location": "Location"
+    "location": "Location",
+    "services": "Therapies & coaching",
+    "book": "Book"
   },
   "courses": {
     "title": "Classes and experiences",
-    "intro": "In-person classes in Perpignan, open to all women, whatever their age or level.",
+    "intro": "In Perpignan and online, classes open to all women, whatever their age or level.",
     "items": [
       {
         "title": "Intuitive dance and intuitive oriental dance",
@@ -69,7 +71,8 @@
   "online": {
     "title": "Online experience",
     "text": "Coming soon: meditations, programs and guides so you can practice from anywhere in the world. In the meantime, find Sully on YouTube.",
-    "youtube": "Visit the YouTube channel"
+    "youtube": "Visit the YouTube channel",
+    "classes": "See the online classes"
   },
   "contact": {
     "title": "Contact and location",
@@ -152,5 +155,84 @@
   "welcome": {
     "enter": "Enter",
     "enterSilent": "Enter without music"
-  }
+  },
+  "book": {
+    "cta": "Book",
+    "pay": "Pay with PayPal",
+    "free": "Free",
+    "online": "Online",
+    "freeTrial": "1st class free",
+    "min": "min",
+    "hour": "h",
+    "payNote": "Secure payment via PayPal, to Zulgey Castro.",
+    "call": {
+      "title": "Let's get to know each other",
+      "text": "A first personalised 30-minute call, live and free of charge, to answer your questions and choose the guidance that suits you.",
+      "cta": "Book my free call"
+    }
+  },
+  "services": {
+    "metaTitle": "Holistic therapies, coaching and online classes | Le Papillon Danse 66",
+    "title": "Holistic therapies & guidance",
+    "method": "Mariposa Method",
+    "motto": "Be reborn • Shine • Take flight",
+    "intro": "Sessions to reconnect with your intuition, let go of what weighs on you and move forward with confidence, online or in Perpignan.",
+    "danceTitle": "Dance & movement",
+    "danceIntro": "Online classes to dance at home, at your own pace. Your first class is free.",
+    "careTitle": "Therapies & guidance",
+    "careIntro": "One-to-one sessions guided by Sully, between intuition, energy and personal transformation.",
+    "howTitle": "How to book",
+    "how": [
+      "Choose your session and book your time slot online.",
+      "Pay for your session with PayPal.",
+      "You receive the confirmation by email."
+    ],
+    "disclaimer": "These holistic sessions do not replace medical advice or treatment.",
+    "items": {
+      "intuitiveDance": {
+        "title": "Intuitive dance & complementary studies",
+        "text": "Explore your inner world through the study of your emotions, with tools to release tension and find the well-being you need."
+      },
+      "orientalIntuitive": {
+        "title": "Intuitive oriental dance",
+        "text": "Simple foundations, reading your energy through movement and inspiring choreographies. No age limit or fitness level required. Monthly plan available."
+      },
+      "pilatesOnline": {
+        "title": "Body conditioning",
+        "subtitle": "Mat work inspired by the Pilates method",
+        "text": "Gently tone your body and work on the areas you choose. Monthly plan available."
+      },
+      "tarot": {
+        "title": "Tarot reading",
+        "text": "Intuitive, predictive and therapeutic tarot to shed light on your questions and receive guidance."
+      },
+      "pendulum": {
+        "title": "Pendulum, dowsing & energy cleansing",
+        "text": "A session to release blockages, align and harmonise your energy."
+      },
+      "akashic": {
+        "title": "Past lives & Akashic records",
+        "text": "Exploring your past lives and anchoring the qualities you need in your present life."
+      },
+      "spiritualCoaching": {
+        "title": "Spiritual & holistic transformation coaching",
+        "text": "One-to-one or in groups, online or in person. Free assessment, materials and tools included."
+      },
+      "empowerment": {
+        "title": "Women's Empowerment Coaching",
+        "text": "Complete one-to-one guidance: finances, beauty, nutrition, an adapted training programme, mindset and business plan."
+      }
+    },
+    "discover": "Discover the therapies"
+  },
+  "insta": {
+    "title": "Follow the butterfly",
+    "text": "Classes, behind the scenes, inspiration and news: follow Sully every day on Instagram.",
+    "cta": "Follow @lepapillondanse66"
+  },
+  "closingCta": {
+    "book": "Book my session",
+    "call": "or book the free discovery call"
+  },
+  "atelierCta": "Contact me"
 }

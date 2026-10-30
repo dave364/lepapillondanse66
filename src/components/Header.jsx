@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { IMAGES } from '../config/site'
+import { BOOKING } from '../config/booking'
 import LanguageSwitcher from './LanguageSwitcher'
 import MusicButton from './MusicButton'
 import OrnateButton from './OrnateButton'
@@ -26,6 +27,7 @@ export default function Header({ full = false }) {
     { to: `/${lang}/inscription`, label: t('nav.signupOpen') },
     { to: `/${lang}/en-ligne`, label: t('nav.online') },
     { to: `/${lang}/cours`, label: t('nav.courses') },
+    { to: `/${lang}/soins`, label: t('nav.services') },
     { to: `/${lang}/contact`, label: t('nav.location') },
   ]
   const lines = t('hero.lines', { returnObjects: true })
@@ -65,6 +67,11 @@ export default function Header({ full = false }) {
               <OrnateButton as={NavLink} size="sm" to={l.to} end={l.end}>{l.label}</OrnateButton>
             </li>
           ))}
+          <li>
+            <OrnateButton as="a" size="sm" className="ornate--book" href={BOOKING.all} target="_blank" rel="noopener">
+              {t('nav.book')}
+            </OrnateButton>
+          </li>
         </ul>
       </nav>
     </header>

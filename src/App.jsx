@@ -7,6 +7,7 @@ import Courses from './pages/Courses'
 import Online from './pages/Online'
 import Contact from './pages/Contact'
 import Signup from './pages/Signup'
+import Services from './pages/Services'
 import NotFound from './pages/NotFound'
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="sully" element={<Sully />} />
         <Route path="cours" element={<Courses />} />
+        <Route path="soins" element={<Services />} />
         <Route path="en-ligne" element={<Online />} />
         <Route path="contact" element={<Contact />} />
         <Route path="inscription" element={<Signup />} />

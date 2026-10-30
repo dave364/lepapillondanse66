@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { IMAGES } from '../config/site'
+import { IMAGES, SITE } from '../config/site'
+import { BOOKING, SERVICES } from '../config/booking'
 import CourseList from '../components/CourseList'
 import SafeImg from '../components/SafeImg'
 import OrnateButton from '../components/OrnateButton'
@@ -59,10 +60,47 @@ export default function Home() {
         <CourseList />
       </section>
 
+      {/* Soins & accompagnement (Méthode Mariposa) */}
+      <section className="block lilac">
+        <h2 className="block__title">{t('services.careTitle')}</h2>
+        <p className="mariposa__method center-text">{t('services.method')}</p>
+        <p className="info">{t('services.careIntro')}</p>
+        <ul className="care-list">
+          {SERVICES.care.map((s) => (
+            <li key={s.key}>
+              <Link to={`/${lang}/soins#soins`}>{t(`services.items.${s.key}.title`)}</Link>
+            </li>
+          ))}
+        </ul>
+        <p className="center">
+          <OrnateButton as={Link} to={`/${lang}/soins`}>{t('services.discover')}</OrnateButton>
+        </p>
+      </section>
+
       {/* Information et tarifs */}
       <section className="block sky block--short">
         <h2 className="block__title">{t('info.title')}</h2>
         <p className="info">{t('info.text')}</p>
+        <p className="center">
+          <OrnateButton as="a" href={BOOKING.all} target="_blank" rel="noopener">{t('nav.book')}</OrnateButton>
+        </p>
+        <p className="info info--small">{t('book.payNote')}</p>
+      </section>
+
+      {/* Instagram */}
+      <section className="block sky block--short insta">
+        <h2 className="block__title">{t('insta.title')}</h2>
+        <p className="info">{t('insta.text')}</p>
+        <p className="center">
+          <OrnateButton as="a" size="sm" href={SITE.social.instagram} target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" strokeWidth="1.6" />
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="1.6" />
+              <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" />
+            </svg>
+            {t('insta.cta')}
+          </OrnateButton>
+        </p>
       </section>
 
       {/* Cierre */}
@@ -70,7 +108,10 @@ export default function Home() {
         <h2 className="closing__title">
           {closing.map((l) => <span key={l}>{l}</span>)}
         </h2>
-        <OrnateButton as={Link} to={`/${lang}/inscription`}>{t('closing.cta')}</OrnateButton>
+        <OrnateButton as="a" href={BOOKING.all} target="_blank" rel="noopener">{t('closingCta.book')}</OrnateButton>
+        <p className="closing__call">
+          <a href={BOOKING.call} target="_blank" rel="noopener">{t('closingCta.call')}</a>
+        </p>
       </section>
     </>
   )

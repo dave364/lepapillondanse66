@@ -1,8 +1,8 @@
 /* ==========================================================
    Le Papillon Danse 66 — estilos globales
-   Réplica del diseño original de Wix: fondo de cielo rosado,
-   títulos bordó, texto centrado en Cormorant Garamond y fotos
-   redondas con borde dorado. Se usan propiedades lógicas
+   Réplica del diseño original de Wix (fondo de cielo rosado, texto
+   centrado en Cormorant Garamond, fotos redondas con borde dorado)
+   con la paleta oficial de la marca Le Papillon Danse. Se usan propiedades lógicas
    (inline/block) para que el árabe (RTL) se espeje solo.
 
    Tipografías del original → equivalentes gratuitas:
@@ -13,8 +13,15 @@
    ========================================================== */
 
 :root {
-  --wine: #701c45;      /* bordó del original */
-  --wine-dark: #561334;
+  /* Paleta de la marca (pasada por Sully, oct. 2026) */
+  --purple: #762b87;    /* púrpura mariposa: títulos, links, mensajes importantes */
+  --plum: #3d244c;      /* ciruela profunda: texto */
+  --mauve: #d88ac8;     /* rosa malva: detalles femeninos */
+  --ethereal: #c7b5f0;  /* lila etéreo */
+  --turquoise: #22b9b1; /* turquesa mariposa: acentos chicos (gemas) */
+  --gold: #d6a84f;      /* dorado champagne: líneas, bordes, volutas */
+  --ivory: #fff3e8;     /* marfil luminoso: botones y tarjetas */
+
   --lilac: #d8bcec;     /* fondo de "Philosophie" */
   --lilac-deep: #b48fd4;
   --pill: #e6dcf7;      /* botones del menú */
@@ -44,7 +51,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: #f4d6e6;
-  color: var(--wine);
+  color: var(--plum);
   font-family: var(--f-text);
   font-size: 1.2rem;
   line-height: 1.6;
@@ -52,10 +59,10 @@ body {
 }
 
 img { display: block; max-width: 100%; }
-a { color: var(--wine); text-underline-offset: 3px; }
+a { color: var(--purple); text-underline-offset: 3px; }
 p { margin: 0 0 1em; }
 
-:focus-visible { outline: 2px solid var(--wine); outline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
 
 .visually-hidden {
   position: absolute !important;
@@ -117,7 +124,7 @@ p { margin: 0 0 1em; }
 .header__logo img {
   width: clamp(110px, 14vw, 150px);
   height: auto;
-  filter: drop-shadow(0 6px 18px rgb(112 28 69 / 0.25));
+  filter: drop-shadow(0 6px 18px rgb(118 43 135 / 0.25));
 }
 /* Portada: como en el original, todo escala con el tamaño de la pantalla
    (el ancho y también el alto, para que entre completa sin scroll) */
@@ -129,7 +136,7 @@ p { margin: 0 0 1em; }
   font-weight: 400;
   font-size: clamp(1.7rem, min(0.6rem + 3.6vw, 8.5vh), 5.6rem);
   line-height: 1.12;
-  color: var(--wine);
+  color: var(--purple);
   text-shadow: 0 1px 12px rgb(255 255 255 / 0.5);
 }
 .header__title span { display: block; }
@@ -213,7 +220,7 @@ p { margin: 0 0 1em; }
   font-size: clamp(1.7rem, 1rem + 2.6vw, 2.9rem);
   line-height: 1.15;
   text-align: center;
-  color: var(--wine);
+  color: var(--purple);
 }
 
 .strong { font-weight: 700; }
@@ -237,9 +244,9 @@ p { margin: 0 0 1em; }
   background: linear-gradient(160deg, rgb(255 255 255 / 0.32), rgb(255 240 248 / 0.16));
   -webkit-backdrop-filter: blur(14px) saturate(1.15);
   backdrop-filter: blur(14px) saturate(1.15);
-  border: 1px solid rgb(201 154 59 / 0.35);
+  border: 1px solid rgb(214 168 79 / 0.35);
   border-radius: 28px;
-  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.5), 0 10px 30px rgb(112 28 69 / 0.08);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.5), 0 10px 30px rgb(118 43 135 / 0.08);
   /* halo claro detrás de la letra para que se lea sobre el cielo */
   text-shadow: 0 0 12px rgb(255 245 250 / 0.9), 0 0 2px rgb(255 245 250 / 0.8);
 }
@@ -407,9 +414,9 @@ p { margin: 0 0 1em; }
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #d9b46a;
+  border: 3px solid var(--gold);
   background: linear-gradient(160deg, var(--pill), var(--lilac-deep));
-  box-shadow: 0 8px 22px rgb(112 28 69 / 0.2);
+  box-shadow: 0 8px 22px rgb(118 43 135 / 0.2);
 }
 .round img { width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 640px) {
@@ -418,7 +425,7 @@ p { margin: 0 0 1em; }
     grid-template-areas: 'title img' 'text text';
   }
   .course__title { grid-area: title; }
-  .course__text { grid-area: text; }
+  .course__body { grid-area: text; }
   .round { grid-area: img; width: 96px; }
 }
 
@@ -468,16 +475,16 @@ p { margin: 0 0 1em; }
 .form textarea {
   font: inherit;
   font-size: 1rem;
-  color: #2b1a24;
-  background: #fff;
-  border: 1px solid rgb(112 28 69 / 0.3);
+  color: var(--plum);
+  background: #fffaf6;
+  border: 1px solid rgb(118 43 135 / 0.3);
   border-radius: 4px;
   padding: 0.7rem 0.85rem;
   width: 100%;
 }
 .form input:focus,
 .form select:focus,
-.form textarea:focus { outline: 2px solid var(--wine); outline-offset: 0; }
+.form textarea:focus { outline: 2px solid var(--purple); outline-offset: 0; }
 .form__submit { justify-self: center; margin-block-start: 0.5rem; }
 .form__status { margin: 0; padding: 0.85rem 1rem; border-radius: 4px; font-size: 0.95rem; }
 .form__status--success { background: #e9f4ea; color: #24572d; }
@@ -557,7 +564,7 @@ p { margin: 0 0 1em; }
   width: min(62vw, 340px);
   height: auto;
   margin-block-end: 1rem;
-  filter: drop-shadow(0 10px 30px rgb(112 28 69 / 0.3));
+  filter: drop-shadow(0 10px 30px rgb(118 43 135 / 0.3));
   animation: welcome-in 1.2s ease both, float 6s ease-in-out 1.2s infinite;
 }
 .welcome__enter { animation: welcome-in 1.2s ease 0.4s both; }
@@ -565,8 +572,8 @@ p { margin: 0 0 1em; }
 /* ---------- Botones con el estilo del logo ---------- */
 /* Óvalo crema con borde dorado doble. Se adapta al ancho del texto. */
 .ornate {
-  --gold-line: linear-gradient(135deg, #f6e3a1, #c99a3b 40%, #f3d98c 65%, #a87a26);
-  --cream: linear-gradient(#fffaf0, #f5e6d3);
+  --gold-line: linear-gradient(135deg, #f5e3b3, var(--gold) 40%, #f2d896 65%, #b08533);
+  --cream: linear-gradient(#fffaf4, var(--ivory) 55%, #f8e7d6);
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -575,10 +582,10 @@ p { margin: 0 0 1em; }
   border: 1.5px solid transparent;
   border-radius: 999px;
   background: var(--cream) padding-box, var(--gold-line) border-box;
-  color: var(--wine);
+  color: var(--purple);
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 0 3px 10px rgb(112 28 69 / 0.14);
+  box-shadow: 0 3px 10px rgb(118 43 135 / 0.14);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 /* línea dorada interior */
@@ -586,18 +593,18 @@ p { margin: 0 0 1em; }
   content: '';
   position: absolute;
   inset: 3px;
-  border: 1px solid rgb(201 154 59 / 0.7);
+  border: 1px solid rgb(214 168 79 / 0.7);
   border-radius: inherit;
   pointer-events: none;
 }
 .ornate:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgb(201 154 59 / 0.45);
+  box-shadow: 0 6px 16px rgb(214 168 79 / 0.45);
 }
 .ornate:focus-visible,
 .ornate:focus-within:has(select:focus-visible) {
   outline: none;
-  box-shadow: 0 0 0 3px rgb(201 154 59 / 0.55), 0 6px 16px rgb(201 154 59 / 0.35);
+  box-shadow: 0 0 0 3px rgb(214 168 79 / 0.55), 0 6px 16px rgb(214 168 79 / 0.35);
 }
 .ornate:disabled { opacity: 0.6; cursor: wait; transform: none; }
 .ornate__label {
@@ -615,7 +622,7 @@ p { margin: 0 0 1em; }
 }
 /* Página actual del menú: dorado más intenso y gema verde arriba */
 .ornate--sm.active {
-  --cream: linear-gradient(#fff6df, #f2d9a0);
+  --cream: linear-gradient(#fff8e8, #f3dcaa);
   font-weight: 500;
 }
 .ornate--sm.active::before {
@@ -626,8 +633,8 @@ p { margin: 0 0 1em; }
   width: 8px;
   height: 8px;
   rotate: 45deg;
-  background: linear-gradient(135deg, #5fd3b5, #0c6b5a);
-  border: 1px solid #c99a3b;
+  background: linear-gradient(135deg, #7ee6dd, var(--turquoise) 55%, #12807a);
+  border: 1px solid var(--gold);
 }
 
 /* Grande: Entrer, Inscription… con volutas y gema */
@@ -660,6 +667,266 @@ p { margin: 0 0 1em; }
   width: 40px;
   height: 18px;
 }
+
+/* ---------- Reservas: duración, precio, etiquetas y botones ---------- */
+.course__body { display: grid; gap: 0.9rem; justify-items: start; }
+.service-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.6rem;
+  font-family: var(--f-sans);
+  font-size: 0.92rem;
+}
+.service-meta__main strong { color: var(--purple); font-weight: 600; }
+.tag {
+  display: inline-block;
+  padding: 0.15em 0.75em;
+  border: 1px solid rgb(118 43 135 / 0.35);
+  border-radius: 999px;
+  font-size: 0.82em;
+  color: var(--purple);
+  background: rgb(255 243 232 / 0.6);
+}
+.tag--gem {
+  border-color: rgb(34 185 177 / 0.6);
+  color: #0f6f6a;
+  background: rgb(34 185 177 / 0.1);
+}
+.service-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+/* "Réserver": el botón principal, en dorado */
+.ornate--book {
+  --cream: linear-gradient(#fff8e8, #f3dcaa);
+  font-weight: 600 !important;
+}
+
+/* ---------- Página de terapias: Méthode Mariposa ---------- */
+.mariposa {
+  max-width: 1100px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+/* Retrato en óvalo con doble aro dorado, como el marco del logo */
+.mariposa__portrait {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  max-width: 420px;
+  width: 100%;
+  justify-self: center;
+  padding: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f5e3b3, var(--gold) 40%, #f2d896 65%, #b08533);
+  box-shadow: 0 20px 50px rgb(118 43 135 / 0.22);
+}
+.mariposa__portrait::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgb(255 243 232 / 0.9);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.mariposa__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 50%;
+}
+.mariposa__text { text-align: center; }
+.mariposa__method {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: clamp(1.8rem, 1.2rem + 2vw, 3rem);
+  color: var(--purple);
+}
+.center-text { text-align: center; margin-block-end: 0.5rem; }
+.mariposa__intro { max-width: 40ch; margin: 1rem auto 2rem; font-size: 1.15em; }
+
+/* Llamada gratuita */
+.free-call {
+  position: relative;
+  max-width: 34rem;
+  margin-inline: auto;
+  padding: clamp(1.5rem, 3vw, 2.25rem) clamp(1.25rem, 3vw, 2.5rem) clamp(1.75rem, 3vw, 2.5rem);
+  text-align: center;
+  background: linear-gradient(160deg, rgb(255 248 240 / 0.78), rgb(255 243 232 / 0.55));
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgb(214 168 79 / 0.6);
+  border-radius: 28px;
+  box-shadow: 0 14px 34px rgb(118 43 135 / 0.12);
+}
+.free-call::before {
+  content: '';
+  position: absolute;
+  inset-block-start: -7px;
+  inset-inline-start: calc(50% - 6px);
+  width: 12px;
+  height: 12px;
+  rotate: 45deg;
+  background: linear-gradient(135deg, #7ee6dd, var(--turquoise) 55%, #12807a);
+  border: 1px solid var(--gold);
+}
+.free-call__title {
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2.2rem);
+  color: var(--purple);
+}
+.free-call__meta { margin: 0.2rem 0 0.8rem; font-family: var(--f-sans); font-size: 0.9rem; }
+.free-call__text { margin-block-end: 1.5rem; }
+
+/* Tarjetas de servicios */
+.services {
+  max-width: 1200px;
+  margin: clamp(2rem, 4vw, 3rem) auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+.service {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  text-align: start;
+  background: linear-gradient(170deg, rgb(255 248 240 / 0.82), rgb(255 243 232 / 0.6));
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgb(214 168 79 / 0.55);
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgb(118 43 135 / 0.1);
+}
+/* línea dorada interior, como en los botones */
+.service::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgb(214 168 79 / 0.25);
+  border-radius: 20px;
+  pointer-events: none;
+}
+.service__title {
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(1.3rem, 1.05rem + 0.7vw, 1.7rem);
+  line-height: 1.2;
+  color: var(--purple);
+}
+.service__subtitle { margin: -0.4rem 0 0; font-style: italic; font-size: 1rem; }
+.service__text { margin: 0; flex: 1; font-size: 1.08rem; line-height: 1.55; }
+.service .service-actions { position: relative; z-index: 1; margin-block-start: 0.4rem; }
+
+/* Cómo reservar */
+.how {
+  max-width: 900px;
+  margin: clamp(3rem, 5vw, 4.5rem) auto 0;
+  text-align: center;
+}
+.how__title {
+  margin: 0 0 1.5rem;
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2.2rem);
+  color: var(--purple);
+}
+.how__steps {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  counter-reset: step;
+}
+.how__steps li {
+  counter-increment: step;
+  font-size: 1.05rem;
+}
+.how__steps li::before {
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0 auto 0.6rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+  background: var(--ivory);
+  font-family: var(--f-display);
+  font-size: 1.2rem;
+  color: var(--purple);
+}
+.how__note { margin: 0.3rem 0 0; font-family: var(--f-sans); font-size: 0.88rem; opacity: 0.85; }
+@media (max-width: 820px) {
+  .mariposa { grid-template-columns: 1fr; }
+  .mariposa__portrait { max-width: 280px; }
+  .how__steps { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+/* Legibilidad sobre el cielo y el mar: halo claro detrás del texto */
+.how, .info, .mariposa__text { text-shadow: 0 0 12px rgb(255 245 250 / 0.95), 0 0 3px rgb(255 245 250 / 0.8); }
+@media (max-width: 560px) {
+  .ornate--lg { min-width: 0; padding-inline: 1.4rem; letter-spacing: 0.06em; font-size: 0.95rem; }
+  .how {
+    padding: 1.5rem 1rem;
+    border-radius: 24px;
+    background: rgb(255 246 250 / 0.62);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+}
+
+/* Home: lista de terapias, notas y cierre */
+.care-list {
+  list-style: none;
+  max-width: 900px;
+  margin: 1.75rem auto 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 0;
+}
+.care-list li { display: flex; align-items: center; }
+.care-list li + li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-inline: 0.9rem;
+  rotate: 45deg;
+  background: var(--gold);
+}
+.care-list a {
+  font-family: var(--f-display);
+  font-size: clamp(1.1rem, 0.95rem + 0.5vw, 1.45rem);
+  color: var(--purple);
+  text-decoration: none;
+}
+.care-list a:hover { text-decoration: underline; text-decoration-color: var(--gold); }
+.info--small { margin-block-start: 1rem; font-size: 0.85rem; opacity: 0.85; }
+.closing__call { margin: 1.25rem 0 0; font-family: var(--f-sans); font-size: 1rem; }
+.closing__call a { color: var(--purple); text-decoration-color: var(--gold); }
+
+/* ---------- Jerarquía de color ----------
+   Títulos en púrpura mariposa, texto en ciruela, detalles en dorado */
+.course__title,
+.closing__title,
+.philo__text h3,
+.philo__stage h4,
+.panel__title,
+.footer__name,
+.motto { color: var(--purple); }
 
 /* ---------- Escala de escritorio ----------
    Como en el original de Wix, en compu todas las secciones crecen con el
@@ -700,6 +967,16 @@ p { margin: 0 0 1em; }
   .course__title { font-size: clamp(1.4rem, 2.5vw, 3.4rem); }
   .course__text { font-size: clamp(1rem, 1.4vw, 1.9rem); }
   .round { width: clamp(150px, 20vw, 440px); }
+
+  /* Tarjetas de servicios */
+  .service { max-width: clamp(370px, 24vw, 520px); flex-basis: clamp(300px, 22vw, 480px); }
+  .services { max-width: 92vw; }
+  .service__text, .mariposa__intro, .free-call__text { font-size: clamp(1.05rem, 1.15vw, 1.6rem); }
+  .service-meta { font-size: clamp(0.92rem, 0.85vw, 1.2rem); }
+  .mariposa { max-width: 80vw; }
+  .mariposa__portrait { max-width: clamp(320px, 26vw, 560px); }
+  .free-call { max-width: clamp(34rem, 36vw, 50rem); }
+  .care-list { max-width: 80vw; }
 
   /* Información y cierre */
   .info { font-size: clamp(1.05rem, 1.7vw, 2.3rem); }

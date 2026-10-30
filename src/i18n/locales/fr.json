@@ -14,11 +14,13 @@
     "closeMenu": "Fermer le menu",
     "language": "Langue",
     "signupOpen": "Inscriptions ouvertes",
-    "location": "Localisation"
+    "location": "Localisation",
+    "services": "Soins & coaching",
+    "book": "Réserver"
   },
   "courses": {
     "title": "Les cours et expériences",
-    "intro": "Des cours en présentiel à Perpignan, ouverts à toutes les femmes, quel que soit leur âge ou leur niveau.",
+    "intro": "À Perpignan et en ligne, des cours ouverts à toutes les femmes, quel que soit leur âge ou leur niveau.",
     "items": [
       {
         "title": "Danse intuitive et orientale intuitive",
@@ -69,7 +71,8 @@
   "online": {
     "title": "Expérience en ligne",
     "text": "Bientôt : méditations, programmes et guides pour pratiquer où que vous soyez dans le monde. En attendant, retrouvez Sully sur YouTube.",
-    "youtube": "Voir la chaîne YouTube"
+    "youtube": "Voir la chaîne YouTube",
+    "classes": "Voir les cours en ligne"
   },
   "contact": {
     "title": "Contact et localisation",
@@ -152,5 +155,84 @@
   "welcome": {
     "enter": "Entrer",
     "enterSilent": "Entrer sans musique"
-  }
+  },
+  "book": {
+    "cta": "Réserver",
+    "pay": "Payer avec PayPal",
+    "free": "Gratuit",
+    "online": "En ligne",
+    "freeTrial": "1er cours offert",
+    "min": "min",
+    "hour": "h",
+    "payNote": "Paiement sécurisé via PayPal, au nom de Zulgey Castro.",
+    "call": {
+      "title": "Faisons connaissance",
+      "text": "Un premier appel personnalisé de 30 minutes, en direct et sans frais, pour répondre à vos questions et choisir l'accompagnement qui vous correspond.",
+      "cta": "Réserver mon appel gratuit"
+    }
+  },
+  "services": {
+    "metaTitle": "Soins holistiques, coaching et cours en ligne | Le Papillon Danse 66",
+    "title": "Soins holistiques & accompagnement",
+    "method": "Méthode Mariposa",
+    "motto": "Renaître • Rayonner • S'envoler",
+    "intro": "Des séances pour vous reconnecter à votre intuition, libérer ce qui vous pèse et avancer avec confiance, en ligne ou à Perpignan.",
+    "danceTitle": "Danse & mouvement",
+    "danceIntro": "Des cours en ligne pour danser chez vous, à votre rythme. Le premier cours est offert.",
+    "careTitle": "Soins & accompagnement",
+    "careIntro": "Des séances individuelles guidées par Sully, entre intuition, énergie et transformation personnelle.",
+    "howTitle": "Comment réserver",
+    "how": [
+      "Choisissez votre séance et réservez votre créneau en ligne.",
+      "Réglez votre séance via PayPal.",
+      "Vous recevez la confirmation par e-mail."
+    ],
+    "disclaimer": "Ces accompagnements holistiques ne remplacent pas un avis ou un traitement médical.",
+    "items": {
+      "intuitiveDance": {
+        "title": "Danse intuitive & études complémentaires",
+        "text": "Naviguez en vous-même grâce à l'étude de vos émotions et à des outils pour libérer les tensions et retrouver le bien-être dont vous avez besoin."
+      },
+      "orientalIntuitive": {
+        "title": "Danse orientale intuitive",
+        "text": "Des bases simples, la lecture de votre énergie à travers le mouvement et des chorégraphies inspirantes. Sans limite d'âge ni condition physique. Formule mensuelle possible."
+      },
+      "pilatesOnline": {
+        "title": "Préparation corporelle",
+        "subtitle": "Travail au sol inspiré de la méthode Pilates",
+        "text": "Tonifier votre corps en douceur et travailler les zones de votre choix. Formule mensuelle possible."
+      },
+      "tarot": {
+        "title": "Consultation de tarot",
+        "text": "Un tarot intuitif, prédictif et thérapeutique pour éclairer vos questions et recevoir des conseils."
+      },
+      "pendulum": {
+        "title": "Pendule, radiesthésie & nettoyage énergétique",
+        "text": "Une séance pour libérer les blocages, aligner et harmoniser votre énergie."
+      },
+      "akashic": {
+        "title": "Vies antérieures & annales akashiques",
+        "text": "L'exploration de vos vies antérieures et l'ancrage des qualités dont vous avez besoin dans votre vie présente."
+      },
+      "spiritualCoaching": {
+        "title": "Coaching spirituel & holistique de transformation",
+        "text": "En individuel ou en groupe, en ligne ou en présentiel. Diagnostic offert, supports et outils inclus."
+      },
+      "empowerment": {
+        "title": "Coaching Empowerment Féminin",
+        "text": "Un accompagnement individuel complet : finances, beauté, nutrition, programme d'entraînement adapté, état d'esprit et business plan."
+      }
+    },
+    "discover": "Découvrir les soins"
+  },
+  "insta": {
+    "title": "Suivez le papillon",
+    "text": "Cours, coulisses, inspirations et nouveautés : retrouvez Sully au quotidien sur Instagram.",
+    "cta": "Suivre @lepapillondanse66"
+  },
+  "closingCta": {
+    "book": "Réserver ma séance",
+    "call": "ou réserver l'appel découverte gratuit"
+  },
+  "atelierCta": "Me contacter"
 }
