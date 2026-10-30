@@ -16,7 +16,8 @@
     "signupOpen": "Inscriptions ouvertes",
     "location": "Localisation",
     "services": "Soins & coaching",
-    "book": "Réserver"
+    "book": "Réserver",
+    "events": "Événements"
   },
   "courses": {
     "title": "Les cours et expériences",
@@ -118,7 +119,7 @@
       "L'association artistique accompagne à Perpignan les femmes à travers la danse intuitive, la danse orientale et l'expression corporelle, dans une expérience immersive alliant mouvement, créativité, confiance en soi et bien-être féminin.",
       "Plus qu'un simple cours de danse, Sully propose un accompagnement progressif inspiré du cycle de transformation du papillon, symbole de renaissance, d'évolution et d'émancipation féminine."
     ],
-    "stagesTitle": "Un parcours en plusieurs étapes",
+    "stagesTitle": "Les étapes de la transformation",
     "accompTitle": "Un accompagnement artistique et humain",
     "motto": "Danse • Transformation • Féminité • Expression de soi",
     "stages": [
@@ -137,7 +138,8 @@
         "subtitle": "La transformation",
         "text": "Peu à peu, chaque femme révèle son identité, sa féminité et sa liberté d'expression, pleinement alignée avec elle-même et capable de créer une vie plus harmonieuse et épanouissante."
       }
-    ]
+    ],
+    "methodIntro": "Comme la chenille qui devient papillon, chaque femme traverse son propre cycle de transformation. Ses ailes : la confiance en soi et la foi en elle-même, pour renaître, rayonner et prendre son envol."
   },
   "info": {
     "title": "Information et tarifs",
@@ -234,5 +236,29 @@
     "book": "Réserver ma séance",
     "call": "ou réserver l'appel découverte gratuit"
   },
-  "atelierCta": "Me contacter"
+  "atelierCta": "Me contacter",
+  "inPerson": {
+    "title": "En présentiel à Perpignan",
+    "class": "Danse intuitive & danse orientale intuitive",
+    "text": "Les deux danses se pratiquent ensemble, dans la même séance. On commence par la prépa corps : un échauffement intuitif pour se reconnecter à son corps.",
+    "scheduleTitle": "Horaires",
+    "schedule": [
+      "Lundi · 18h00 – 19h15",
+      "Mercredi · 11h00 – 12h00"
+    ],
+    "placeTitle": "Lieu",
+    "parkingTitle": "Parking",
+    "parking": "Au Lidl ou dans les rues alentour.",
+    "directions": "Itinéraire",
+    "more": "Horaires et lieu"
+  },
+  "events": {
+    "metaTitle": "Événements, spectacles et ateliers | Le Papillon Danse 66",
+    "title": "Événements & spectacles",
+    "intro": "Haflas, spectacles, ateliers et moments de partage : la vie du Papillon en mouvement, à Perpignan et au bord de la mer.",
+    "videoTitle": "Le Papillon Danse en vidéo",
+    "galleryTitle": "Galerie",
+    "nextTitle": "Les prochains rendez-vous",
+    "nextText": "Les dates des prochains événements sont annoncées sur Instagram. Suivez-nous pour ne rien manquer."
+  }
 }

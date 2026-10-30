@@ -25,6 +25,7 @@ export default function Header({ full = false }) {
     { to: `/${lang}`, label: t('nav.home'), end: true },
     { to: `/${lang}/sully`, label: t('nav.sully') },
     { to: `/${lang}/cours`, label: t('nav.courses') },
+    { to: `/${lang}/evenements`, label: t('nav.events') },
     { to: `/${lang}/soins`, label: t('nav.services') },
     { to: `/${lang}/contact`, label: t('nav.contact') },
   ]

@@ -16,7 +16,8 @@
     "signupOpen": "Registration open",
     "location": "Location",
     "services": "Therapies & coaching",
-    "book": "Book"
+    "book": "Book",
+    "events": "Events"
   },
   "courses": {
     "title": "Classes and experiences",
@@ -118,7 +119,7 @@
       "In Perpignan, the association guides women through intuitive dance, oriental dance and body expression, in an immersive experience combining movement, creativity, self-confidence and women's well-being.",
       "More than a dance class, Sully offers a gradual path inspired by the butterfly's transformation cycle, a symbol of rebirth, growth and women's emancipation."
     ],
-    "stagesTitle": "A journey in several stages",
+    "stagesTitle": "The stages of transformation",
     "accompTitle": "Artistic and human guidance",
     "motto": "Dance • Transformation • Femininity • Self-expression",
     "stages": [
@@ -137,7 +138,8 @@
         "subtitle": "Transformation",
         "text": "Little by little, each woman reveals her identity, femininity and freedom of expression, fully aligned with herself and able to create a more harmonious, fulfilling life."
       }
-    ]
+    ],
+    "methodIntro": "Like the caterpillar that becomes a butterfly, every woman goes through her own cycle of transformation. Her wings are self-confidence and belief in herself, to be reborn, shine and take flight."
   },
   "info": {
     "title": "Information and prices",
@@ -234,5 +236,29 @@
     "book": "Book my session",
     "call": "or book the free discovery call"
   },
-  "atelierCta": "Contact me"
+  "atelierCta": "Contact me",
+  "inPerson": {
+    "title": "In person in Perpignan",
+    "class": "Intuitive dance & intuitive oriental dance",
+    "text": "Both dances are practised together in the same session. We begin with body conditioning: an intuitive warm-up to reconnect with your body.",
+    "scheduleTitle": "Schedule",
+    "schedule": [
+      "Monday · 6:00 – 7:15 pm",
+      "Wednesday · 11:00 am – 12:00 pm"
+    ],
+    "placeTitle": "Venue",
+    "parkingTitle": "Parking",
+    "parking": "At Lidl or in the surrounding streets.",
+    "directions": "Directions",
+    "more": "Schedule and venue"
+  },
+  "events": {
+    "metaTitle": "Events, shows and workshops | Le Papillon Danse 66",
+    "title": "Events & shows",
+    "intro": "Haflas, shows, workshops and moments of sharing: Le Papillon in motion, in Perpignan and by the sea.",
+    "videoTitle": "Le Papillon Danse on video",
+    "galleryTitle": "Gallery",
+    "nextTitle": "Upcoming dates",
+    "nextText": "Dates for upcoming events are announced on Instagram. Follow us so you don't miss a thing."
+  }
 }

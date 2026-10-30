@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { IMAGES, SITE } from '../config/site'
 import { BOOKING, SERVICES } from '../config/booking'
 import CourseList from '../components/CourseList'
+import InPerson from '../components/InPerson'
 import SafeImg from '../components/SafeImg'
 import OrnateButton from '../components/OrnateButton'
 
@@ -39,28 +40,36 @@ export default function Home() {
           <div className="philo__text">
             {philo.map((p) => <p key={p}>{p}</p>)}
 
-            <h3>{t('philosophy.stagesTitle')}</h3>
-            {/* Las tres etapas son una secuencia: van como lista ordenada */}
-            <ol className="philo__stages">
-              {stages.map((s) => (
-                <li key={s.name} className="philo__stage">
-                  <h4>{s.name}</h4>
-                  <p className="philo__stage-sub">{s.subtitle}</p>
-                  <p>{s.text}</p>
-                </li>
-              ))}
-            </ol>
-
             <h3>{t('philosophy.accompTitle')}</h3>
             {accomp.map((p) => <p key={p}>{p}</p>)}
             <p className="motto">{t('philosophy.motto')}</p>
           </div>
+        </div>
+
+        {/* Méthode Mariposa: las tres etapas de la transformación */}
+        <div className="method">
+          <h3 className="method__title">{t('services.method')}</h3>
+          <p className="method__subtitle">{t('philosophy.stagesTitle')}</p>
+          <p className="method__intro">{t('philosophy.methodIntro')}</p>
+          <ol className="method__stages">
+            {stages.map((s, i) => (
+              <li key={s.name} className="method__stage">
+                <SafeImg src={IMAGES.stages[i]} alt="" className="method__img" />
+                <div className="method__body">
+                  <h4>{s.name}</h4>
+                  <p className="method__stage-sub">{s.subtitle}</p>
+                  <p>{s.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
       {/* Les cours et expériences */}
       <section className="block sky">
         <h2 className="block__title">{t('courses.title')}</h2>
+        <InPerson compact />
         <CourseList />
       </section>
 

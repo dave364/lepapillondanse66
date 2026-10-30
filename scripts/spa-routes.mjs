@@ -4,7 +4,7 @@ import { mkdir, copyFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
 const LANGS = ['fr', 'es', 'en', 'ar']
-const PAGES = ['', 'sully', 'cours', 'soins', 'en-ligne', 'contact', 'inscription']
+const PAGES = ['', 'sully', 'cours', 'soins', 'evenements', 'en-ligne', 'contact', 'inscription']
 const dist = 'dist'
 
 for (const lang of LANGS) {

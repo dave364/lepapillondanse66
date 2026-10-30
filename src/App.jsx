@@ -6,6 +6,7 @@ import Sully from './pages/Sully'
 import Courses from './pages/Courses'
 import Contact from './pages/Contact'
 import Services from './pages/Services'
+import Events from './pages/Events'
 import NotFound from './pages/NotFound'
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="sully" element={<Sully />} />
         <Route path="cours" element={<Courses />} />
         <Route path="soins" element={<Services />} />
+        <Route path="evenements" element={<Events />} />
         {/* "Expérience en ligne" e "Inscription" se integraron en Soins & coaching */}
         <Route path="en-ligne" element={<Navigate to="../soins#danse" replace />} />
         <Route path="contact" element={<Contact />} />

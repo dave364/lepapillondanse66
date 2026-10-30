@@ -16,7 +16,8 @@
     "signupOpen": "Inscripciones abiertas",
     "location": "Ubicación",
     "services": "Terapias y coaching",
-    "book": "Reservar"
+    "book": "Reservar",
+    "events": "Eventos"
   },
   "courses": {
     "title": "Clases y experiencias",
@@ -118,7 +119,7 @@
       "La asociación acompaña a las mujeres en Perpignan a través de la danza intuitiva, la danza oriental y la expresión corporal, en una experiencia inmersiva que une movimiento, creatividad, confianza y bienestar femenino.",
       "Más que una simple clase de danza, Sully propone un acompañamiento progresivo inspirado en el ciclo de transformación de la mariposa, símbolo de renacimiento, evolución y emancipación femenina."
     ],
-    "stagesTitle": "Un recorrido en varias etapas",
+    "stagesTitle": "Las etapas de la transformación",
     "accompTitle": "Un acompañamiento artístico y humano",
     "motto": "Danza • Transformación • Feminidad • Expresión personal",
     "stages": [
@@ -137,7 +138,8 @@
         "subtitle": "La transformación",
         "text": "Poco a poco, cada mujer revela su identidad, su feminidad y su libertad de expresión, en plena armonía consigo misma y capaz de crear una vida más plena y creativa."
       }
-    ]
+    ],
+    "methodIntro": "Como la oruga que se convierte en mariposa, cada mujer atraviesa su propio ciclo de transformación. Sus alas son la confianza y la fe en sí misma, para renacer, brillar y volar."
   },
   "info": {
     "title": "Información y tarifas",
@@ -234,5 +236,29 @@
     "book": "Reservar mi sesión",
     "call": "o reservar la llamada gratuita para conocernos"
   },
-  "atelierCta": "Contactarme"
+  "atelierCta": "Contactarme",
+  "inPerson": {
+    "title": "Presencial en Perpignan",
+    "class": "Danza intuitiva y danza oriental intuitiva",
+    "text": "Las dos danzas se practican juntas, en la misma sesión. Empezamos con la prépa corps: un calentamiento intuitivo para reconectar con tu cuerpo.",
+    "scheduleTitle": "Horarios",
+    "schedule": [
+      "Lunes · 18:00 – 19:15",
+      "Miércoles · 11:00 – 12:00"
+    ],
+    "placeTitle": "Lugar",
+    "parkingTitle": "Estacionamiento",
+    "parking": "En el Lidl o en las calles de alrededor.",
+    "directions": "Cómo llegar",
+    "more": "Horarios y lugar"
+  },
+  "events": {
+    "metaTitle": "Eventos, espectáculos y talleres | Le Papillon Danse 66",
+    "title": "Eventos y espectáculos",
+    "intro": "Haflas, espectáculos, talleres y momentos para compartir: la vida de Le Papillon en movimiento, en Perpignan y a orillas del mar.",
+    "videoTitle": "Le Papillon Danse en video",
+    "galleryTitle": "Galería",
+    "nextTitle": "Los próximos encuentros",
+    "nextText": "Las fechas de los próximos eventos se anuncian en Instagram. Síguenos para no perderte nada."
+  }
 }
