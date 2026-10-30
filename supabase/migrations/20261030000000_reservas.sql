@@ -403,6 +403,11 @@ create policy "admin events"    on public.events           for all using (public
 create policy "admin bookings"  on public.bookings         for all using (public.is_admin()) with check (public.is_admin());
 create policy "admin ve admins" on public.admins           for select using (public.is_admin());
 
+-- Acceso a las tablas (las reglas de arriba deciden qué filas ve cada uno)
+grant usage on schema public to anon, authenticated, service_role;
+grant select on public.services to anon;
+grant select, insert, update, delete on all tables in schema public to authenticated, service_role;
+
 -- Funciones: el sitio solo puede consultar; reservar/cancelar pasa por el servidor
 revoke execute on all functions in schema public from public, anon, authenticated;
 grant execute on function public.available_slots(text, date, date) to anon, authenticated;
