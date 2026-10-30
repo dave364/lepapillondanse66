@@ -13,7 +13,8 @@ function load() {
   const url = import.meta.env.VITE_SUPABASE_URL
   const key = import.meta.env.VITE_SUPABASE_ANON_KEY
   fetch(`${url}/rest/v1/services?select=key,price,minutes,online,free_trial`, {
-    headers: { apikey: key, Authorization: `Bearer ${key}` },
+    // Las claves nuevas (sb_publishable_…) van solo en apikey; las viejas (JWT) también en Authorization
+    headers: key.startsWith('eyJ') ? { apikey: key, Authorization: `Bearer ${key}` } : { apikey: key },
   })
     .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
     .then((rows) => {
