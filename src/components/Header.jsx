@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { BOOKING } from '../config/booking'
+import BookLink from './BookLink'
 import LanguageSwitcher from './LanguageSwitcher'
 import MusicButton from './MusicButton'
 import FlutterLogo from './FlutterLogo'
@@ -67,9 +67,9 @@ export default function Header({ full = false }) {
             </li>
           ))}
           <li>
-            <OrnateButton as="a" size="sm" className="ornate--book" href={BOOKING.all} target="_blank" rel="noopener">
+            <BookLink size="sm" className="ornate--book">
               {t('nav.book')}
-            </OrnateButton>
+            </BookLink>
           </li>
         </ul>
       </nav>

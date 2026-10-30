@@ -42,6 +42,7 @@ public/
 - [ ] Texto completo de la historia de Sully
 - [ ] Prerenderizado para SEO (`vite-react-ssg`) antes de publicar
 - [x] Reservas con Setmore y pagos con PayPal (`src/config/booking.js`: precios, duraciones y links)
+- [ ] Reservas propias con panel para Zulgey (Supabase): poner en marcha siguiendo [`supabase/LEEME.md`](supabase/LEEME.md)
 - [ ] Si cambia un precio o servicio en Setmore, actualizar `src/config/booking.js`
 - [ ] Video profesional del videasta para la portada
 - [ ] Feed de Instagram en el sitio (Behold.so, que conecte Sully)

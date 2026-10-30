@@ -8,9 +8,11 @@
     "build": "vite build && node scripts/spa-routes.mjs",
     "lint": "oxlint",
     "preview": "vite preview",
-    "images": "node scripts/download-images.mjs"
+    "images": "node scripts/download-images.mjs",
+    "test:db": "node supabase/tests/agenda.test.mjs"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
     "i18next": "^26.5.10",
     "i18next-browser-languagedetector": "^8.2.2",
     "react": "^19.3.1",
@@ -20,6 +22,7 @@
     "react-router-dom": "^7.18.4"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "^0.5.13",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",

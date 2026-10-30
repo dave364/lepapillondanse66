@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { SITE } from '../config/site'
-import { BOOKING } from '../config/booking'
+import BookLink from './BookLink'
 import OrnateButton from './OrnateButton'
 
 // Clases presenciales en Perpignan: horarios, sala, parking y mapa.
@@ -47,9 +47,9 @@ export default function InPerson({ compact = false }) {
       </div>
 
       <p className="in-person__actions">
-        <OrnateButton as="a" size="sm" className="ornate--book" href={BOOKING.all} target="_blank" rel="noopener">
+        <BookLink size="sm" className="ornate--book">
           {t('nav.book')}
-        </OrnateButton>
+        </BookLink>
         {compact ? (
           <OrnateButton as={Link} size="sm" to={`/${i18n.language}/cours#presentiel`}>{t('inPerson.more')}</OrnateButton>
         ) : (

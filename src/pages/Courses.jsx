@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import CourseList from '../components/CourseList'
 import OrnateButton from '../components/OrnateButton'
 import InPerson from '../components/InPerson'
-import { BOOKING } from '../config/booking'
+import BookLink from '../components/BookLink'
 
 export default function Courses() {
   const { t, i18n } = useTranslation()
@@ -14,7 +14,7 @@ export default function Courses() {
       <InPerson />
       <CourseList />
       <p className="center">
-        <OrnateButton as="a" href={BOOKING.all} target="_blank" rel="noopener">{t('closingCta.book')}</OrnateButton>
+        <BookLink>{t('closingCta.book')}</BookLink>
       </p>
       <p className="center">
         <OrnateButton as={Link} size="sm" to={`/${i18n.language}/soins`}>{t('services.discover')}</OrnateButton>

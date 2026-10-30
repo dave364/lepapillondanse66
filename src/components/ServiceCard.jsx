@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import OrnateButton from './OrnateButton'
+import BookLink from './BookLink'
+import { useLiveService } from '../lib/liveServices'
 
 // Precio con el formato del idioma (45 €, €45, ٤٥ €…)
 export function usePrice() {
@@ -23,10 +24,14 @@ export function useDuration() {
 }
 
 // Duración · precio + etiquetas (En ligne, 1er cours offert)
-export function ServiceMeta({ service }) {
+export function ServiceMeta({ service: base }) {
   const { t } = useTranslation()
   const price = usePrice()
   const duration = useDuration()
+  // Con datos del panel si los hay (el sitio de reservas los pasa ya resueltos)
+  const live = useLiveService(base?.key ? base : null)
+  const service = base?.key ? live : base
+  if (!service) return null
   return (
     <div className="service-meta">
       <span className="service-meta__main">
@@ -38,22 +43,25 @@ export function ServiceMeta({ service }) {
   )
 }
 
-// Botón Réserver (Setmore). El link de pago por PayPal le llega a la
-// clienta en el email de confirmación de Setmore, después de reservar.
+// Botón Réserver. El link de pago por PayPal (con el monto) le llega a la
+// clienta en el email de confirmación, después de reservar.
 export function ServiceActions({ service }) {
   const { t } = useTranslation()
+  if (!useLiveService(service)) return null // desactivado en el panel
   return (
     <div className="service-actions">
-      <OrnateButton as="a" size="sm" className="ornate--book" href={service.url} target="_blank" rel="noopener">
+      <BookLink serviceKey={service.key} size="sm" className="ornate--book">
         {t('book.cta')}
-      </OrnateButton>
+      </BookLink>
     </div>
   )
 }
 
 export default function ServiceCard({ service }) {
   const { t } = useTranslation()
+  const active = useLiveService(service)
   const item = t(`services.items.${service.key}`, { returnObjects: true })
+  if (!active) return null // desactivado en el panel
   return (
     <article className="service">
       <h3 className="service__title">{item.title}</h3>

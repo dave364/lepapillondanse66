@@ -1344,3 +1344,121 @@ p { margin: 0 0 1em; }
   .events__gallery { max-width: 88vw; gap: 1.5vw; }
   .events__next { max-width: min(60vw, 1000px); font-size: clamp(1.05rem, 1.2vw, 1.6rem); padding: 2.5vw 3vw; }
 }
+
+/* ==========================================================================
+   Reservas propias (/reserver) e inscripción a eventos
+   ========================================================================== */
+.page-loading { min-height: 60vh; }
+.bk .info { margin-inline: auto; }
+.bk-back { max-width: 980px; margin: 0 auto 0.5rem; font-family: var(--f-sans); font-size: 0.95rem; }
+.bk-back a, .bk-success__home a { color: var(--purple); }
+.bk-meta { display: flex; justify-content: center; margin-block: 0.5rem 1rem; }
+.bk-text { max-width: 46rem; }
+.bk-card {
+  max-width: 980px;
+  margin: clamp(1.5rem, 3vw, 2.5rem) auto 0;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  background: linear-gradient(160deg, rgb(255 248 240 / 0.86), rgb(255 243 232 / 0.7));
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgb(214 168 79 / 0.6);
+  border-radius: 28px;
+  box-shadow: 0 14px 34px rgb(118 43 135 / 0.12);
+}
+.bk-card--narrow { max-width: 36rem; text-align: center; }
+.bk-step {
+  margin: 0 0 0.9rem;
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(1.3rem, 1rem + 0.8vw, 1.7rem);
+  color: var(--purple);
+}
+.bk-loading, .bk-empty, .bk-hint { text-align: center; margin: 1rem 0; }
+.bk-pick { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); }
+@media (max-width: 720px) { .bk-pick { grid-template-columns: 1fr; } }
+
+/* Calendario */
+.bk-cal__head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-block-end: 0.6rem; }
+.bk-cal__month { margin: 0; font: 400 1.15rem/1.2 var(--f-title); letter-spacing: 0.06em; }
+.bk-cal__nav {
+  width: 2.4rem; height: 2.4rem;
+  border: 1px solid rgb(214 168 79 / 0.7); border-radius: 50%;
+  background: var(--ivory); color: var(--purple);
+  font-size: 1.4rem; line-height: 1; cursor: pointer;
+}
+:root[dir='rtl'] .bk-cal__nav span { display: inline-block; scale: -1 1; }
+.bk-cal__nav:disabled { opacity: 0.35; cursor: default; }
+.bk-cal__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.3rem; }
+.bk-cal__wd { text-align: center; font-family: var(--f-sans); font-size: 0.8rem; opacity: 0.7; }
+.bk-cal__day {
+  aspect-ratio: 1; min-height: 2.4rem;
+  border: 1px solid transparent; border-radius: 50%;
+  background: none; color: var(--plum);
+  font: inherit; font-size: 1rem; opacity: 0.35;
+}
+.bk-cal__day.is-open {
+  opacity: 1; cursor: pointer;
+  background: rgb(255 243 232 / 0.9);
+  border-color: rgb(214 168 79 / 0.65);
+  color: var(--purple); font-weight: 600;
+}
+.bk-cal__day.is-open:hover { background: #fff; }
+.bk-cal__day.is-today { text-decoration: underline; text-underline-offset: 3px; }
+.bk-cal__day.is-selected { background: var(--purple); border-color: var(--purple); color: var(--ivory); }
+.bk-cal__empty { text-align: center; font-size: 0.95rem; opacity: 0.8; }
+
+/* Horarios */
+.bk-day { margin: 0 0 0.6rem; font-weight: 600; }
+.bk-times { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(5.2rem, 1fr)); gap: 0.5rem; }
+.bk-time {
+  width: 100%; padding: 0.55rem 0.4rem;
+  border: 1px solid rgb(118 43 135 / 0.35); border-radius: 999px;
+  background: var(--ivory); color: var(--purple);
+  font: 600 1rem/1 var(--f-sans); cursor: pointer;
+}
+.bk-time:hover, .bk-time:focus-visible { background: var(--purple); color: var(--ivory); }
+.bk-tz { margin-block-start: 1rem; font-size: 0.85rem; opacity: 0.75; }
+
+/* Turno elegido + formulario */
+.bk-chosen {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1rem;
+  margin-block-end: 1.5rem; padding: 0.8rem 1.1rem;
+  border-radius: 16px; background: rgb(216 188 236 / 0.35);
+}
+.bk-chosen strong { color: var(--purple); }
+.bk-link { border: 0; background: none; color: var(--purple); font: inherit; text-decoration: underline; cursor: pointer; }
+.bk-form { display: grid; gap: 1rem; max-width: 34rem; }
+.bk-field { display: grid; gap: 0.3rem; font-family: var(--f-sans); font-size: 0.95rem; }
+.bk-field input, .bk-field textarea {
+  width: 100%; padding: 0.65rem 0.85rem;
+  border: 1px solid rgb(118 43 135 / 0.3); border-radius: 12px;
+  background: #fff; color: var(--plum); font: inherit; font-size: 1rem;
+}
+.bk-field input:focus, .bk-field textarea:focus { outline: 2px solid rgb(118 43 135 / 0.45); outline-offset: 1px; }
+.bk-hp { position: absolute; inset-inline-start: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.bk-privacy { margin: 0; font-size: 0.85rem; opacity: 0.8; }
+.bk-form .ornate { justify-self: start; }
+.bk-error {
+  margin: 0; padding: 0.7rem 1rem; border-radius: 12px;
+  background: rgb(176 40 80 / 0.1); color: #8c1d44; text-align: center;
+}
+
+/* Reservado */
+.bk-success { text-align: center; }
+.bk-success__title { margin: 0 0 0.6rem; font: 400 clamp(1.6rem, 1.2rem + 1.2vw, 2.3rem) var(--f-display); color: var(--purple); }
+.bk-success__pay { margin-block: 1.4rem; }
+.bk-summary { margin-block-end: 1.2rem; }
+
+/* Eventos con cupo */
+.bk-events { max-width: 980px; margin: clamp(2rem, 4vw, 3rem) auto 0; }
+.bk-events__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; }
+.bk-event {
+  padding: clamp(1.2rem, 3vw, 2rem);
+  background: linear-gradient(160deg, rgb(255 248 240 / 0.86), rgb(255 243 232 / 0.7));
+  border: 1px solid rgb(214 168 79 / 0.6); border-radius: 24px;
+  box-shadow: 0 10px 26px rgb(118 43 135 / 0.1);
+}
+.bk-event__title { margin: 0 0 0.3rem; font: 400 clamp(1.3rem, 1rem + 0.9vw, 1.8rem) var(--f-display); color: var(--purple); }
+.bk-event__when { margin: 0 0 0.6rem; }
+.bk-event__text { margin-block: 0.8rem 1rem; white-space: pre-line; }
+.bk-event .bk-step { margin-block-start: 1.2rem; }

@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { IMAGES, SITE } from '../config/site'
-import { BOOKING, SERVICES } from '../config/booking'
+import { SERVICES } from '../config/booking'
+import BookLink from '../components/BookLink'
 import CourseList from '../components/CourseList'
 import InPerson from '../components/InPerson'
 import SafeImg from '../components/SafeImg'
@@ -95,7 +96,7 @@ export default function Home() {
         <h2 className="block__title">{t('info.title')}</h2>
         <p className="info">{t('info.text')}</p>
         <p className="center">
-          <OrnateButton as="a" href={BOOKING.all} target="_blank" rel="noopener">{t('nav.book')}</OrnateButton>
+          <BookLink>{t('nav.book')}</BookLink>
         </p>
         <p className="info info--small">{t('book.payNote')}</p>
       </section>
@@ -121,9 +122,9 @@ export default function Home() {
         <h2 className="closing__title">
           {closing.map((l) => <span key={l}>{l}</span>)}
         </h2>
-        <OrnateButton as="a" href={BOOKING.all} target="_blank" rel="noopener">{t('closingCta.book')}</OrnateButton>
+        <BookLink>{t('closingCta.book')}</BookLink>
         <p className="closing__call">
-          <a href={BOOKING.call} target="_blank" rel="noopener">{t('closingCta.call')}</a>
+          <BookLink serviceKey="call" plain>{t('closingCta.call')}</BookLink>
         </p>
       </section>
     </>

@@ -58,7 +58,8 @@ export default function LangLayout() {
         ))}
         <link rel="alternate" hrefLang="x-default" href={urlFor(DEFAULT_LANG)} />
       </Helmet>
-      <Welcome />
+      {/* Las páginas de reserva (y el link de cancelar del email) abren directo */}
+      {!rest.startsWith('reserver') && <Welcome />}
       <Header full={!rest} />
       <main id="main">
         {/* key = página sin el idioma: al cambiar de página hay fundido,

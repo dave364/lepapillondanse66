@@ -1,10 +1,14 @@
-import { useEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet-async'
 import { EVENTS, SITE } from '../config/site'
 import OrnateButton from '../components/OrnateButton'
 import SafeImg from '../components/SafeImg'
 import { pauseMusic } from '../lib/music'
+import { BOOKING_ENABLED } from '../config/booking'
+
+// Eventos con cupo e inscripción (solo con el sistema de reservas propio)
+const UpcomingEvents = BOOKING_ENABLED ? lazy(() => import('../booking/UpcomingEvents')) : () => null
 
 // Video: si ninguna fuente carga, se oculta en vez de mostrar un reproductor roto
 function EventVideo({ title }) {
@@ -41,6 +45,10 @@ export default function Events() {
       <p className="info">{t('events.intro')}</p>
 
       <EventVideo title={t('events.videoTitle')} />
+
+      <Suspense fallback={null}>
+        <UpcomingEvents />
+      </Suspense>
 
       {gallery.length > 0 && (
         <>

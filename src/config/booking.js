@@ -1,4 +1,7 @@
-// Reservas (Setmore) y pagos (PayPal).
+// Reservas y pagos (PayPal).
+// Si están configuradas las variables de Supabase (VITE_SUPABASE_URL y
+// VITE_SUPABASE_ANON_KEY) se usa el sistema de reservas propio (/reserver).
+// Si no, los botones siguen llevando a Setmore como antes.
 // Datos tomados de la página de Setmore de Sully el 29/10/2026.
 // Si cambia un precio o una duración en Setmore, actualizarlo también acá.
 
@@ -50,3 +53,21 @@ export const COURSE_SERVICES = ['intuitiveDance', 'orientalIntuitive', 'pilatesO
 
 export const findService = (key) =>
   [...SERVICES.dance, ...SERVICES.care].find((s) => s.key === key)
+
+// ---------------------------------------------------------------------------
+// Sistema de reservas propio
+// ---------------------------------------------------------------------------
+export const BOOKING_ENABLED = Boolean(
+  import.meta.env.VITE_SUPABASE_URL && import.meta.env.VITE_SUPABASE_ANON_KEY,
+)
+
+// Zona horaria de la agenda de Sully
+export const TIMEZONE = 'Europe/Paris'
+
+// A dónde lleva "Réserver": página propia o Setmore.
+// key: clave del servicio ('tarot', 'call'…) o vacío para ver todos.
+export function bookingHref(lang, key) {
+  if (BOOKING_ENABLED) return key ? `/${lang}/reserver/${key}` : `/${lang}/reserver`
+  if (key === 'call') return BOOKING.call
+  return findService(key)?.url ?? BOOKING.all
+}
