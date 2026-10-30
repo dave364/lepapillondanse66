@@ -4,9 +4,7 @@ import LangLayout from './components/LangLayout'
 import Home from './pages/Home'
 import Sully from './pages/Sully'
 import Courses from './pages/Courses'
-import Online from './pages/Online'
 import Contact from './pages/Contact'
-import Signup from './pages/Signup'
 import Services from './pages/Services'
 import NotFound from './pages/NotFound'
 
@@ -20,9 +18,10 @@ export default function App() {
         <Route path="sully" element={<Sully />} />
         <Route path="cours" element={<Courses />} />
         <Route path="soins" element={<Services />} />
-        <Route path="en-ligne" element={<Online />} />
+        {/* "Expérience en ligne" e "Inscription" se integraron en Soins & coaching */}
+        <Route path="en-ligne" element={<Navigate to="../soins#danse" replace />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="inscription" element={<Signup />} />
+        <Route path="inscription" element={<Navigate to="../soins" replace />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

@@ -24,11 +24,9 @@ export default function Header({ full = false }) {
   const links = [
     { to: `/${lang}`, label: t('nav.home'), end: true },
     { to: `/${lang}/sully`, label: t('nav.sully') },
-    { to: `/${lang}/inscription`, label: t('nav.signupOpen') },
-    { to: `/${lang}/en-ligne`, label: t('nav.online') },
     { to: `/${lang}/cours`, label: t('nav.courses') },
     { to: `/${lang}/soins`, label: t('nav.services') },
-    { to: `/${lang}/contact`, label: t('nav.location') },
+    { to: `/${lang}/contact`, label: t('nav.contact') },
   ]
   const lines = t('hero.lines', { returnObjects: true })
 

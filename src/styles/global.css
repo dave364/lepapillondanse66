@@ -9,7 +9,7 @@
    eschaton  → Gilda Display  (título principal y títulos de cursos)
    aboreto   → Aboreto        (títulos de sección, igual que el original)
    cormorant → Cormorant Garamond (igual que el original)
-   gilroy    → Outfit         (textos chicos, footer)
+   gilroy    → Cormorant Garamond (textos chicos: se unificó en 3 familias)
    ========================================================== */
 
 :root {
@@ -29,7 +29,7 @@
   --f-display: 'Gilda Display', 'Didot', Georgia, serif;
   --f-title: 'Aboreto', 'Trajan Pro', Georgia, serif;
   --f-text: 'Cormorant Garamond', Garamond, Georgia, serif;
-  --f-sans: 'Outfit', 'Helvetica Neue', Arial, sans-serif;
+  --f-sans: 'Cormorant Garamond', Garamond, Georgia, serif;
 
   --gutter: clamp(16px, 4vw, 48px);
   --max: 1180px;
@@ -339,25 +339,75 @@ p { margin: 0 0 1em; }
   max-width: 420px;
   justify-self: end;          /* hacia el centro del círculo */
 }
+/* Texto alineado al inicio y en peso normal: se lee mejor en párrafos largos */
 .philo__text {
-  text-align: center;
-  font-size: 1.08rem;
-  font-weight: 600;
+  text-align: start;
+  font-size: 1.12rem;
+  font-weight: 500;
+  line-height: 1.65;
   padding-block: 2rem;
+  padding-inline: 1.1rem;
+  max-width: 62ch;
+  text-shadow: 0 0 12px rgb(240 228 250 / 0.9), 0 0 3px rgb(240 228 250 / 0.8);
 }
 .philo__text h3 {
-  margin: 1.6rem 0 0.8rem;
-  font-family: var(--f-text);
-  font-style: italic;
-  font-size: 1.35rem;
-  font-weight: 700;
+  margin: 2rem 0 1rem;
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+.philo__text .motto { text-align: center; margin-block-start: 2rem; }
+
+/* Las tres etapas: tarjetas de vidrio con número en círculo dorado */
+.philo__stages {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+  counter-reset: stage;
+}
+.philo__stage {
+  position: relative;
+  counter-increment: stage;
+  padding: 1rem 1.25rem 1rem 3.75rem;
+  padding-inline: 3.75rem 1.25rem;
+  background: rgb(255 248 252 / 0.55);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgb(214 168 79 / 0.5);
+  border-radius: 18px;
+}
+.philo__stage::before {
+  content: counter(stage);
+  position: absolute;
+  inset-inline-start: 1rem;
+  inset-block-start: 1rem;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+  background: var(--ivory);
+  font-family: var(--f-display);
+  color: var(--purple);
 }
 .philo__stage h4 {
-  margin: 0 0 0.3rem;
-  font-family: var(--f-text);
-  font-size: 1.15rem;
-  font-weight: 700;
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.2;
 }
+.philo__stage-sub {
+  margin: 0.1rem 0 0.4rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--purple);
+}
+.philo__stage p:last-child { margin: 0; }
 /* En pantallas grandes, como en el original: la foto ocupa toda la mitad
    izquierda del círculo, translúcida, y deja ver las alas detrás */
 @media (min-width: 821px) {
@@ -643,7 +693,7 @@ p { margin: 0 0 1em; }
 /* Chico: menú, idioma, música */
 .ornate--sm {
   padding: 0.5rem 1.15rem;
-  font: 400 0.92rem/1.2 var(--f-sans);
+  font: 600 1.02rem/1.2 var(--f-sans);
 }
 /* Página actual del menú: dorado más intenso y gema verde arriba */
 .ornate--sm.active {
@@ -1005,9 +1055,9 @@ p { margin: 0 0 1em; }
     grid-template-columns: 45fr 47fr;
     gap: 2vw;
   }
-  .philo__text { font-size: clamp(1.05rem, 1.42vw, 2rem); }
-  .philo__text h3 { font-size: 1.25em; }
-  .philo__stage h4 { font-size: 1.07em; }
+  .philo__text { font-size: clamp(1.1rem, 1.3vw, 1.85rem); max-width: none; padding-inline: 0; }
+  .philo__text h3 { font-size: 1.45em; }
+  .philo__stage h4 { font-size: 1.2em; }
 
   /* Cursos */
   .courses { max-width: 88vw; }

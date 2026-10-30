@@ -40,12 +40,16 @@ export default function Home() {
             {philo.map((p) => <p key={p}>{p}</p>)}
 
             <h3>{t('philosophy.stagesTitle')}</h3>
-            {stages.map((s) => (
-              <div key={s.name} className="philo__stage">
-                <h4>{s.name} — {s.subtitle}</h4>
-                <p>{s.text}</p>
-              </div>
-            ))}
+            {/* Las tres etapas son una secuencia: van como lista ordenada */}
+            <ol className="philo__stages">
+              {stages.map((s) => (
+                <li key={s.name} className="philo__stage">
+                  <h4>{s.name}</h4>
+                  <p className="philo__stage-sub">{s.subtitle}</p>
+                  <p>{s.text}</p>
+                </li>
+              ))}
+            </ol>
 
             <h3>{t('philosophy.accompTitle')}</h3>
             {accomp.map((p) => <p key={p}>{p}</p>)}
