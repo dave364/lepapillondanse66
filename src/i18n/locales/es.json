@@ -164,7 +164,7 @@
     "freeTrial": "1.ª clase gratis",
     "min": "min",
     "hour": "h",
-    "payNote": "Pago seguro por PayPal, a nombre de Zulgey Castro.",
+    "payNote": "Pago seguro por PayPal, a nombre de Zulgey Castro. El link te llega después de reservar.",
     "call": {
       "title": "Conozcámonos",
       "text": "Una primera llamada personalizada de 30 minutos, en vivo y sin costo, para responder tus dudas y elegir el acompañamiento que mejor te va.",
@@ -184,8 +184,8 @@
     "howTitle": "Cómo reservar",
     "how": [
       "Elige tu sesión y reserva tu horario online.",
-      "Paga tu sesión por PayPal.",
-      "Recibes la confirmación por email."
+      "Recibes un email de confirmación con el link de pago por PayPal.",
+      "Paga tu sesión para confirmarla."
     ],
     "disclaimer": "Estos acompañamientos holísticos no reemplazan una consulta ni un tratamiento médico.",
     "items": {

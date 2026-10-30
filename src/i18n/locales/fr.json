@@ -164,7 +164,7 @@
     "freeTrial": "1er cours offert",
     "min": "min",
     "hour": "h",
-    "payNote": "Paiement sécurisé via PayPal, au nom de Zulgey Castro.",
+    "payNote": "Paiement sécurisé via PayPal, au nom de Zulgey Castro. Le lien vous est envoyé après la réservation.",
     "call": {
       "title": "Faisons connaissance",
       "text": "Un premier appel personnalisé de 30 minutes, en direct et sans frais, pour répondre à vos questions et choisir l'accompagnement qui vous correspond.",
@@ -184,8 +184,8 @@
     "howTitle": "Comment réserver",
     "how": [
       "Choisissez votre séance et réservez votre créneau en ligne.",
-      "Réglez votre séance via PayPal.",
-      "Vous recevez la confirmation par e-mail."
+      "Vous recevez un e-mail de confirmation avec le lien de paiement PayPal.",
+      "Réglez votre séance pour la confirmer."
     ],
     "disclaimer": "Ces accompagnements holistiques ne remplacent pas un avis ou un traitement médical.",
     "items": {

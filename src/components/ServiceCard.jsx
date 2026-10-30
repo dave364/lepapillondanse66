@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next'
-import { paypalLink } from '../config/booking'
 import OrnateButton from './OrnateButton'
 
 // Precio con el formato del idioma (45 €, €45, ٤٥ €…)
@@ -39,7 +38,8 @@ export function ServiceMeta({ service }) {
   )
 }
 
-// Botones: Réserver (Setmore) y Payer avec PayPal (con el monto cargado)
+// Botón Réserver (Setmore). El link de pago por PayPal le llega a la
+// clienta en el email de confirmación de Setmore, después de reservar.
 export function ServiceActions({ service }) {
   const { t } = useTranslation()
   return (
@@ -47,11 +47,6 @@ export function ServiceActions({ service }) {
       <OrnateButton as="a" size="sm" className="ornate--book" href={service.url} target="_blank" rel="noopener">
         {t('book.cta')}
       </OrnateButton>
-      {service.price > 0 && (
-        <OrnateButton as="a" size="sm" href={paypalLink(service.price)} target="_blank" rel="noopener">
-          {t('book.pay')}
-        </OrnateButton>
-      )}
     </div>
   )
 }

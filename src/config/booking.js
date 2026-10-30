@@ -6,7 +6,8 @@ const BASE = 'https://lepapillondanse.setmore.com'
 const ref = '?utm_source=website'
 const service = (id) => `${BASE}/services/${id}${ref}`
 
-// Pagos con PayPal (cuenta personal de Sully, no la de la asociación)
+// Pagos con PayPal (cuenta personal de Sully, no la de la asociación).
+// No se muestra en la web: va en el email de confirmación de Setmore.
 export const PAYPAL = 'https://paypal.me/zulgeycastro'
 // Link de PayPal con el monto ya cargado, por ej. paypalLink(45) → .../45EUR
 export const paypalLink = (amount) => (amount ? `${PAYPAL}/${amount}EUR` : PAYPAL)

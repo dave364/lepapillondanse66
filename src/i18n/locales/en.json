@@ -164,7 +164,7 @@
     "freeTrial": "1st class free",
     "min": "min",
     "hour": "h",
-    "payNote": "Secure payment via PayPal, to Zulgey Castro.",
+    "payNote": "Secure payment via PayPal, to Zulgey Castro. The link is sent to you after booking.",
     "call": {
       "title": "Let's get to know each other",
       "text": "A first personalised 30-minute call, live and free of charge, to answer your questions and choose the guidance that suits you.",
@@ -184,8 +184,8 @@
     "howTitle": "How to book",
     "how": [
       "Choose your session and book your time slot online.",
-      "Pay for your session with PayPal.",
-      "You receive the confirmation by email."
+      "You receive a confirmation email with the PayPal payment link.",
+      "Pay for your session to confirm it."
     ],
     "disclaimer": "These holistic sessions do not replace medical advice or treatment.",
     "items": {
