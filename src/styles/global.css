@@ -121,14 +121,14 @@ p { margin: 0 0 1em; }
   gap: 1rem;
   z-index: 2;
 }
-.header__logo img {
+.header__logo .flutter {
   width: clamp(110px, 14vw, 150px);
   height: auto;
   filter: drop-shadow(0 6px 18px rgb(118 43 135 / 0.25));
 }
 /* Portada: como en el original, todo escala con el tamaño de la pantalla
    (el ancho y también el alto, para que entre completa sin scroll) */
-.header--full .header__logo img { width: clamp(min(62vw, 250px), min(23vw, 42vh), 560px); }
+.header--full .header__logo .flutter { width: clamp(min(62vw, 250px), min(23vw, 42vh), 560px); }
 
 .header__title {
   margin: 1.5rem 0 1.75rem;
@@ -192,10 +192,10 @@ p { margin: 0 0 1em; }
 @media (max-width: 760px) {
   .header__toggle.ornate { display: inline-flex; }
   /* Menú abierto: el logo y el título se achican para dar lugar a los botones */
-  .header__logo img,
+  .header__logo .flutter,
   .header__title { transition: width 0.35s ease, font-size 0.35s ease, margin 0.35s ease; }
   .header--full.header--menu-open { justify-content: flex-start; padding-block-start: 4.25rem; }
-  .header--full.header--menu-open .header__logo img { width: 110px; }
+  .header--full.header--menu-open .header__logo .flutter { width: 110px; }
   .header--menu-open .header__title { font-size: 1.2rem; margin: 0.6rem 0 0.4rem; }
   .header--menu-open .nav ul { margin-block-start: 1rem; }
   .nav { display: none; width: 100%; max-width: 360px; }
@@ -1151,10 +1151,29 @@ p { margin: 0 0 1em; }
       opacity 0.8s ease var(--reveal-delay, 0ms),
       translate 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) var(--reveal-delay, 0ms);
   }
-  .header--full .header__logo img { animation: logo-breathe 7s ease-in-out infinite; }
+  .header--full .header__logo .flutter { animation: logo-breathe 7s ease-in-out infinite; }
 }
 
 /* Reducir movimiento: el botón brilla pero no se levanta */
 @media (prefers-reduced-motion: reduce) {
   .ornate:hover { transform: none; }
+}
+
+/* ---------- Logo con alas en movimiento ---------- */
+.flutter { position: relative; display: inline-block; line-height: 0; }
+.flutter img { display: block; width: 100%; height: auto; }
+.flutter__layer { position: absolute; inset: 0; height: 100% !important; pointer-events: none; }
+/* El eje de cada ala es donde se une al cuerpo */
+.flutter__wing--l { transform-origin: 47.9% 20%; animation: flap-l 3.4s ease-in-out infinite; }
+.flutter__wing--r { transform-origin: 50.3% 20%; animation: flap-r 3.4s ease-in-out infinite; }
+/* Suben un poco, bajan un poco y vuelven: un aleteo lento y suave */
+@keyframes flap-l {
+  0%, 100% { rotate: 0deg; }
+  35% { rotate: 5deg; }
+  70% { rotate: -2.5deg; }
+}
+@keyframes flap-r {
+  0%, 100% { rotate: 0deg; }
+  35% { rotate: -5deg; }
+  70% { rotate: 2.5deg; }
 }

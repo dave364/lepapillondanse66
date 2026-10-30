@@ -21,6 +21,13 @@ export const SITE = {
 // Imágenes: se bajan del sitio original con `npm run images`
 export const IMAGES = {
   logo: '/images/logo.png',
+  // Capas del logo para animar las alas (ver FlutterLogo)
+  logoLayers: {
+    base: '/images/logo-base.png',
+    wingL: '/images/logo-wing-l.png',
+    wingR: '/images/logo-wing-r.png',
+    front: '/images/logo-front.png',
+  },
   // Retrato de Sully recortado del afiche (página de terapias)
   portrait: '/images/sully-portrait.jpg',
   sky: '/images/sky.jpg',

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { IMAGES } from '../config/site'
 import { playMusic } from '../lib/music'
+import FlutterLogo from './FlutterLogo'
 import OrnateButton from './OrnateButton'
 
 // Pantalla de bienvenida con el logo. Al tocar "Entrer" se abre la página
@@ -38,7 +38,7 @@ export default function Welcome() {
       aria-label="Le Papillon Danse 66"
       onKeyDown={(e) => e.key === 'Escape' && enter(false)}
     >
-      <img src={IMAGES.logo} alt="Le Papillon Danse" className="welcome__logo" width="591" height="751" />
+      <FlutterLogo className="welcome__logo" />
       <OrnateButton ref={button} className="welcome__enter" onClick={() => enter(true)}>
         {t('welcome.enter')}
       </OrnateButton>

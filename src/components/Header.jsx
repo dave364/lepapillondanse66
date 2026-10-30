@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { IMAGES } from '../config/site'
 import { BOOKING } from '../config/booking'
 import LanguageSwitcher from './LanguageSwitcher'
 import MusicButton from './MusicButton'
+import FlutterLogo from './FlutterLogo'
 import OrnateButton from './OrnateButton'
 
 // Cabecera igual a la del sitio original: logo centrado, título con las
@@ -38,7 +38,7 @@ export default function Header({ full = false }) {
       </div>
 
       <Link to={`/${lang}`} className="header__logo">
-        <img src={IMAGES.logo} alt="Le Papillon Danse" width="591" height="751" />
+        <FlutterLogo />
       </Link>
 
       {full && (
