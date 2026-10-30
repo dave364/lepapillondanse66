@@ -504,9 +504,34 @@ p { margin: 0 0 1em; }
 
 /* ---------- Footer ---------- */
 .footer {
+  position: relative;
+  isolation: isolate;
   font-family: var(--f-sans);
   font-size: 0.95rem;
+  color: var(--plum);
   background-position: bottom;
+}
+/* Velo marfil sobre el mar: el fondo se sigue viendo pero el texto se lee */
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgb(255 243 232 / 0.35) 0%, rgb(255 243 240 / 0.78) 30%, rgb(255 243 240 / 0.86) 100%);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  pointer-events: none;
+}
+/* Línea dorada arriba, para separarlo del contenido */
+.footer::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  inset-block-start: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+  pointer-events: none;
 }
 .footer__inner {
   max-width: var(--max);
@@ -536,7 +561,7 @@ p { margin: 0 0 1em; }
   margin: 0 auto;
   padding: 1.1rem var(--gutter) 2.5rem;
   font-size: 0.85rem;
-  border-block-start: 1px solid rgb(255 255 255 / 0.85);
+  border-block-start: 1px solid rgb(214 168 79 / 0.45);
 }
 @media (max-width: 600px) {
   .footer__inner { flex-direction: column; align-items: center; text-align: center; }
