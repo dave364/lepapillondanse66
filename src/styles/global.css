@@ -1134,25 +1134,27 @@ p { margin: 0 0 1em; }
   50% { transform: translateY(-7px) scale(1.012); filter: drop-shadow(0 12px 26px rgb(214 168 79 / 0.35)); }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  /* Paso entre páginas */
-  .page-fade { animation: page-in 0.55s ease both; }
+@keyframes page-in-soft { from { opacity: 0; } to { opacity: 1; } }
 
-  /* Aparición al hacer scroll (la clase la pone useReveal) */
-  /* Solo se oculta mientras no entró: así respeta la opacidad propia de
-     cada elemento (por ej. la foto translúcida de Philosophie) */
-  .reveal:not(.is-in) { opacity: 0; translate: 0 22px; }
+/* Base para todos: fundidos suaves (aceptables aunque se pida reducir
+   movimiento, porque no hay desplazamiento) */
+.page-fade { animation: page-in-soft 0.5s ease both; }
+.reveal:not(.is-in) { opacity: 0; }
+.reveal { transition: opacity 0.9s ease var(--reveal-delay, 0ms); }
+
+/* Con movimiento habilitado: además suben un poco y el logo flota */
+@media (prefers-reduced-motion: no-preference) {
+  .page-fade { animation-name: page-in; }
+  .reveal:not(.is-in) { translate: 0 22px; }
   .reveal {
     transition:
       opacity 0.8s ease var(--reveal-delay, 0ms),
       translate 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) var(--reveal-delay, 0ms);
   }
-
-  /* Logo de la portada: respira lento, como si flotara */
   .header--full .header__logo img { animation: logo-breathe 7s ease-in-out infinite; }
 }
 
+/* Reducir movimiento: el botón brilla pero no se levanta */
 @media (prefers-reduced-motion: reduce) {
-  .ornate, .ornate:hover { transition: none; transform: none; }
-  .ornate:hover .ornate__gem { animation: none; }
+  .ornate:hover { transform: none; }
 }

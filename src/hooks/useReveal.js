@@ -3,8 +3,8 @@ import { useEffect } from 'react'
 // Aparición suave al hacer scroll.
 // Busca en <main> los elementos de la lista y los muestra (fundido + subida
 // corta) cuando entran en pantalla. Los que entran juntos aparecen uno tras
-// otro con un pequeño desfase. Si la persona pidió "reducir movimiento" en su
-// dispositivo, no se anima nada.
+// otro con un pequeño desfase. Si el dispositivo pide "reducir movimiento",
+// el CSS deja solo el fundido, sin desplazamiento.
 const TARGETS = [
   '.block__title',
   '.block > .info',
@@ -35,7 +35,6 @@ const STAGGER = 110 // ms entre elementos que aparecen juntos
 export default function useReveal(key) {
   useEffect(() => {
     if (typeof IntersectionObserver === 'undefined') return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
     const els = [...document.querySelectorAll(`#main :is(${TARGETS})`)].filter(
       (el) => !el.classList.contains('is-in'),
