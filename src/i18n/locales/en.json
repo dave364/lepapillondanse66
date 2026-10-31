@@ -296,7 +296,8 @@
       "event_past": "This event has already taken place.",
       "invalid_input": "Please check your name and email.",
       "service_not_found": "This session is no longer available.",
-      "generic": "Something went wrong. Please try again or message us on WhatsApp."
+      "generic": "Something went wrong. Please try again or message us on WhatsApp.",
+      "too_late": "Your appointment is less than 24 hours away: to cancel or change the date, please message us on WhatsApp."
     },
     "events": {
       "title": "Upcoming events",
@@ -317,7 +318,11 @@
       "rebook": "Book another time",
       "booking_not_found": "This link is no longer valid.",
       "already_cancelled": "This booking was already cancelled.",
-      "booking_past": "This booking has already passed. For any questions, message us on WhatsApp."
-    }
+      "booking_past": "This booking has already passed. For any questions, message us on WhatsApp.",
+      "too_late": "Your appointment is less than 24 hours away: to cancel or change the date, please message us on WhatsApp."
+    },
+    "packageNote_one": "One session.",
+    "packageNote_other": "Package of {{count}} sessions, paid in full. Book the first one here; the rest are arranged with Sully.",
+    "policy": "You can cancel up to 24 hours before. Payments are non-refundable, but you can change the date by messaging us."
   }
 }

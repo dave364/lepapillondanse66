@@ -296,7 +296,8 @@
       "event_past": "Este evento ya pasó.",
       "invalid_input": "Revisá tu nombre y tu email.",
       "service_not_found": "Esta sesión ya no está disponible.",
-      "generic": "Ocurrió un error. Probá de nuevo o escribinos por WhatsApp."
+      "generic": "Ocurrió un error. Probá de nuevo o escribinos por WhatsApp.",
+      "too_late": "Faltan menos de 24 h para tu encuentro: para cancelar o cambiar la fecha, escribinos por WhatsApp."
     },
     "events": {
       "title": "Próximos eventos",
@@ -317,7 +318,11 @@
       "rebook": "Reservar otro horario",
       "booking_not_found": "Este link ya no es válido.",
       "already_cancelled": "Esta reserva ya estaba cancelada.",
-      "booking_past": "Esta reserva ya pasó. Ante cualquier duda, escribinos por WhatsApp."
-    }
+      "booking_past": "Esta reserva ya pasó. Ante cualquier duda, escribinos por WhatsApp.",
+      "too_late": "Faltan menos de 24 h para tu encuentro: para cancelar o cambiar la fecha, escribinos por WhatsApp."
+    },
+    "packageNote_one": "Una sesión.",
+    "packageNote_other": "Paquete de {{count}} sesiones, se paga el total. Acá reservás la primera; las siguientes se acuerdan con Sully.",
+    "policy": "Podés cancelar hasta 24 h antes. Los pagos no se reembolsan, pero podés cambiar la fecha escribiéndonos."
   }
 }

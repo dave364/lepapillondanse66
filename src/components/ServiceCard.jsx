@@ -35,7 +35,7 @@ export function ServiceMeta({ service: base }) {
   return (
     <div className="service-meta">
       <span className="service-meta__main">
-        {duration(service.minutes)} · <strong>{price(service.price)}</strong>
+        {service.sessions > 1 && `${service.sessions} × `}{duration(service.minutes)} · <strong>{price(service.price)}</strong>
       </span>
       {service.online && <span className="tag">{t('book.online')}</span>}
       {service.freeTrial && <span className="tag tag--gem">{t('book.freeTrial')}</span>}

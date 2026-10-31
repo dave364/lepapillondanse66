@@ -12,7 +12,7 @@ const listeners = new Set()
 function load() {
   const url = import.meta.env.VITE_SUPABASE_URL
   const key = import.meta.env.VITE_SUPABASE_ANON_KEY
-  fetch(`${url}/rest/v1/services?select=key,price,minutes,online,free_trial`, {
+  fetch(`${url}/rest/v1/services?select=key,price,minutes,online,free_trial,sessions`, {
     // Las claves nuevas (sb_publishable_…) van solo en apikey; las viejas (JWT) también en Authorization
     headers: key.startsWith('eyJ') ? { apikey: key, Authorization: `Bearer ${key}` } : { apikey: key },
   })
@@ -48,5 +48,6 @@ export function useLiveService(service) {
     minutes: row.minutes,
     online: row.online,
     freeTrial: row.free_trial,
+    sessions: row.sessions,
   }
 }

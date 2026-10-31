@@ -22,7 +22,8 @@ export default function Services() {
       <h1>Servicios</h1>
       <p className="adm-help">
         Lo que cambies acá se ve enseguida en el sitio (precio y duración) y es lo que se cobra en las reservas
-        nuevas. Si desactivás un servicio, deja de aparecer y no se puede reservar.
+        nuevas. En los paquetes, el precio es el total y se cobra al reservar la primera sesión; las siguientes
+        las cargás vos en la Agenda (con precio 0). Si desactivás un servicio, deja de aparecer y no se puede reservar.
       </p>
       {error && <p className="adm-error">{error}</p>}
       {!rows ? <p>Cargando…</p> : (
@@ -42,6 +43,7 @@ function ServiceRow({ s }) {
     const { error } = await supabase.from('services').update({
       price: Number(v.price) || 0,
       minutes: Number(v.minutes),
+      sessions: Number(v.sessions) || 1,
       online: !!v.online,
       active: !!v.active,
     }).eq('id', s.id)
@@ -55,6 +57,7 @@ function ServiceRow({ s }) {
           <small>{CATEGORY[s.category]}</small>
         </div>
         <label className="adm-field"><span>Precio (€)</span><input name="price" type="number" min="0" step="0.5" defaultValue={Number(s.price)} /></label>
+        <label className="adm-field"><span>Sesiones (paquete)</span><input name="sessions" type="number" min="1" max="50" required defaultValue={s.sessions ?? 1} /></label>
         <label className="adm-field"><span>Duración (min)</span><input name="minutes" type="number" min="5" max="480" required defaultValue={s.minutes} /></label>
         <label className="adm-check"><input type="checkbox" name="online" defaultChecked={s.online} /> En línea</label>
         <label className="adm-check"><input type="checkbox" name="active" defaultChecked={s.active} /> Se puede reservar</label>

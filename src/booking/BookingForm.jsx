@@ -52,6 +52,7 @@ export function BookingForm({ onSubmit, submitLabel }) {
 
       {msg && <p className="bk-error" role="alert">{msg}</p>}
 
+      <p className="bk-privacy">{t('booking.policy')}</p>
       <p className="bk-privacy">{t('booking.privacy')}</p>
       <OrnateButton type="submit" className="ornate--book" disabled={sending}>
         {sending ? t('booking.sending') : submitLabel}

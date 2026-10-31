@@ -21,6 +21,7 @@ export default function CancelBooking() {
         if (!b) setState('booking_not_found')
         else if (b.status === 'cancelled') setState('already_cancelled')
         else if (new Date(b.starts_at) <= new Date()) setState('booking_past')
+        else if (b.cancel_until && new Date(b.cancel_until) <= new Date()) setState('too_late')
         else setState('ask')
       })
       .catch(() => setState('booking_not_found'))
@@ -32,7 +33,7 @@ export default function CancelBooking() {
       await cancelBooking(token)
       setState('done')
     } catch (e) {
-      setState(['booking_not_found', 'already_cancelled', 'booking_past'].includes(e.code) ? e.code : 'error')
+      setState(['booking_not_found', 'already_cancelled', 'booking_past', 'too_late'].includes(e.code) ? e.code : 'error')
     }
   }
 
@@ -62,7 +63,7 @@ export default function CancelBooking() {
           </>
         )}
         {state === 'done' && <p role="status">{t('booking.cancel.done')}</p>}
-        {['booking_not_found', 'already_cancelled', 'booking_past'].includes(state) && (
+        {['booking_not_found', 'already_cancelled', 'booking_past', 'too_late'].includes(state) && (
           <p role="alert">{t(`booking.cancel.${state}`)}</p>
         )}
         {state === 'error' && <p className="bk-error" role="alert">{t('booking.errors.generic')}</p>}

@@ -10,6 +10,7 @@ const FIELDS = [
   ['max_days_ahead', 'Hasta cuántos días adelante se puede reservar', 'number', ''],
   ['buffer_minutes', 'Margen entre sesiones (minutos)', 'number', 'Tiempo libre antes y después de cada sesión.'],
   ['slot_step_minutes', 'Cada cuántos minutos empiezan los turnos', 'number', '15 = 9:00, 9:15, 9:30…'],
+  ['cancel_hours', 'Hasta cuántas horas antes puede cancelar la clienta', 'number', 'Después de ese plazo, el link de cancelar le pide que escriba por WhatsApp.'],
   ['reminder_hours', 'Recordatorio: cuántas horas antes', 'number', 'Si todavía no pagó, el recordatorio incluye el link de PayPal.'],
   ['session_location', 'Lugar de las sesiones presenciales (va en el email)', 'text', ''],
   ['site_url', 'Dirección del sitio', 'url', 'Para los links de los emails (cancelar, volver a reservar).'],

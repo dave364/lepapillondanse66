@@ -39,7 +39,7 @@ export default function BookService() {
   const text = isCall ? t('book.call.text') : t(`services.items.${key}.text`, { defaultValue: '' })
   // Precio y duración: los de la base (los que edita Zulgey) o los del sitio
   const meta = service
-    ? { price: Number(service.price), minutes: service.minutes, online: service.online, freeTrial: service.free_trial }
+    ? { price: Number(service.price), minutes: service.minutes, online: service.online, freeTrial: service.free_trial, sessions: service.sessions }
     : findService(key)
 
   const tz = visitorTz()
@@ -75,6 +75,9 @@ export default function BookService() {
       <p className="bk-back"><Link to={`/${lang}/reserver`}>{lang === 'ar' ? '→' : '←'} {t('booking.all')}</Link></p>
       <h1 className="block__title">{title}</h1>
       {meta && <div className="bk-meta"><ServiceMeta service={meta} /></div>}
+      {meta?.sessions > 1 && !done && (
+        <p className="info bk-text">{t('booking.packageNote', { count: meta.sessions })}</p>
+      )}
       {text && !done && <p className="info bk-text">{text}</p>}
 
       <div className="bk-card">

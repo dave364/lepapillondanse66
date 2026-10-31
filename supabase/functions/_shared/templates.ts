@@ -16,7 +16,10 @@ const T = {
     payText: 'Pour confirmer votre réservation, merci de régler {amount} via PayPal :',
     payBtn: 'Payer {amount} avec PayPal',
     payNote: 'Le paiement est fait au nom de Zulgey Castro. Si vous avez déjà payé, ne tenez pas compte de ce message.',
-    cancelText: 'Un empêchement ? Vous pouvez annuler votre réservation ici :',
+    cancelText: "Un empêchement ? Vous pouvez annuler jusqu'à {h} h avant votre rendez-vous :",
+    policy: 'Les paiements ne sont pas remboursés, mais vous pouvez changer la date : écrivez-nous au moins 24 à 48 h avant.',
+    package: 'Forfait',
+    packageNote: '{n} séances de {m} min : vous réservez ici la première, les suivantes sont fixées avec Sully.',
     cancelBtn: 'Annuler ma réservation',
     questions: `Une question ? Répondez simplement à cet e-mail ou écrivez-nous sur WhatsApp au ${PHONE}.`,
     sign: 'À très bientôt,<br>Sully — Le Papillon Danse 66',
@@ -41,7 +44,10 @@ const T = {
     payText: 'Para confirmar tu reserva, aboná {amount} por PayPal:',
     payBtn: 'Pagar {amount} con PayPal',
     payNote: 'El pago se hace a nombre de Zulgey Castro. Si ya pagaste, ignorá este mensaje.',
-    cancelText: '¿Te surgió un imprevisto? Podés cancelar tu reserva acá:',
+    cancelText: '¿Te surgió un imprevisto? Podés cancelar hasta {h} h antes del encuentro:',
+    policy: 'Los pagos no se reembolsan, pero podés cambiar la fecha: escribinos con 24 a 48 h de anticipación.',
+    package: 'Paquete',
+    packageNote: '{n} sesiones de {m} min: acá reservás la primera y las siguientes se acuerdan con Sully.',
     cancelBtn: 'Cancelar mi reserva',
     questions: `¿Alguna pregunta? Respondé este email o escribinos por WhatsApp al ${PHONE}.`,
     sign: '¡Hasta pronto!<br>Sully — Le Papillon Danse 66',
@@ -66,7 +72,10 @@ const T = {
     payText: 'To confirm your booking, please pay {amount} via PayPal:',
     payBtn: 'Pay {amount} with PayPal',
     payNote: 'The payment goes to Zulgey Castro. If you have already paid, please ignore this message.',
-    cancelText: 'Something came up? You can cancel your booking here:',
+    cancelText: 'Something came up? You can cancel up to {h} hours before your appointment:',
+    policy: 'Payments are non-refundable, but you can change the date: message us at least 24 to 48 hours ahead.',
+    package: 'Package',
+    packageNote: '{n} sessions of {m} min: you book the first one here, the rest are arranged with Sully.',
     cancelBtn: 'Cancel my booking',
     questions: `Any questions? Just reply to this email or message us on WhatsApp at ${PHONE}.`,
     sign: 'See you soon,<br>Sully — Le Papillon Danse 66',
@@ -91,7 +100,10 @@ const T = {
     payText: 'لتأكيد حجزك، يُرجى دفع {amount} عبر PayPal:',
     payBtn: 'ادفعي {amount} عبر PayPal',
     payNote: 'يتم الدفع باسم Zulgey Castro. إذا كنتِ قد دفعتِ بالفعل، يُرجى تجاهل هذه الرسالة.',
-    cancelText: 'هل طرأ ظرف ما؟ يمكنك إلغاء حجزك من هنا:',
+    cancelText: 'هل طرأ ظرف ما؟ يمكنك الإلغاء حتى {h} ساعة قبل الموعد:',
+    policy: 'المبالغ المدفوعة غير قابلة للاسترداد، لكن يمكنك تغيير الموعد: راسلينا قبل 24 إلى 48 ساعة على الأقل.',
+    package: 'الباقة',
+    packageNote: '{n} جلسات مدة كل منها {m} دقيقة: تحجزين هنا الجلسة الأولى، ويتم تحديد الباقي مع Sully.',
     cancelBtn: 'إلغاء حجزي',
     questions: `لديكِ سؤال؟ يكفي الرد على هذه الرسالة أو مراسلتنا عبر واتساب على ${PHONE}.`,
     sign: 'إلى اللقاء قريبًا،<br>Sully — Le Papillon Danse 66',
@@ -154,7 +166,8 @@ function details(f: Full, t: Dict) {
   const rows: [string, string][] = [
     [t.when, `${formatDate(b.starts_at, lang, s.timezone)} (${t.tz})`],
   ]
-  if (!f.isEvent) rows.push([t.duration, `${f.minutes} ${t.min}`])
+  if (!f.isEvent && f.sessions > 1) rows.push([t.package, fill(t.packageNote, { n: String(f.sessions), m: String(f.minutes) })])
+  else if (!f.isEvent) rows.push([t.duration, `${f.minutes} ${t.min}`])
   if (f.online) rows.push([t.place, t.online])
   else if (f.location) rows.push([t.place, f.location])
   rows.push([t.amount, b.price > 0 ? money(b.price) : t.free])
@@ -175,8 +188,9 @@ function payBlock(f: Full, t: Dict, intro: string) {
 }
 
 const footer = (f: Full, t: Dict, withCancel = true) => `
-  ${withCancel ? `<p style="margin-top:22px">${esc(t.cancelText)}<br>
-    <a href="${esc(cancelLink(f.settings, f.booking))}" style="color:#762b87">${esc(t.cancelBtn)}</a></p>` : ''}
+  ${withCancel ? `<p style="margin-top:22px">${esc(fill(t.cancelText, { h: String(f.settings.cancel_hours ?? 24) }))}<br>
+    <a href="${esc(cancelLink(f.settings, f.booking))}" style="color:#762b87">${esc(t.cancelBtn)}</a></p>
+    <p style="font-size:13px;color:#8a7350">${esc(t.policy)}</p>` : ''}
   <p>${esc(t.questions)}</p>
   <p>${t.sign}</p>`
 
@@ -250,7 +264,7 @@ export function adminEmail(f: Full, kind: 'new' | 'cancelled'): Mail {
   const name = f.title.es || f.title.fr || ''
   const date = formatDate(b.starts_at, 'es', f.settings.timezone)
   const rows: [string, string][] = [
-    [f.isEvent ? 'Evento' : 'Servicio', name],
+    [f.isEvent ? 'Evento' : 'Servicio', f.sessions > 1 ? `${name} (paquete de ${f.sessions} sesiones)` : name],
     ['Fecha', `${date} (hora de Francia)`],
     ['Clienta', b.client_name],
     ['Email', b.client_email],

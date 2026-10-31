@@ -29,6 +29,7 @@ export type Settings = {
   paypal_url: string
   site_url: string
   session_location: string
+  cancel_hours: number
 }
 
 export type Booking = {
@@ -57,6 +58,8 @@ export type Full = {
   online: boolean
   location: string | null
   isEvent: boolean
+  // sesiones del paquete (1 = sesión suelta)
+  sessions: number
 }
 
 // Reserva con todo lo necesario para armar los emails
@@ -64,7 +67,7 @@ export async function loadFull(id: string): Promise<Full> {
   const db = admin()
   const [{ data: booking, error }, { data: settings }] = await Promise.all([
     db.from('bookings')
-      .select('*, service:services(name, minutes, online), event:events(title, location, online)')
+      .select('*, service:services(name, minutes, online, sessions), event:events(title, location, online)')
       .eq('id', id)
       .single(),
     db.from('settings').select('*').eq('id', 1).single(),
@@ -80,6 +83,7 @@ export async function loadFull(id: string): Promise<Full> {
     online: service?.online ?? event?.online ?? false,
     location: event ? event.location : service?.online ? null : settings.session_location,
     isEvent: !!event,
+    sessions: service?.sessions ?? 1,
   }
 }
 
@@ -101,7 +105,7 @@ export const clean = (s: unknown, max: number) =>
 export const KNOWN_ERRORS = [
   'service_not_found', 'slot_unavailable', 'event_not_found', 'event_past',
   'event_full', 'already_registered', 'booking_not_found', 'already_cancelled',
-  'booking_past',
+  'booking_past', 'too_late',
 ]
 export const errorCode = (message = '') =>
   KNOWN_ERRORS.find((c) => message.includes(c)) ??

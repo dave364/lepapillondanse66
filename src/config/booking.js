@@ -34,15 +34,16 @@ export const SERVICES = {
       url: service('aad8c50e-880d-41b4-b4ad-55c266877270') },
   ],
   care: [
-    { key: 'tarot', price: 40, minutes: 30,
+    { key: 'tarot', price: 40, minutes: 30, online: true,
       url: service('10777997-582f-45e1-a4b9-ba9c467cf62a') },
-    { key: 'pendulum', price: 50, minutes: 30,
+    { key: 'pendulum', price: 50, minutes: 30, online: true,
       url: service('20559047-0e36-4fda-b407-79f6eacdafdd') },
-    { key: 'akashic', price: 100, minutes: 60,
+    { key: 'akashic', price: 100, minutes: 60, online: true,
       url: service('0d75eb70-1b0c-4f08-b636-9d3b9d7105d9') },
-    { key: 'spiritualCoaching', price: 150, minutes: 60,
+    // Paquetes: price es el total; sessions = cantidad de sesiones
+    { key: 'spiritualCoaching', price: 150, minutes: 60, sessions: 4, online: true,
       url: service('33f40fa8-41c8-4583-a9a2-18ac7960dcf8') },
-    { key: 'empowerment', price: 300, minutes: 60, online: true,
+    { key: 'empowerment', price: 300, minutes: 60, sessions: 6, online: true,
       url: service('c656fc65-d817-4b81-a758-a08360ef7306') },
   ],
 }

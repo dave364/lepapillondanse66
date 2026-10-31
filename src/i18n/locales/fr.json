@@ -296,7 +296,8 @@
       "event_past": "Cet événement a déjà eu lieu.",
       "invalid_input": "Vérifiez votre nom et votre e-mail.",
       "service_not_found": "Cette séance n'est plus disponible.",
-      "generic": "Une erreur est survenue. Réessayez ou écrivez-nous sur WhatsApp."
+      "generic": "Une erreur est survenue. Réessayez ou écrivez-nous sur WhatsApp.",
+      "too_late": "Il reste moins de 24 h avant votre rendez-vous : pour l'annuler ou changer la date, écrivez-nous sur WhatsApp."
     },
     "events": {
       "title": "Prochains événements",
@@ -317,7 +318,11 @@
       "rebook": "Réserver un autre créneau",
       "booking_not_found": "Ce lien n'est plus valide.",
       "already_cancelled": "Cette réservation est déjà annulée.",
-      "booking_past": "Cette réservation est déjà passée. Pour toute question, écrivez-nous sur WhatsApp."
-    }
+      "booking_past": "Cette réservation est déjà passée. Pour toute question, écrivez-nous sur WhatsApp.",
+      "too_late": "Il reste moins de 24 h avant votre rendez-vous : pour l'annuler ou changer la date, écrivez-nous sur WhatsApp."
+    },
+    "packageNote_one": "Une séance.",
+    "packageNote_other": "Forfait de {{count}} séances, payé en une fois. Vous réservez ici la première ; les suivantes sont fixées avec Sully.",
+    "policy": "Annulation possible jusqu'à 24 h avant. Les paiements ne sont pas remboursés, mais vous pouvez changer la date en nous écrivant."
   }
 }
