@@ -9,6 +9,18 @@ import Services from './Services'
 import Settings from './Settings'
 import './admin.css'
 
+// Logo de la mariposa (versión liviana para el panel)
+function Logo({ className = '' }) {
+  return (
+    <img
+      className={`adm-logo ${className}`}
+      src="/images/logo-panel.webp"
+      srcSet="/images/logo-panel.webp 1x, /images/logo-panel@2x.webp 2x"
+      alt="Le Papillon Danse 66"
+    />
+  )
+}
+
 // Panel de administración de Le Papillon Danse 66 (/admin)
 export default function Admin() {
   const [session, setSession] = useState(undefined)
@@ -37,15 +49,18 @@ export default function Admin() {
       <Helmet>
         <title>Panel · Le Papillon Danse 66</title>
         <meta name="robots" content="noindex" />
+        <meta name="theme-color" content="#762b87" />
+        <link rel="apple-touch-icon" href="/images/panel-icon.png" />
       </Helmet>
       {session === undefined || (session && isAdmin === null) ? (
-        <p className="adm-center">Cargando…</p>
+        <div className="adm-center"><Logo className="adm-logo--pulse" /></div>
       ) : !session ? (
         <Login />
       ) : newPassword ? (
         <SetPassword onDone={() => setNewPassword(false)} />
       ) : !isAdmin ? (
-        <div className="adm-center adm-box">
+        <div className="adm-center adm-box adm-login">
+          <Logo className="adm-logo--big" />
           <p>Esta cuenta ({session.user.email}) no tiene acceso al panel.</p>
           <button className="adm-btn" onClick={() => supabase.auth.signOut()}>Salir</button>
         </div>
@@ -67,7 +82,13 @@ function Shell({ email }) {
   return (
     <>
       <header className="adm-top">
-        <a href="/" className="adm-brand">✦ Le Papillon Danse 66</a>
+        <a href="/" className="adm-brand" title="Ver el sitio">
+          <Logo className="adm-logo--small" />
+          <span className="adm-brand__text">
+            <span className="adm-brand__name">Le Papillon Danse 66</span>
+            <span className="adm-brand__sub">Panel de reservas</span>
+          </span>
+        </a>
         <nav className="adm-tabs">
           {tabs.map(([to, label]) => (
             <NavLink key={to} to={`/admin/${to}`} className={({ isActive }) => (isActive ? 'is-active' : '')}>
@@ -123,7 +144,9 @@ function Login() {
 
   return (
     <form className="adm-box adm-login" onSubmit={submit}>
-      <h1>✦ Panel de reservas</h1>
+      <Logo className="adm-logo--big" />
+      <h1>Panel de reservas</h1>
+      <p className="adm-login__sub">Le Papillon Danse 66</p>
       <label className="adm-field">
         <span>Email</span>
         <input name="email" type="email" required autoComplete="username" />
@@ -154,7 +177,8 @@ function SetPassword({ onDone }) {
   }
   return (
     <form className="adm-box adm-login" onSubmit={submit}>
-      <h1>✦ Elegí tu contraseña</h1>
+      <Logo className="adm-logo--big" />
+      <h1>Elegí tu contraseña</h1>
       <label className="adm-field">
         <span>Contraseña nueva</span>
         <input name="password" type="password" required autoComplete="new-password" />
