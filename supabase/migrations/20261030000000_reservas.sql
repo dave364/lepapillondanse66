@@ -25,7 +25,7 @@ create table public.settings (
   admin_email       text    not null default 'lepapillondanse@gmail.com',
   paypal_url        text    not null default 'https://paypal.me/zulgeycastro',
   -- cambiar a https://www.lepapillondanse66.com cuando el dominio apunte acá
-  site_url          text    not null default 'https://lepapillondanse66.onrender.com',
+  site_url          text    not null default 'https://lepapillondanse66-5lye.onrender.com',
   -- dónde son las sesiones que no son en línea (va en el email)
   session_location  text    not null default 'Salle Sweet Om « Centre del Món », 1 bis rue de la Pépinière Robin, 66000 Perpignan'
 );

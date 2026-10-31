@@ -39,8 +39,8 @@ emails ◄── Brevo, remitente lepapillondanse66.web@gmail.com
 *SQL Editor* → *New query* → pegar todo `migrations/20261030000000_reservas.sql` → *Run*.
 
 ### 3. Usuaria del panel
-1. *Authentication → URL Configuration*: en **Site URL** poner `https://lepapillondanse66.onrender.com`
-   y en **Redirect URLs** agregar `https://lepapillondanse66.onrender.com/admin`.
+1. *Authentication → URL Configuration*: en **Site URL** poner `https://lepapillondanse66-5lye.onrender.com`
+   y en **Redirect URLs** agregar `https://lepapillondanse66-5lye.onrender.com/admin`.
 2. *Authentication → Users → Add user → Send invitation* con el email de Zulgey. Le llega un link; al abrirlo
    elige su contraseña en el panel.
 3. En *SQL Editor*, darle permiso de administradora (cambiar el email):
