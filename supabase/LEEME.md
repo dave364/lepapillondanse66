@@ -17,7 +17,7 @@ sitio (Render) ──► Supabase
                     ├─ Funciones: book (reservar), cancel, notify (avisos desde el panel), reminders
                     ├─ Login del panel (Zulgey)
                     └─ Cron: cada 30 min llama a reminders
-emails ◄── Gmail del proyecto (lepapillondanse66.web@gmail.com) con contraseña de aplicación
+emails ◄── Brevo, remitente lepapillondanse66.web@gmail.com
 ```
 
 | Archivo | Qué es |
@@ -50,16 +50,20 @@ emails ◄── Gmail del proyecto (lepapillondanse66.web@gmail.com) con contra
    ```
 4. *Authentication → Sign In / Providers*: desactivar **Allow new users to sign up** (así nadie más se crea cuenta).
 
-### 4. Gmail para mandar los emails
-En la cuenta **lepapillondanse66.web@gmail.com**: activar la *Verificación en 2 pasos* y después crear una
-*Contraseña de aplicación* (myaccount.google.com → Seguridad → Contraseñas de aplicaciones). Son 16 letras.
+### 4. Brevo para mandar los emails
+1. Crear una cuenta gratis en [brevo.com](https://www.brevo.com) con **lepapillondanse66.web@gmail.com**.
+2. *Senders, domains & dedicated IPs → Senders*: agregar `lepapillondanse66.web@gmail.com` como remitente
+   (Brevo manda un código a ese Gmail para confirmarlo).
+3. *SMTP & API → API Keys → Generate a new API key*: copiar la clave (empieza con `xkeysib-`).
+
+(Alternativa: Gmail con contraseña de aplicación, secretos `SMTP_USER` y `SMTP_PASS`.)
 
 ### 5. Funciones de servidor
 Desde la carpeta del repo, en la terminal:
 ```bash
 npx supabase login
 npx supabase link --project-ref ID_DEL_PROYECTO      # está en Project Settings → General
-npx supabase secrets set SMTP_USER=lepapillondanse66.web@gmail.com SMTP_PASS="las16letras" CRON_SECRET="una-frase-larga-inventada"
+npx supabase secrets set BREVO_API_KEY="xkeysib-..." EMAIL_FROM=lepapillondanse66.web@gmail.com CRON_SECRET="una-frase-larga-inventada"
 npx supabase functions deploy book cancel reminders notify
 ```
 
@@ -88,7 +92,7 @@ en `/admin` marcarla pagada → llega «Pago recibido» → cancelar con el link
   del paso 3.1.
 - **Plan gratis de Supabase**: alcanza de sobra; pausa proyectos sin actividad durante una semana (las llamadas del
   cron cuentan como actividad).
-- **Gmail** permite unos 500 emails por día. Si algún día no alcanza, se puede usar Resend: definir los secretos
-  `RESEND_API_KEY` y `EMAIL_FROM` y deja de usarse Gmail.
+- **Brevo** gratis permite 300 emails por día. Para que lleguen mejor (menos spam), a futuro conviene mandar
+  desde el dominio propio (`reservas@lepapillondanse66.com`) verificándolo en Brevo.
 - **Probar emails en local**: con el secreto `EMAIL_LOG=/ruta/archivo.jsonl` los emails se guardan en ese archivo
   en vez de mandarse.

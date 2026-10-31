@@ -1,9 +1,8 @@
-// Envío de emails.
-// Por defecto usa el Gmail del proyecto por SMTP (contraseña de aplicación):
-//   SMTP_USER = lepapillondanse66.web@gmail.com
-//   SMTP_PASS = la contraseña de aplicación de 16 letras
-// Si más adelante se usa Resend (dominio propio), alcanza con definir
-// RESEND_API_KEY y EMAIL_FROM y deja de usarse el SMTP.
+// Envío de emails. Se usa el primero que esté configurado:
+//   1. Brevo (recomendado):  BREVO_API_KEY + EMAIL_FROM (remitente verificado en Brevo)
+//   2. Resend (dominio propio): RESEND_API_KEY + EMAIL_FROM
+//   3. Gmail por SMTP: SMTP_USER + SMTP_PASS (contraseña de aplicación)
+// EMAIL_FROM es solo la dirección, por ejemplo lepapillondanse66.web@gmail.com
 import nodemailer from 'npm:nodemailer@6'
 
 export type Mail = { to: string; subject: string; html: string; replyTo?: string }
@@ -20,13 +19,30 @@ export async function sendEmail(mail: Mail) {
     return
   }
 
+  const brevoKey = Deno.env.get('BREVO_API_KEY')
+  if (brevoKey) {
+    const res = await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: { 'api-key': brevoKey, 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        sender: { name: FROM_NAME, email: Deno.env.get('EMAIL_FROM') ?? 'lepapillondanse66.web@gmail.com' },
+        to: [{ email: mail.to }],
+        subject: mail.subject,
+        htmlContent: mail.html,
+        ...(mail.replyTo ? { replyTo: { email: mail.replyTo } } : {}),
+      }),
+    })
+    if (!res.ok) throw new Error(`brevo ${res.status}: ${await res.text()}`)
+    return
+  }
+
   const resendKey = Deno.env.get('RESEND_API_KEY')
   if (resendKey) {
     const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: { Authorization: `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        from: Deno.env.get('EMAIL_FROM') ?? `${FROM_NAME} <onboarding@resend.dev>`,
+        from: `${FROM_NAME} <${Deno.env.get('EMAIL_FROM') ?? 'onboarding@resend.dev'}>`,
         to: [mail.to],
         subject: mail.subject,
         html: mail.html,
