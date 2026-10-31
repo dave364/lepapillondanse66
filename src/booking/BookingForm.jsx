@@ -77,7 +77,6 @@ export function BookingSuccess({ title, email, booking }) {
               {t('booking.payNow', { amount })}
             </OrnateButton>
           </p>
-          <p className="info--small">{t('book.payNote')}</p>
         </>
       )}
       <p className="bk-success__home">
